@@ -4,6 +4,7 @@
 
 @section('content')
 
+<h1 class="home__title">Meet the space</h1>
 
 @endsection
 

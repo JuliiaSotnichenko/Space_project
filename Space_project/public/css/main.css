@@ -1,4 +1,54 @@
+
+
 body {
     background-color: black;
+    color: yellow;
+}
+.main__navig{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+.main__navig_list{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  
+   
 }
 
+ul li  {
+    list-style: none;
+    
+
+}
+
+ul li a {
+    text-decoration: none;
+    color: yellow;
+
+}
+
+
+
+
+/* Home */
+
+.home__title{
+    margin: center;
+   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    color: yellow;
+}

@@ -20,4 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 // Home page
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);

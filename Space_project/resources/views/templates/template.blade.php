@@ -8,9 +8,9 @@
 </head>
 <body>
     <main>
-        <nav>
+        <nav class="main__navig">
           <img class="logo" src="" alt="Starlight logo">
-        <ul class="main__navig">
+        <ul class="main__navig_list">
             <li><a href="{{ url('home') }}">Home</a></li>
             <li><a href="{{ url('menu') }}">Menu</a></li>
             <li><a href="{{ url('about us') }}">About us</a></li>
@@ -26,8 +26,9 @@
         @yield('content')
     </div>
     
-    <div class="content">
-        @yield('content')
+    <div class="content2">
+        @yield('content2')
+        
     </div>
 </main>
 
