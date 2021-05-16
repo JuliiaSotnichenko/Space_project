@@ -11,7 +11,7 @@
 <body>
     <main>
         <nav class="main__navig">
-          <img class="logo" src="" alt="Starlight logo">
+          <img class="logo" src="/images/logoSF.svg" alt="Starlight logo">
         <ul class="main__navig_list">
             <li><a href="{{ url('home') }}">Home</a></li>
             <li><a href="{{ url('menu') }}">Menu</a></li>

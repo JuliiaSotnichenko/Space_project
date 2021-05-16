@@ -1,7 +1,10 @@
-
-
+*:not(input){
+    box-sizing: border-box;
+}
 body {
-    background-color: black;
+    width: 120vh;
+    background-color: rgb(56, 5, 77);
+    margin: auto;
     color: yellow;
 }
 .main__navig{
@@ -13,14 +16,10 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-  
-   
 }
 
 ul li  {
     list-style: none;
-    
-
 }
 
 ul li a {
@@ -28,11 +27,14 @@ ul li a {
     color: yellow;
 
 }
+.logo{
+    width: 20vh;
+}
 
 
-
-
-
+footer{
+    text-align: center;
+}
 
 
 
