@@ -1,5 +1,11 @@
 @extends('templates/template')
 
+<!-- Style -->
+@section('style')
+<link href="{{ asset('css/home.css') }}" rel="stylesheet">
+@endsection
+
+
 @section('title', 'Home')
 
 @section('content')
