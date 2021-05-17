@@ -5,10 +5,10 @@
         <div>
             <label for="">Fly Ref</label>
             <input id="fly" name="flyref" type="text" placeholder="Fly Ref: ex:A1">
-            <!-- @error('flyref')
+            @error('flyref')
 
             <div class="alert alert-danger">{{ $message }}</div>
-            @enderror -->
+            @enderror
         </div>
         <div>
             <label for="fitinerary">Itinerary</label>
@@ -54,16 +54,5 @@
             <input type="submit" value="Add Fligth">
         </div>
     </form>
-    <div>
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
-    </div>
 
 </div>
