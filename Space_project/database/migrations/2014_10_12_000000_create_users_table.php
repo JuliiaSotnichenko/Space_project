@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('pass_port_number');
             $table->string('country');
             $table->enum('role', ['user', 'admin']);
-            $table->string('email')->unsique();
+            $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
