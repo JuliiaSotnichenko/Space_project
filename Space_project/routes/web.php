@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UserController;
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,27 +13,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*Route::get('/', function () {
+
+Route::get('/home', function () {
     return view('home');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');*/
+})->middleware(['auth'])->name('dashboard');
 
-
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Home page
-
-Route::get('/', [HomeController::class, 'index']);
-
+require __DIR__ . '/auth.php';
 
 
 Auth::routes();
-
-Route::get('/log-in', [UserController::class, 'index']);
-Route::get('/register1', [UserController::class, 'create']);
