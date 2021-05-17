@@ -44,7 +44,7 @@ class itinerariesSeeder extends Seeder
                 'updated_at' => date(now())
             ],
             [
-                'name' => 'itenerary 5',
+                'name' => 'itinerary 5',
                 'description' => 'One month on Mars',
                 'duration' => '10 months',
                 'created_at' => date(now()),
