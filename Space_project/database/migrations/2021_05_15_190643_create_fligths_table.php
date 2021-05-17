@@ -13,7 +13,7 @@ class CreateFligthsTable extends Migration
      */
     public function up()
     {
-        Schema::create('fligths', function (Blueprint $table) {
+        Schema::create('flights', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->id();
             $table->string('depart_time');
