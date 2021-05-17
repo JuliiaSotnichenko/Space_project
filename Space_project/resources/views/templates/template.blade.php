@@ -16,9 +16,9 @@
           <img class="logo" src="/images/logoSF.svg" alt="Starlight logo">
         <ul class="main__navig_list">
             <li><a href="{{ url('home') }}">Home</a></li>
-            <li><a href="{{ url('menu') }}">Menu</a></li>
             <li><a href="{{ url('about us') }}">About us</a></li>
-            <li><a href="{{ url('history') }}">History</a></li>
+            <li><a href="{{ url('packages') }}">Packages offer</a></li>
+            <li><a href="{{ url('booking') }}">Booking</a></li>
             <li><a href="{{ url('contact') }}">Contact</a></li>
         </ul>
         <ul>
@@ -37,7 +37,7 @@
 </main>
 
     <footer>
-    <div id="copyright text-right">© Copyright 2021 </div>
+    <div id="copyright text-right">© 2021 Spacetravel agency</div>
     </footer>
 
     @yield('script')
