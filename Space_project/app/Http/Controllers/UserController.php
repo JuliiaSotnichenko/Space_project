@@ -14,9 +14,13 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('auth.login');
+        $user = Auth::user();
+        if ($user->role == 'admin') { // check if the user logging in is a "user" or an "admin"
+            return view('BackOffice.backOfficePortal'); // if admin show the back office portal page
+        } else {
+            return view('auth.login'); // change path to the user's account page (17/05 - Max)
+        }
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -35,7 +39,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // A user is created from the register protocole
     }
 
     /**
@@ -44,10 +48,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($email)
     {
-        $user = User::find($id);
-
+        $user = User::find($email);
         return view('user-detail', ['user' => $user]);
     }
 
