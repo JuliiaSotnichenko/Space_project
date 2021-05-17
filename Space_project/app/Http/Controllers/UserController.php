@@ -45,7 +45,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+
+        return view('user-detail', ['user' => $user]);
     }
 
     /**
@@ -56,7 +58,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('user-update', ['user' => $user]);
     }
 
     /**
@@ -68,7 +71,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validated();
+        $user = User::find($id);
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->pass_port_number = $request->pass_port_number;
+        $user->country = $request->country;
+        $user->email = $request->email;
+        $user->save();
+
+        return redirect('backOfficePortal')->with('success', $request->last_name . ' was updated successfully.');
     }
 
     /**
@@ -79,6 +91,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $result = User::destroy($id);
+
+        if ($result)
+            return 'Deleted successfully';
     }
 }
