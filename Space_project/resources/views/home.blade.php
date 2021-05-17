@@ -2,11 +2,10 @@
 
 <!-- Style -->
 @section('style')
-<link href="{{ asset('css/home.css') }}" rel="stylesheet">
+<link href="{{ asset('css/backround.css') }}" rel="stylesheet">
 @endsection
-
-
 @section('title', 'Home')
+ 
 
 @section('content')
 <!-- Title -->
@@ -57,7 +56,7 @@
 	</svg>
 </div>
 
-<div class="container">
+<div class="container1">
 
 
 	<div class="solar-system-animation">
@@ -128,10 +127,10 @@
 		</svg>
 	
 	</div>
+
 </div>
-
-
+ 
+ 
 @endsection
-
 
 

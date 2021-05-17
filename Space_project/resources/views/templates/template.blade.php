@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link href="/css/main.css" rel="stylesheet">
-    <script src="https://cesiumjs.org/releases/1.79.1/Build/Cesium/Cesium.js"></script>
-  <link href="https://cesiumjs.org/releases/1.79.1/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
-
+ 
     @yield('style')
 </head>
 <body>
@@ -22,7 +20,7 @@
             <li><a href="{{ url('contact') }}">Contact</a></li>
         </ul>
         <ul>
-            <li><a href="{{ url('home') }}">Login/Register</a></li>
+            <li><a href="{{ url('login') }}">Login/Register</a></li>
         </ul>
         </nav>
 
@@ -30,13 +28,11 @@
         @yield('content')
     </div>
 
-    <div class="content2">
-        @yield('content2')
-
-    </div>
+   
 </main>
 
-    <footer>
+    <footer class="footer">
+    @yield('footer')
     <div id="copyright text-right">© 2021 Spacetravel agency</div>
     </footer>
 

@@ -1,13 +1,19 @@
 *:not(input){
     box-sizing: border-box;
 }
-body {
-    width: 70rem;
+ body {
+    width: 90%;
     /* background-color: darkblue; */
     margin: auto;
     color: white;
-    
+ }
+
+
+ .home__title{
+    margin: center;
+   text-align: center;
 }
+
 .main__navig{
     display: flex;
     justify-content: space-between;
@@ -17,6 +23,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    
 }
 
 ul li  {
@@ -27,6 +34,7 @@ ul li a {
     text-decoration: none;
     color: white;
     font-weight: 700;
+    
 
 }
 .logo{
@@ -35,20 +43,8 @@ ul li a {
 
 
 footer{
+    /* display: block; */
     text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-footer{
     color: yellow;
 }
+ 
