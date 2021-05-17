@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\FligthController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +14,32 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/home', function () {
+    return view('home');
+});
 
-// Home page
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+
+require __DIR__ . '/auth.php';
+
+
+Auth::routes();
+
+
+
+
+// Back office access
+    // BoP page
+Route::post('/admin/portal', [UserController::'index']);
+    // BoP search bar
+Route::post('/admin/portal/{email}', [UserController::'show']);
+    // BoP update results
+Route::post('/admin/portal/update/{id}', [UserController::'update']);
+    // BoP delete entry
+Route::post('/admin/portal/{id}', [UserController::'delete']);
 
 Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */

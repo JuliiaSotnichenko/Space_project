@@ -17,8 +17,8 @@ class CreateItinerariesTable extends Migration
             $table->engine = 'InnoDB';
             $table->id();
             $table->string('name');
-            $table->string('discriptian');
-            $table->integer('duration');
+            $table->string('description');
+            $table->string('duration');
             $table->timestamps();
         });
     }
