@@ -16,7 +16,7 @@ class CreateLocationsTable extends Migration
         Schema::create('locations', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->id();
-            $table->enum('lauch_location', ['Baikonur_Cosmodrome', 'Kennedy_Space_Center', 'Guiana_Space_Center', 'Vikram_Sarabhai_Space_Center', 'Tanegashima Space Center', 'Vostochny Cosmodrome', 'Boca Chica Starbase', 'Vandenberg Air Base']);
+            $table->enum('lauch_location', ['Baikonur Cosmodrome', 'Kennedy Space Center', 'Guiana Space Center', 'Vikram Sarabhai Space Center', 'Tanegashima Space Center', 'Vostochny Cosmodrome', 'Boca Chica Starbase', 'Vandenberg Air Base']);
             $table->string('time_lauch_location');
             $table->enum('landing_location', ['Atlantic Ocean', 'Kazakh Steppe', 'Shuttle Landing Facility', 'Boca Chica Starbase', 'Pacific Ocean', 'Kourou Airport', 'Indian Ocean']);
             $table->string('time_landing_location');
