@@ -14,12 +14,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-<<<<<<< Updated upstream
-=======
 
         $this->call(locationsSeeder::class);
-        $this->call(itinerairiesSeeder::class);
-       
->>>>>>> Stashed changes
+        $this->call(itinerariesSeeder::class);
     }
 }
