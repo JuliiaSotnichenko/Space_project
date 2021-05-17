@@ -21,3 +21,14 @@ use Illuminate\Support\Facades\Route;
 // Home page
 
 Route::get('/', [HomeController::class, 'index']);
+
+// Back office access
+    // BoP page
+Route::post('/admin/portal', [UserController::'index']);
+    // BoP search bar
+Route::post('/admin/portal', [UserController::'show']);
+    // BoP edit results
+Route::post('/admin/portal', [UserController::'edit']);
+    // BoP delete entry
+Route::post('/admin/portal', [UserController::'delete']);
+
