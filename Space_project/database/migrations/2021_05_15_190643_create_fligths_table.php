@@ -16,8 +16,10 @@ class CreateFligthsTable extends Migration
         Schema::create('fligths', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->id();
-            $table->string('depart_time');
-            $table->string('arrival_time');
+            $table->date('depart_date');
+            $table->time('depart_time');
+            $table->date('arrival_date');
+            $table->time('arrival_time');
             $table->unsignedBigInteger('itinerary_id');
             $table->unsignedBigInteger('location_id');
             $table->foreign('itinerary_id')->references('id')->on('itineraries');

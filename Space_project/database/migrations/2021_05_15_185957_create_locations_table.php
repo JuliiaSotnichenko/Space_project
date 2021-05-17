@@ -17,9 +17,7 @@ class CreateLocationsTable extends Migration
             $table->engine = 'InnoDB';
             $table->id();
             $table->string('lauch_location');
-            $table->string('time_lauch_location');
             $table->string('landing_location');
-            $table->string('time_landing_location');
             $table->timestamps();
         });
     }

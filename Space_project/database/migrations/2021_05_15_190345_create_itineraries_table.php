@@ -18,7 +18,7 @@ class CreateItinerariesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('discriptian');
-            $table->string('duration');
+            $table->integer('duration');
             $table->timestamps();
         });
     }
