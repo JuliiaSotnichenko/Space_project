@@ -19,10 +19,10 @@ class CreateBookingsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('fligth_id');
             $table->enum('payment', ['done', 'not Done']);
-            $table->unsignedBigInteger('package_id');
+            $table->enum('package', ['Package 1', 'Package 2', 'Package 3']);
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('fligth_id')->references('id')->on('fligths');
-            $table->foreign('package_id')->references('id')->on('pakages');
+
             $table->timestamps();
         });
     }
