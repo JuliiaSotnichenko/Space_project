@@ -1,13 +1,14 @@
 @extends('bop-template')
 
 @section('title', 'Manage Users')
+@section('content')
 <section>
     <article>
         <label for="search">Search</label>
         <input type="text" name="search">
         <br>
     </article>
-@section('content')
+
     <article>
         <label for="results">Results</label>
         <div id="results">
@@ -65,5 +66,5 @@
     <article>
         <input type="submit" value="Delete user entry">
     </article>
-@endsection
 </section>
+@endsection
