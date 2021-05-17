@@ -22,7 +22,23 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
 require __DIR__ . '/auth.php';
 
 
 Auth::routes();
+
+
+
+
+// Back office access
+    // BoP page
+Route::post('/admin/portal', [UserController::'index']);
+    // BoP search bar
+Route::post('/admin/portal', [UserController::'show']);
+    // BoP edit results
+Route::post('/admin/portal', [UserController::'edit']);
+    // BoP delete entry
+Route::post('/admin/portal', [UserController::'delete']);
+
+
