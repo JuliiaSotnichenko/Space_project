@@ -28,7 +28,7 @@ Route::get('/fligth/Insertform', [FligthController::class, 'index']);
 
 /**Insert in the data base */
 //show the form html to insert data
-Route::get('/fligth/Insertform', [FligthController::class, 'create']);
+Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
 //method to insert in the data base
 Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
 
@@ -40,4 +40,4 @@ Route::get('/fligth/editFligth', [FligthController::class, 'edit']);
 Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 
 /**delite fligth */
-Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
+Route::get('/fligth/deleteFligth', [FligthController::class, 'destroy']);

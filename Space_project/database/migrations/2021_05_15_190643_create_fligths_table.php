@@ -20,6 +20,7 @@ class CreateFligthsTable extends Migration
             $table->time('depart_time');
             $table->date('arrival_date');
             $table->time('arrival_time');
+            $table->string('fly_ref');
             $table->unsignedBigInteger('itinerary_id');
             $table->unsignedBigInteger('location_id');
             $table->foreign('itinerary_id')->references('id')->on('itineraries');
