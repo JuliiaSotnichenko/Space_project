@@ -1,9 +1,7 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UserController;
-
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,23 +13,23 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*Route::get('/', function () {
+
+Route::get('/home', function () {
     return view('home');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth'])->name('dashboard');*/
+})->middleware(['auth'])->name('dashboard');
+
+
+require __DIR__ . '/auth.php';
+
+
+Auth::routes();
 
 
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Home page
-
-Route::get('/', [HomeController::class, 'index']);
 
 // Back office access
     // BoP page
@@ -42,4 +40,5 @@ Route::get('/', [HomeController::class, 'index']);
 // Route::post('/admin/portal', [UserController::'edit']);
 //     // BoP delete entry
 // Route::post('/admin/portal', [UserController::'delete']);
+
 
