@@ -4,12 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title')</title>
     <link href="/css/main.css" rel="stylesheet">
-    <script src="https://cesiumjs.org/releases/1.79.1/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesiumjs.org/releases/1.79.1/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
-
 
     @yield('style')
 </head>
