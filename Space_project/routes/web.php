@@ -54,13 +54,14 @@ Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
 Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
 //method to insert in the data base
 Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
+
 /**edit method */
 //show the edit form
-Route::get('/fligth/editFligth{id}', [FligthController::class, 'edit']);
+Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
 //update the data base
 Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 /**delite fligth */
-Route::get('/fligth/deleteFligth{id}', [FligthController::class, 'destroy']);
+Route::get('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
 
 
 Route::get('/fligth/InsertFligth', [ItineraryController::class, 'index']);

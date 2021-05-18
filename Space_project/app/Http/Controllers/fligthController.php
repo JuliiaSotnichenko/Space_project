@@ -86,16 +86,17 @@ class FligthController extends Controller
      */
     public function edit($id)
     {
-        //$updateForm = Fligth::find($id);
+        $editFligth = Fligth::find($id);
 
-        $updateForm = DB::table('fligths')
+        $editFligth = DB::table('fligths')
             ->join('itineraries', 'fligths.itinerary_id', '=', 'itineraries.id')
             ->join('locations', 'fligths.location_id', '=', 'locations.id')
             ->select('fligths.*', 'itineraries.name', 'locations.lauch_location')
-            ->where('fligths.id', '=', $id)
+            ->where('fligths.id', $id)
             ->get();
 
-        return view('fligth/fligthUpdate', ['upShow' => $updateForm]);
+
+        return view('fligth.fligthUpdate', ['editFligth' => $editFligth]);
     }
 
     /**
@@ -118,5 +119,9 @@ class FligthController extends Controller
      */
     public function destroy($id)
     {
+        $result = Fligth::destroy($id);
+
+        if ($result)
+            return redirect('/fligth/Allfligth')->with('success', 'Flower deleted.');
     }
 }

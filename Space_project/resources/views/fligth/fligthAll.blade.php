@@ -1,3 +1,4 @@
+@extends('templates.template')
 @section('title','Fligth | All Fligth')
 
 
@@ -30,7 +31,9 @@
             <span>Arrival time:</span> {{$fligth->arrival_time}}
         </div>
         <div>
-            <a href="/fligth/editFligth{{$fligth->id}} ">Edit</a>
+
+            <li><a href="{{ url('/fligth/editFligth', $fligth->id) }}">Edit</a></li>
+
             <button class="mybutton" value="{{$fligth->id}}">Delete</button>
 
         </div>
@@ -51,9 +54,9 @@
 <script>
     $(function() {
         $('.mybutton').click(function(e) {
-            let but = 'deletFlower/' + $(this).val()
+            let but = '/fligth/deleteFligth/' + $(this).val()
 
-            //console.log(but)
+            console.log(but)
             $.ajax({
                     url: but,
                     method: "get",
