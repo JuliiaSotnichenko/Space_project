@@ -70,7 +70,6 @@ Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
 
 // Back office access
     // BoP page
-
 Route::post('/admin/portal', [UserController::'index']);
     // BoP search bar
 Route::post('/admin/portal/{email}', [UserController::'show']);
