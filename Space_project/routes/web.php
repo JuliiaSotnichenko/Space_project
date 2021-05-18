@@ -42,8 +42,8 @@ Route::put('/update/user', [UserController::class, 'update']);
 
 
 // Back office access
-    // BoP page
-// Route::post('/admin/portal', [UserController::'index']);
+//    BoP page
+Route::post('/admin/portal', [UserController::class, 'index']);
 //     // BoP search bar
 // Route::post('/admin/portal/{email}', [UserController::'show']);
 //     // BoP update results
