@@ -28,14 +28,12 @@ require __DIR__ . '/auth.php';
 
 
 Auth::routes();
-<<<<<<< HEAD
 
 
 
 
-// Back office access
-=======
->>>>>>> parent of 5e7143d (dashboard(user n booking details)+update user)
+
+
 
 // Route::post('/admin/portal', [UserController::'index']);
 //     // BoP search bar
@@ -51,7 +49,7 @@ Route::get('/', [HomeController::class, 'index']);
 //show all filgths in the data base
 Route::get('/fligth/Insertform', [FligthController::class, 'index']);
 
-<<<<<<< HEAD
+
 /**Insert in the data base */
 //show the form html to insert data
 Route::get('/fligth/Insertform', [FligthController::class, 'create']);
@@ -69,10 +67,10 @@ Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
 
 
-=======
+
 // Back office access
     // BoP page
->>>>>>> parent of 5e7143d (dashboard(user n booking details)+update user)
+
 Route::post('/admin/portal', [UserController::'index']);
     // BoP search bar
 Route::post('/admin/portal/{email}', [UserController::'show']);

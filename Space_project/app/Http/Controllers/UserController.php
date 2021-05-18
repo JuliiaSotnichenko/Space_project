@@ -50,7 +50,7 @@ class UserController extends Controller
      */
     public function show($email)
     {
-<<<<<<< HEAD
+
 
         $user = auth()->user();
 
@@ -66,10 +66,8 @@ class UserController extends Controller
         }
 
 
-=======
-        $user = User::find($email);
-        return view('user-detail', ['user' => $user]);
->>>>>>> parent of 5e7143d (dashboard(user n booking details)+update user)
+
+
     }
 
     /**
