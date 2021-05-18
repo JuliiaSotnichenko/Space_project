@@ -48,7 +48,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show($email)
     {
 
 
@@ -65,6 +65,8 @@ class UserController extends Controller
         } else {
             return view('dashboard', ['user' => $user], ['bookings' => $bookings]);
         }
+        $user = User::find($email);
+        return view('user-detail', ['user' => $user]);
     }
 
     /**
