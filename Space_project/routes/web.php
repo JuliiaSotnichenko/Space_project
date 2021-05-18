@@ -29,21 +29,6 @@ require __DIR__ . '/auth.php';
 
 Auth::routes();
 
-
-
-
-
-
-
-// Route::post('/admin/portal', [UserController::'index']);
-//     // BoP search bar
-// Route::post('/admin/portal/{email}', [UserController::'show']);
-//     // BoP update results
-// Route::post('/admin/portal/update/{id}', [UserController::'update']);
-//     // BoP delete entry
-// Route::post('/admin/portal/{id}', [UserController::'delete']);
-
-
 Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
 //show all filgths in the data base
