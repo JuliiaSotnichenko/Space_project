@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -27,7 +28,13 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 
-Auth::routes();
+// Account info
+Route::get('/dashboard', [UserController::class, 'show'])->middleware(['auth']);
+// Editing and updating account info
+Route::get('/update/user', [UserController::class, 'edit'])->middleware(['auth']);
+Route::put('/update/user', [UserController::class, 'update']);
+Route::get('/logout', [LoginController::class, 'logout']);
+//Auth::routes();
 
 Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
@@ -55,11 +62,10 @@ Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
 
 // Back office access
     // BoP page
-Route::post('/admin/portal', [UserController::'index']);
+/*Route::post('/admin/portal', [UserController::'index']);
     // BoP search bar
 Route::post('/admin/portal/{email}', [UserController::'show']);
     // BoP update results
 Route::post('/admin/portal/update/{id}', [UserController::'update']);
     // BoP delete entry
-Route::post('/admin/portal/{id}', [UserController::'delete']);
-
+Route::post('/admin/portal/{id}', [UserController::'delete']);*/
