@@ -8,8 +8,11 @@
     <link href="/css/main.css" rel="stylesheet">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
  
 =======
+=======
+>>>>>>> parent of 5e7143d (dashboard(user n booking details)+update user)
 =======
 >>>>>>> parent of 5e7143d (dashboard(user n booking details)+update user)
     <script src="https://cesiumjs.org/releases/1.79.1/Build/Cesium/Cesium.js"></script>
