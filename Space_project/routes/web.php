@@ -34,6 +34,14 @@ Auth::routes();
 
 // Back office access
 
+// Route::post('/admin/portal', [UserController::'index']);
+//     // BoP search bar
+// Route::post('/admin/portal/{email}', [UserController::'show']);
+//     // BoP update results
+// Route::post('/admin/portal/update/{id}', [UserController::'update']);
+//     // BoP delete entry
+// Route::post('/admin/portal/{id}', [UserController::'delete']);
+
 
 Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
@@ -55,6 +63,8 @@ Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 
 /**delite fligth */
 Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
+
+
 Route::post('/admin/portal', [UserController::'index']);
     // BoP search bar
 Route::post('/admin/portal/{email}', [UserController::'show']);
@@ -62,5 +72,4 @@ Route::post('/admin/portal/{email}', [UserController::'show']);
 Route::post('/admin/portal/update/{id}', [UserController::'update']);
     // BoP delete entry
 Route::post('/admin/portal/{id}', [UserController::'delete']);
-
 
