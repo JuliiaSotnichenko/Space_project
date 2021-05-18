@@ -53,7 +53,7 @@ Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
 //show the edit form
 Route::get('/fligth/editFligth', [FligthController::class, 'edit']);
 //update the data base
-Route::post('/fligth/editFligth', [FligthController::class, 'update']);
+//Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 
 /**delite fligth */
 Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
