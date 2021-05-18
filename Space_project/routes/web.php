@@ -17,16 +17,16 @@ use App\Http\Controllers\UserController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/', function () {
+    return view('home');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 
-// require __DIR__ . '/auth.php';
+require __DIR__ . '/auth.php';
 
 
 //Auth::routes();
@@ -34,17 +34,7 @@ Route::get('/dashboard', function () {
 
 
 
-// Back office access
-// BoP page
-// Route::post('/admin/portal', [UserController::'index']);
-//     // BoP search bar
-// Route::post('/admin/portal/{email}', [UserController::'show']);
-//     // BoP update results
-// Route::post('/admin/portal/update/{id}', [UserController::'update']);
-//     // BoP delete entry
-// Route::post('/admin/portal/{id}', [UserController::'delete']);
 
-// Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
 //show all filgths in the data base
 Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
@@ -61,6 +51,8 @@ Route::get('/fligth/editFligth{id}', [FligthController::class, 'edit']);
 Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 /**delite fligth */
 Route::get('/fligth/deleteFligth{id}', [FligthController::class, 'destroy']);
+
+Route::get('/fligth/InsertFligth', [locationController::class, 'index']);
 
 
 // Back office access
