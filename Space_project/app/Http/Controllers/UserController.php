@@ -50,8 +50,21 @@ class UserController extends Controller
      */
     public function show($email)
     {
-        $user = User::find($email);
-        return view('user-detail', ['user' => $user]);
+
+        $user = auth()->user();
+
+
+
+
+        $bookings = Booking::where('user_id', $user->id)->get();
+
+        if (!$bookings) {
+            return "No bookings found";
+        } else {
+            return view('dashboard', ['user' => $user], ['bookings' => $bookings]);
+        }
+
+
     }
 
     /**
