@@ -89,7 +89,7 @@ class UserController extends Controller
      */
     public function update(Request $request,)
     {
-        //$request->validated();
+        $request->validated();
         $user = auth()->user();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
@@ -104,7 +104,7 @@ class UserController extends Controller
             return view('BackOffice.backOfficePortal',['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
             // if admin show the back office portal page
         } else {
-            return view('home',)->with('success', $request->last_name . ' was updated successfully.'); // change path to the user's account page (17/05 - Max)
+            return view('home')->with('success', $request->last_name . ' was updated successfully.'); // change path to the user's account page (17/05 - Max)
         }
     }
 
