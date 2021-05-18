@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Itineraries;
+use App\Models\Locations;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Location;
 
 class locationController extends Controller
 {
@@ -13,7 +16,9 @@ class locationController extends Controller
      */
     public function index()
     {
-        //
+        $data = Itineraries::all();
+        $selBox = Locations::all();
+        return view('fligth/fligthInsert', ['selBox' => $selBox], ['data' => $data]);
     }
 
     /**

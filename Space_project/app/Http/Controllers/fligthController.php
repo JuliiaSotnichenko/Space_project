@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreFligthRequest;
 use App\Models\Fligth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FligthController extends Controller
 {
@@ -16,6 +17,14 @@ class FligthController extends Controller
     public function index()
     {
         //
+        //$allFligth = Fligth::all();
+        $allFligth = DB::table('fligths')
+            ->join('itineraries', 'fligths.itinerary_id', '=', 'itineraries.id')
+            ->join('locations', 'fligths.location_id', '=', 'locations.id')
+            ->select('fligths.*', 'itineraries.name', 'locations.lauch_location')
+            ->get();
+
+        return view('/fligth/fligthAll', ['allFligth' => $allFligth]);
     }
 
     /**
@@ -77,7 +86,6 @@ class FligthController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**

@@ -12,7 +12,6 @@
             <select name="itinerary" id="fitinerary">
                 @foreach($data as $row)
                 <option value="{{$row->id}}">{{$row->name}}</option>
-
                 @endforeach
             </select>
 
@@ -39,14 +38,19 @@
         <div>
             <label for="flocation">Location</label>
             <select name="location" id="flocation">
-                <option value="1">location1</option>
-                <option value="2">location2</option>
+                @foreach($selBox as $row)
+                <option value="{{$row->id}}">{{$row->lauch_location}}</option>
+                @endforeach
             </select>
         </div>
         <div>
             <input type="submit" value="Add Fligth">
         </div>
     </form>
+    <div>
+        <button>Edite Fligth</button>
+        <button>Delete Fligth</button>
+    </div>
     <div>
         @if ($errors->any())
         <div class="alert alert-danger">

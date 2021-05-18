@@ -14,8 +14,7 @@ class ItineraryController extends Controller
      */
     public function index()
     {
-        $data = Itineraries::all();
-        return view('fligth/fligthInsert', ['data' => $data]);
+
         //
     }
 

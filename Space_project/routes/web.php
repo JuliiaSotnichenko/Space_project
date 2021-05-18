@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\FligthController;
 use App\Http\Controllers\ItineraryController;
+use App\Http\Controllers\locationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -46,21 +47,21 @@ Route::get('/dashboard', function () {
 // Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
 //show all filgths in the data base
-Route::get('/fligth/Insertform', [FligthController::class, 'index']);
+Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
 
 /**Insert in the data base */
 //show the form html to insert data
 Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
 //method to insert in the data base
 Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
-
-Route::get('/fligth/InsertFligth', [ItineraryController::class, 'index']);
-
 /**edit method */
 //show the edit form
-Route::get('/fligth/editFligth', [FligthController::class, 'edit']);
+Route::get('/fligth/editFligth{id}', [FligthController::class, 'edit']);
 //update the data base
 Route::post('/fligth/editFligth', [FligthController::class, 'update']);
-
 /**delite fligth */
 Route::get('/fligth/deleteFligth', [FligthController::class, 'destroy']);
+
+
+Route::get('/fligth/InsertFligth', [ItineraryController::class, 'index']);
+Route::get('/fligth/InsertFligth', [locationController::class, 'index']);
