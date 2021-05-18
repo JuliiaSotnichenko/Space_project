@@ -25,8 +25,17 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
+// Account info
 
-Auth::routes();
+Route::get('/dashboard', [UserController::class, 'show'])->middleware(['auth']);
+
+// Editing and updating account info
+
+Route::get('/update/user', [UserController::class, 'edit'])->middleware(['auth']);
+Route::put('/update/user', [UserController::class, 'update']);
+
+
+//Auth::routes();
 
 
 

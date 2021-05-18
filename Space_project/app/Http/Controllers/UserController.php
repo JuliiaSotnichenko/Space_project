@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -48,10 +50,17 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($email)
+    public function show()
     {
-        $user = User::find($email);
-        return view('user-detail', ['user' => $user]);
+        $user = auth()->user();
+
+
+
+
+        $bookings = Booking::where('user_id', $user->id)->get();
+
+
+        return view('dashboard', ['user' => $user], ['bookings' => $bookings]);
     }
 
     /**
@@ -60,10 +69,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
-        $user = User::find($id);
-        return view('user-update', ['user' => $user]);
+        $user = auth()->user();
+
+        return view('update-user', ['user' => $user]);
     }
 
     /**
@@ -73,10 +83,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,)
     {
-        $request->validated();
-        $user = User::find($id);
+        //$request->validated();
+        $user = auth()->user();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->pass_port_number = $request->pass_port_number;
@@ -84,7 +94,14 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->save();
 
-        return redirect('backOfficePortal')->with('success', $request->last_name . ' was updated successfully.');
+
+        if ($user->role == 'admin') {
+            // check if the user logging in is a "user" or an "admin"
+            return view('BackOffice.backOfficePortal',['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
+            // if admin show the back office portal page
+        } else {
+            return view('home',)->with('success', $request->last_name . ' was updated successfully.'); // change path to the user's account page (17/05 - Max)
+        }
     }
 
     /**
