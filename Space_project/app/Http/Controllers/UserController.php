@@ -59,8 +59,12 @@ class UserController extends Controller
 
         $bookings = Booking::where('user_id', $user->id)->get();
 
+        if (!$bookings) {
+            return "No bookings found";
+        } else {
+            return view('dashboard', ['user' => $user], ['bookings' => $bookings]);
+        }
 
-        return view('dashboard', ['user' => $user], ['bookings' => $bookings]);
     }
 
     /**

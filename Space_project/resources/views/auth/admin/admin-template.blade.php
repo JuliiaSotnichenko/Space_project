@@ -10,6 +10,8 @@
 @yield('nav')
 
 @yield('content')
-
+    <form action="" method="post">
+        <input type="email" name="email" id="email">
+    </form>
 </body>
 </html>
