@@ -16,16 +16,37 @@ class itinerariSeeder extends Seeder
     {
         DB::table('itineraries')->insert([
             [
-                'name' => 'route1',
-                'discriptian' => 'arround',
-                'duration' => '1',
+                'name' => 'itinerary 1',
+                'description' => 'Travel around planet Earth',
+                'duration' => '21 days',
                 'created_at' => date(now()),
                 'updated_at' => date(now())
             ],
             [
-                'name' => 'route2',
-                'discriptian' => 'arround2',
-                'duration' => '2',
+                'name' => 'itinerary 2',
+                'description' => 'To the Moon and back',
+                'duration' => '1 month',
+                'created_at' => date(now()),
+                'updated_at' => date(now())
+            ],
+            [
+                'name' => 'itinerary 3',
+                'description' => '3 weeks on the moon',
+                'duration' => '2 months',
+                'created_at' => date(now()),
+                'updated_at' => date(now())
+            ],
+            [
+                'name' => 'itinerary 4',
+                'description' => 'Mars Express',
+                'duration' => '4 months',
+                'created_at' => date(now()),
+                'updated_at' => date(now())
+            ],
+            [
+                'name' => 'itinerary 5',
+                'description' => '3 Months on Mars',
+                'duration' => '8 months',
                 'created_at' => date(now()),
                 'updated_at' => date(now())
             ],
