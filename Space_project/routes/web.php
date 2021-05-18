@@ -17,9 +17,9 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,7 +29,7 @@ Route::get('/dashboard', function () {
 // require __DIR__ . '/auth.php';
 
 
-// Auth::routes();
+//Auth::routes();
 
 
 
@@ -63,5 +63,12 @@ Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 Route::get('/fligth/deleteFligth{id}', [FligthController::class, 'destroy']);
 
 
-Route::get('/fligth/InsertFligth', [ItineraryController::class, 'index']);
-Route::get('/fligth/InsertFligth', [locationController::class, 'index']);
+// Back office access
+// BoP page
+Route::post('/admin/portal', [UserController::class, 'index']);
+// BoP search bar
+Route::post('/admin/portal/{email}', [UserController::class, 'show']);
+// BoP update results
+Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
+// BoP delete entry
+Route::post('/admin/portal/{id}', [UserController::class, 'delete']);
