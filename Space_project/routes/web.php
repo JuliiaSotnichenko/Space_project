@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FligthController;
+use App\Http\Controllers\ItineraryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -23,25 +25,25 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-require __DIR__ . '/auth.php';
+// require __DIR__ . '/auth.php';
 
 
-Auth::routes();
+// Auth::routes();
 
 
 
 
-// Back office access
-    // BoP page
-Route::post('/admin/portal', [UserController::'index']);
-    // BoP search bar
-Route::post('/admin/portal/{email}', [UserController::'show']);
-    // BoP update results
-Route::post('/admin/portal/update/{id}', [UserController::'update']);
-    // BoP delete entry
-Route::post('/admin/portal/{id}', [UserController::'delete']);
+// // Back office access
+//     // BoP page
+// Route::post('/admin/portal', [UserController::'index']);
+//     // BoP search bar
+// Route::post('/admin/portal/{email}', [UserController::'show']);
+//     // BoP update results
+// Route::post('/admin/portal/update/{id}', [UserController::'update']);
+//     // BoP delete entry
+// Route::post('/admin/portal/{id}', [UserController::'delete']);
 
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
 //show all filgths in the data base
 Route::get('/fligth/Insertform', [FligthController::class, 'index']);
@@ -52,6 +54,7 @@ Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
 //method to insert in the data base
 Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
 
+Route::get('/fligth/InsertFligth', [ItineraryController::class, 'index']);
 
 /**edit method */
 //show the edit form

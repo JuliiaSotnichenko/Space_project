@@ -5,34 +5,27 @@
         <div>
             <label for="">Fly Ref</label>
             <input id="fly" name="flyref" type="text" placeholder="Fly Ref: ex:A1">
-            @error('flyref')
 
-            <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
         </div>
         <div>
             <label for="fitinerary">Itinerary</label>
             <select name="itinerary" id="fitinerary">
-                <option value="1">itinerary 1</option>
-                <option value="2">itinerary 2</option>
+                @foreach($data as $row)
+                <option value="{{$row->id}}">{{$row->name}}</option>
+
+                @endforeach
             </select>
-            @error('depart_time')
-            <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
+
         </div>
         <div>
             <label for="dod">Date of Departe</label>
             <input id="dod" name="dateOfDepart" type="date">
-            @error('depart_date')
-            <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
+
         </div>
         <div>
             <label for="tod">Time of Departe</label>
             <input id="tod" name="timeOfDepart" type="time">
-            @error('depart_time')
-            <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
+
         </div>
         <div>
             <label for="doa">Date of Arrival</label>
@@ -54,5 +47,16 @@
             <input type="submit" value="Add Fligth">
         </div>
     </form>
+    <div>
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+    </div>
 
 </div>
