@@ -60,7 +60,7 @@ Route::get('/fligth/editFligth{id}', [FligthController::class, 'edit']);
 //update the data base
 Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 /**delite fligth */
-Route::get('/fligth/deleteFligth', [FligthController::class, 'destroy']);
+Route::get('/fligth/deleteFligth{id}', [FligthController::class, 'destroy']);
 
 
 Route::get('/fligth/InsertFligth', [ItineraryController::class, 'index']);

@@ -86,6 +86,16 @@ class FligthController extends Controller
      */
     public function edit($id)
     {
+        //$updateForm = Fligth::find($id);
+
+        $updateForm = DB::table('fligths')
+            ->join('itineraries', 'fligths.itinerary_id', '=', 'itineraries.id')
+            ->join('locations', 'fligths.location_id', '=', 'locations.id')
+            ->select('fligths.*', 'itineraries.name', 'locations.lauch_location')
+            ->where('fligths.id', '=', $id)
+            ->get();
+
+        return view('fligth/fligthUpdate', ['upShow' => $updateForm]);
     }
 
     /**
@@ -108,6 +118,5 @@ class FligthController extends Controller
      */
     public function destroy($id)
     {
-        //
     }
 }
