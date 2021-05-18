@@ -15,9 +15,9 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/home', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -54,22 +54,11 @@ Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
 
 
 // Back office access
-    // BoP page
-<<<<<<< Updated upstream
-// Route::post('/admin/portal', [UserController::'index']);
-//     // BoP search bar
-// Route::post('/admin/portal/{email}', [UserController::'show']);
-//     // BoP update results
-// Route::post('/admin/portal/update/{id}', [UserController::'update']);
-//     // BoP delete entry
-// Route::post('/admin/portal/{id}', [UserController::'delete']);
-=======
+// BoP page
 Route::post('/admin/portal', [UserController::class, 'index']);
-    // BoP search bar
+// BoP search bar
 Route::post('/admin/portal/{email}', [UserController::class, 'show']);
-    // BoP update results
+// BoP update results
 Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
-    // BoP delete entry
+// BoP delete entry
 Route::post('/admin/portal/{id}', [UserController::class, 'delete']);
->>>>>>> Stashed changes
-
