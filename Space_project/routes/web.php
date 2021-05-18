@@ -55,6 +55,7 @@ Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
 
 // Back office access
     // BoP page
+<<<<<<< Updated upstream
 // Route::post('/admin/portal', [UserController::'index']);
 //     // BoP search bar
 // Route::post('/admin/portal/{email}', [UserController::'show']);
@@ -62,4 +63,13 @@ Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
 // Route::post('/admin/portal/update/{id}', [UserController::'update']);
 //     // BoP delete entry
 // Route::post('/admin/portal/{id}', [UserController::'delete']);
+=======
+Route::post('/admin/portal', [UserController::class, 'index']);
+    // BoP search bar
+Route::post('/admin/portal/{email}', [UserController::class, 'show']);
+    // BoP update results
+Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
+    // BoP delete entry
+Route::post('/admin/portal/{id}', [UserController::class, 'delete']);
+>>>>>>> Stashed changes
 
