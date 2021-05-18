@@ -27,7 +27,7 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
