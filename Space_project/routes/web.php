@@ -36,10 +36,10 @@ Route::put('/update/user', [UserController::class, 'update']);
 Route::get('/logout', [LoginController::class, 'logout']);
 //Auth::routes();
 
-Route::get('/', [HomeController::class, 'index']);
+//Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
 //show all filgths in the data base
-Route::get('/fligth/Insertform', [FligthController::class, 'index']);
+//Route::get('/fligth/Insertform', [FligthController::class, 'index']);
 
 
 /**Insert in the data base */
