@@ -33,8 +33,8 @@ Route::get('/dashboard', function () {
 
 
 
-// // Back office access
-//     // BoP page
+// Back office access
+// BoP page
 // Route::post('/admin/portal', [UserController::'index']);
 //     // BoP search bar
 // Route::post('/admin/portal/{email}', [UserController::'show']);
