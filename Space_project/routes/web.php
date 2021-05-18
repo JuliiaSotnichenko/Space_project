@@ -65,6 +65,7 @@ Route::get('/fligth/deleteFligth{id}', [FligthController::class, 'destroy']);
 
 Route::get('/fligth/InsertFligth', [ItineraryController::class, 'index']);
 Route::get('/fligth/InsertFligth', [locationController::class, 'index']);
+<<<<<<< HEAD
 
 
 
@@ -78,3 +79,5 @@ Route::get('/fligth/InsertFligth', [locationController::class, 'index']);
 // Route::post('/admin/portal/update/{id}', [UserController::'update']);
 //     // BoP delete entry
 // Route::post('/admin/portal/{id}', [UserController::'delete']);
+=======
+>>>>>>> parent of a75131f (Merge branch 'main' into ivan)
