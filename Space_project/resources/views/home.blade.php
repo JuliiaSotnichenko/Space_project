@@ -9,21 +9,7 @@
 
 @section('content')
 <!-- Title -->
-<h1 class="home__title">TOGETHER WE OPEN SPACE FOR CHANGE MIND</h1>
-
-<div class="main__buttons">
-	
-	<a href="#">Packages</a>
-	<a href="#">Fly with us</a>
-	
-
-</div>
-
-
-
-
-
-
+<h1 class="home__title">Meet the space</h1>
 
 <!-- Earth Rotation https://codepen.io/stephaniewalter/pen/vYGmrLR  -->
 
