@@ -64,10 +64,6 @@ class UserController extends Controller
         } else {
             return view('dashboard', ['user' => $user], ['bookings' => $bookings]);
         }
-
-
-
-
     }
 
     /**
