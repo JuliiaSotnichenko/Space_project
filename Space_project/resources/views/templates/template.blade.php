@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Link for Bootstrap -->
+    https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css
+
+    <!-- Link CSS -->
     <link href="/css/main.css" rel="stylesheet">
  
     @yield('style')
@@ -46,8 +55,10 @@
 
     @yield('script')
 
-
-
+<script>
+    https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js
+</script>
+   
 </body>
 
 
