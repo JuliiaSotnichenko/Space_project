@@ -38,7 +38,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 //Auth::routes();
 
-//Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
 //show all filgths in the data base
 //Route::get('/fligth/Insertform', [FligthController::class, 'index']);
