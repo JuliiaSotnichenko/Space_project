@@ -1,0 +1,143 @@
+*:not(input){
+  box-sizing: border-box;
+  
+}
+
+body{
+  /* background:url(http://artem.anmedio.ru/dev/planet/space.jpg) repeat; */
+  background-color: #181743;
+  background-image: url('/images/tourist.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* .planet{
+  width:300px;
+  height:300px;
+  position:absolute;
+  border-radius:50%;
+  overflow:hidden;
+  box-shadow: 0 0 60px -20px rgba(255, 189, 3, 0.72), -14px -15px 40px -10px rgba(255, 238, 191, 0.23);
+  left:50%;
+  top:50%;
+  margin:-150px;
+}
+.planet .mask{
+  width:100%;
+  height:100%;
+  position: absolute;
+  box-shadow:inset -10px -10px 40px #251303, inset 10px 10px 30px -10px rgba(255, 204, 159, 0.6);
+  border-radius:50%;
+}
+.planet .background {
+  animation: translateBackground 40s infinite linear;  
+  background: url(http://artem.anmedio.ru/dev/planet/mars.jpg)  repeat-x;
+  width:300px;
+  height:300px;
+  position:absolute;
+  border-radius:50%;
+}
+.planet .clouds{
+  background: url(http://artem.anmedio.ru/dev/planet/clouds.png) repeat-x;
+  width:300px;
+  height:300px;
+  position:absolute;
+  border-radius:50%;
+  animation: translateBackground 30s infinite linear;
+  opacity: 0.4;
+}
+.planet .wrap{
+  width:300px;
+  height:300px;
+  position:absolute;
+  border-radius:50%;
+  animation: rotatePlanet 150s infinite linear;  
+}
+@keyframes translateBackground{
+  0%{
+    background-position-x:0;
+  }
+  100%{
+    background-position-x:-600px;
+  }
+}
+@keyframes rotatePlanet{
+  0%{
+    transform:rotateZ(0);
+  }
+  100%{
+    transform:rotateZ(-360deg);
+  }
+} */
+
+.container__main{
+  min-height: 80vh;
+  position: relative;
+}
+
+.sidepanel {
+  position: fixed;
+  top: 230px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 340px;
+  z-index: 3;
+}
+  .sidepanel img{
+    width: 20px;
+    height: 20px;
+    color: #fff;
+  }
+
+   .sidepanel__divider {
+    width: 2px;
+    height: 70px;
+    background-color: #fff;
+  }
+  .sidepanel__text {
+    height: 150px;
+    width: 25px;
+  }
+  .sidepanel__text span {
+      transform: rotate(-90deg) translate(-30%,-260%);
+      display: block;
+      width: 117px;
+      color: #fff;
+    }
+
+/* Main Navigation  */
+
+.main__navig{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  background-color: rgba(2, 2, 2, 0.2);
+  /* background-color: black; */
+  height: 8vh;
+}
+.main__navig_list{
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  
+}
+
+ul li  {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+.main__navig_login{
+  padding-right: 10px;
+  display: flex;
+  gap: 30px;
+}
