@@ -19,8 +19,10 @@ class UserController extends Controller
         $user = Auth::user();
         if ($user->role == 'admin') { // check if the user logging in is a "user" or an "admin"
             return view('BackOffice.backOfficePortal'); // if admin show the back office portal page
+        } elseif ($user->role == 'user') {
+            return view('dashboard'); 
         } else {
-            return view('auth.login'); // change path to the user's account page (17/05 - Max)
+            return view('home');
         }
     }
     /**
