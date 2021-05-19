@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreFligthRequest;
+use App\Models\Flight;
 use App\Models\Fligth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,7 @@ class FligthController extends Controller
     public function index()
     {
         //
-        $allFligth = Fligth::all();
+        $allFligth = Flight::all();
         return view('/fligth/fligthAll', ['allFligth' => $allFligth]);
     }
 
@@ -42,7 +43,7 @@ class FligthController extends Controller
     {
         $request->validated();
         //1. create new flower
-        $fligth = new Fligth();
+        $fligth = new Flight();
         //2. set properties of the fligth
         $fligth->depart_date = $request->dateOfDepart;
         $fligth->depart_time = $request->timeOfDepart;
@@ -81,7 +82,7 @@ class FligthController extends Controller
     public function edit($id)
     {
         //return view('/fligth/fligthUpdate');
-        $updateForm = Fligth::find($id);
+        $updateForm = Flight::find($id);
         // DB::table('fligths')
         // ->join('itineraries', function ($join) {
         //     $join->on('fligths.itinerary_id', '=', 'itineraries.id')
@@ -126,7 +127,7 @@ class FligthController extends Controller
     public function destroy($id)
     {
 
-        $result = Fligth::destroy($id);
+        $result = Flight::destroy($id);
 
         if ($result)
             return redirect('/fligth/Allfligth')->with('success', 'Fligth deleted successfully.');

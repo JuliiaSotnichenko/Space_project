@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\FligthController;
 use App\Http\Controllers\ItineraryController;
 use App\Http\Controllers\locationController;
@@ -51,6 +52,11 @@ Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
 Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 /**delite fligth */
 Route::get('/fligth/deleteFligth{id}', [FligthController::class, 'destroy']);
+
+/**************Book Route************* */
+Route::get('/bookform', [BookingController::class, 'index']);
+
+Route::get('/bookform/pay', [BookingController::class, 'payment']);
 
 
 

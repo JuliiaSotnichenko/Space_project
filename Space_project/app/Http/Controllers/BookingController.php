@@ -14,6 +14,11 @@ class BookingController extends Controller
     public function index()
     {
         //
+        return view('booking/booking');
+    }
+    public function payment()
+    {
+        return view('booking/payment');
     }
 
     /**
