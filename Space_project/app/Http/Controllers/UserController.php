@@ -6,6 +6,7 @@ use App\Models\Booking;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rules\Exists;
 
 class UserController extends Controller
 {
@@ -16,8 +17,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        if ($user->role == 'admin') { // check if the user logging in is a "user" or an "admin"
+        $loggedUser = Auth::user();
+        if ($loggedUser->role == 'admin') { // check if the user logging in is a "user" or an "admin"
+
             return view('BackOffice.backOfficePortal'); // if admin show the back office portal page
         } elseif ($user->role == 'user') {
             return view('dashboard'); 
@@ -56,9 +58,9 @@ class UserController extends Controller
     {
 
 
-
-        $user = auth()->user();
-
+        if (isset($_GET['search'])) {
+            $user = auth()->user();
+        }
 
 
 
@@ -99,7 +101,7 @@ class UserController extends Controller
         $user->pass_port_number = $request->pass_port_number;
         $user->email = $request->email;
         $user->save();
-        
+
         if ($user->role == 'admin') {
             // check if the user logging in is a "user" or an "admin"
             return view('BackOffice.backOfficePortal', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
