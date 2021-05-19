@@ -28,3 +28,6 @@
     <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Log in</a>
     @endauth
 </form>
+
+@yield('footer-backend')
+

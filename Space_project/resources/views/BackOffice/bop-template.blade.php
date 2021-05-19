@@ -18,5 +18,7 @@
 
 @yield('content')
 
+@yield('footer-backend')
+
 </body>
 </html>
