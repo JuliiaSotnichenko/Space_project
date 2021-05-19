@@ -1,4 +1,4 @@
-@extends('bop-template')
+@extends('BackOffice.bop-template')
 
 @section('title', 'Manage Users')
 @section('content')

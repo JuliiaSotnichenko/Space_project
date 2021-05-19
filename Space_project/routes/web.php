@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -27,12 +28,20 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 
+
+// Account info
+Route::get('/dashboard', [UserController::class, 'show'])->middleware(['auth']);
+// Editing and updating account info
+Route::get('/update/user', [UserController::class, 'edit'])->middleware(['auth']);
+Route::put('/update/user', [UserController::class, 'update']);
+Route::get('/logout', [LoginController::class, 'logout']);
+
 //Auth::routes();
 
-Route::get('/', [HomeController::class, 'index']);
+//Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
 //show all filgths in the data base
-Route::get('/fligth/Insertform', [FligthController::class, 'index']);
+//Route::get('/fligth/Insertform', [FligthController::class, 'index']);
 
 
 /**Insert in the data base */
@@ -46,7 +55,7 @@ Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
 //show the edit form
 Route::get('/fligth/editFligth', [FligthController::class, 'edit']);
 //update the data base
-Route::post('/fligth/editFligth', [FligthController::class, 'update']);
+//Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 
 /**delite fligth */
 Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
@@ -54,6 +63,7 @@ Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
 
 
 // Back office access
+
 // BoP page
 Route::post('/admin/portal', [UserController::class, 'index']);
 // BoP search bar
@@ -62,3 +72,4 @@ Route::post('/admin/portal/{email}', [UserController::class, 'show']);
 Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
 // BoP delete entry
 Route::post('/admin/portal/{id}', [UserController::class, 'delete']);
+
