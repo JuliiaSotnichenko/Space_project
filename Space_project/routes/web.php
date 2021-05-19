@@ -16,10 +16,10 @@ use App\Http\Controllers\UserController;
 |
 */
 
- /*Route::get('/', function () {
+/*Route::get('/', function () {
      return view('home');
 });*/
- Route::get('/home', [UserController::class, 'index']);
+//Route::get('/home', [UserController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,7 +31,7 @@ require __DIR__ . '/auth.php';
 
 
 // Account info
-Route::get('/dashboard', [UserController::class, 'show'])->middleware(['auth']);
+Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);
 // Editing and updating account info
 Route::get('/update/user', [UserController::class, 'edit'])->middleware(['auth']);
 Route::put('/update/user', [UserController::class, 'update']);
@@ -73,4 +73,3 @@ Route::post('/admin/portal/{email}', [UserController::class, 'show']);
 Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
 // BoP delete entry
 Route::post('/admin/portal/{id}', [UserController::class, 'delete']);*/
-
