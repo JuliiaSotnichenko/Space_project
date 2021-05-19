@@ -88,7 +88,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,)
+    public function update(Request $request)
     {
         //$request->validated();
         $user = auth()->user();
@@ -97,6 +97,7 @@ class UserController extends Controller
         $user->pass_port_number = $request->pass_port_number;
         $user->email = $request->email;
         $user->save();
+        
         if ($user->role == 'admin') {
             // check if the user logging in is a "user" or an "admin"
             return view('BackOffice.backOfficePortal', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
