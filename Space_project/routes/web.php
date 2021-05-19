@@ -3,6 +3,8 @@
 use App\Http\Controllers\FligthController;
 use App\Http\Controllers\ItineraryController;
 use App\Http\Controllers\locationController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -29,15 +31,21 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 
+
+// Account info
+Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);
+// Editing and updating account info
+Route::get('/update/user', [UserController::class, 'edit'])->middleware(['auth']);
+Route::put('/update/user', [UserController::class, 'update']);
+Route::get('/logout', [LoginController::class, 'logout']);
+
 //Auth::routes();
 
-
-
-
-
+//Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
 //show all filgths in the data base
-Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
+//Route::get('/fligth/Insertform', [FligthController::class, 'index']);
+
 
 /**Insert in the data base */
 //show the form html to insert data
@@ -58,11 +66,12 @@ Route::get('/fligth/InsertFligth', [locationController::class, 'index']);
 
 
 // Back office access
-// BoP page
+
+/*// BoP page
 Route::post('/admin/portal', [UserController::class, 'index']);
 // BoP search bar
 Route::post('/admin/portal/{email}', [UserController::class, 'show']);
 // BoP update results
 Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
 // BoP delete entry
-Route::post('/admin/portal/{id}', [UserController::class, 'delete']);
+Route::post('/admin/portal/{id}', [UserController::class, 'delete']);*/
