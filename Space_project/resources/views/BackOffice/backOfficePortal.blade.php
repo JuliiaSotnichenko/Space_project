@@ -1,30 +1,23 @@
 @extends('BackOffice.bop-template')
 
 @section('title', 'Manage Users')
+<nav>
+    <div>
+        <img src="" alt="">
+    </div>
+    <div>
+        <ul>
+            <li><a href="/admin/users">Users</a></li>
+            <li><a href="/admin/bookings">Bookings</a></li>
+            <li><a href="/admin/flights">Flights</a></li>
+        </ul>
+    </div>
+</nav>
 @section('content')
 <section>
-    <article>
-        <label for="search">Search</label>
-        <input type="text" name="search">
-        <br>
-    </article>
 
-    <article>
-        <label for="results">Results</label>
-        <div id="results">
-            <label for="first_name">Firstname</label>
-            <p>{{$user->first_name}}</p>
-            <label for="last_name">Lastname</label>
-            <p>{{$user->last_name}}</p>
-            <label for="pass_port_number">Passport Number</label>
-            <p>{{$user->pass_port_number}}</p>
-            <label for="country">Country</label>
-            <p>{{$user->country}}</p>
-            <label for="email">Email Address</label>
-            <p>{{$user->email}}</p>
-            <br>
-        </div>
-    </article>
+
+
     <article>
         <form action="" method="POST">
         @csrf

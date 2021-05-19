@@ -10,6 +10,12 @@
 <body>
 @yield('nav')
 
+<article>
+        <label for="search">Search</label>
+        <input type="text" name="search">
+        <br>
+    </article>
+
 @yield('content')
 
 </body>

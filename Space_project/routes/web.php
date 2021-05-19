@@ -19,6 +19,7 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('home');
 });
+ Route::get('/home', [UserController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -65,7 +66,7 @@ Route::get('/fligth/editFligth', [FligthController::class, 'destroy']);
 // Back office access
 
 // BoP page
-Route::post('/admin/portal', [UserController::class, 'index']);
+Route::get('/admin', [UserController::class, 'index']);
 // BoP search bar
 Route::post('/admin/portal/{email}', [UserController::class, 'show']);
 // BoP update results
