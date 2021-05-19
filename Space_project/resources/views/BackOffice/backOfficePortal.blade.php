@@ -3,11 +3,7 @@
 @section('title', 'Manage Users')
 @section('content')
 <section>
-    <article>
-        <label for="search">Search</label>
-        <input type="text" name="search">
-        <br>
-    </article>
+
 
 
     <article>

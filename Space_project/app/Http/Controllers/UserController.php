@@ -84,7 +84,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         //$request->validated();
         $user = auth()->user();
@@ -97,6 +97,13 @@ class UserController extends Controller
         $user->email = $request->email;
         $user->password = $request->password;
         $user->save();
+        {
+            $booking= User::find($id);
+            $booking = User::where('id',$id)->first();
+            $booking->package_id = $request->package_id;
+            $booking->user_id = $request->user_id;
+            $booking->payment_status = $request->payment_status;
+        }
 
         if ($user->role == 'admin') {
             // check if the user logging in is a "user" or an "admin"
