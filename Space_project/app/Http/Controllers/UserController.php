@@ -54,23 +54,15 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function showUser($email)
     {
 
+        $user = User::find($email);
 
-        if (isset($_GET['search'])) {
-            $user = auth()->user();
-        }
-
-
-
-        $bookings = Booking::where('user_id', $user->id)->get();
-
-        if (!$bookings) {
-            return "No bookings found";
-        } else {
-            return view('dashboard', ['user' => $user], ['bookings' => $bookings]);
-        }
+        return view('bop.user-detail', ['user' => $user]);
+        // if (isset($_GET['search'])) {
+        //     $user = auth()->user();
+        // }
     }
 
     /**
@@ -99,7 +91,11 @@ class UserController extends Controller
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->pass_port_number = $request->pass_port_number;
+        $user->country = $request->country;
+        // $user->city = $request->city;
+        $user->role = $request->role;
         $user->email = $request->email;
+        $user->password = $request->password;
         $user->save();
 
         if ($user->role == 'admin') {
