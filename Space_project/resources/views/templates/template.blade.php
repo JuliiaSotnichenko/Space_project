@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 
     <!-- Link for Bootstrap -->
-    https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css
+    <link src='//cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css'>
 
     <!-- Link CSS -->
     <link href="/css/main.css" rel="stylesheet">
@@ -26,9 +26,9 @@
     <main>
        
         <nav class="main__navig">
-            <!-- <a href="{{ url('home') }}"> -->
+            <a href="{{ url('home') }}">
                 <img class="logo" src="images/logoSF.svg" alt="Starlight logo">
-            <!-- </a> -->
+            </a>
             <ul class="main__navig_list">
                 <li><a href="{{ url('home') }}">Home</a></li>
                 <li><a href="{{ url('menu') }}">Menu</a></li>
@@ -50,6 +50,10 @@
             @yield('content2')
 
         </div>
+        <div class="content3">
+            @yield('content3')
+
+        </div>
     </main>
 
     <footer>
@@ -58,8 +62,8 @@
 
     @yield('script')
 
-<script>
-    https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js
+<script
+   src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'>
 </script>
    
 </body>
