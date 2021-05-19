@@ -48,7 +48,7 @@ class BookingController extends Controller
     {
         $booking = Booking::find($id);
 
-        return view('bop.booking-detail');
+        return view('bop.booking-detail', ['booking' => $booking]);
     }
 
     /**
