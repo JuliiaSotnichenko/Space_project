@@ -1,12 +1,5 @@
-<?php
-// Back Office Portal
-?>
-<section>
-    <article>
-        <label for="search">Search</label>
-        <input type="text" name="search">
-        <br>
-    </article>
+extends ('BackOffice.bopTemplate')
+@section('content')
     <article>
         <label for="results">Results</label>
         <div id="results">
@@ -42,3 +35,4 @@
         <input type="submit" value="Delete user entry">
     </article>
 </section>
+@endsection
