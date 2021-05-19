@@ -20,10 +20,10 @@ class CreateFligthsTable extends Migration
             $table->time('depart_time');
             $table->date('arrival_date');
             $table->time('arrival_time');
-            $table->unsignedBigInteger('itinerary_id');
-            $table->unsignedBigInteger('location_id');
-            $table->foreign('itinerary_id')->references('id')->on('itineraries');
-            $table->foreign('location_id')->references('id')->on('locations');
+            $table->enum('status', ['Done', 'Not Done']);
+            $table->enum('itinerary', ['Earth Planet ', 'Moon']);
+            $table->enum('location', ['Baikonur Cosmodrome', 'Kennedy Space Center']);
+            $table->string('fly_ref');
             $table->timestamps();
         });
     }
