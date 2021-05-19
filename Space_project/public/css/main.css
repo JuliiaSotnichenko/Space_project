@@ -6,6 +6,9 @@
     /* background-color: darkblue; */
     margin: auto;
     color: white;
+    scroll-behavior: smooth;
+    font-family: 'Space Grotesk', sans-serif;
+    
  }
 
 
