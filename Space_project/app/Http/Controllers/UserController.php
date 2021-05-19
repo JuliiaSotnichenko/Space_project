@@ -21,8 +21,8 @@ class UserController extends Controller
         if ($loggedUser->role == 'admin') { // check if the user logging in is a "user" or an "admin"
 
             return view('BackOffice.backOfficePortal'); // if admin show the back office portal page
-        } elseif ($user->role == 'user') {
-            return view('dashboard'); 
+        } elseif ($loggedUser->role == 'user') {
+            return view('dashboard');
         } else {
             return view('home');
         }
@@ -54,23 +54,15 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function showUser($email)
     {
 
+        $user = User::find($email);
 
-        if (isset($_GET['search'])) {
-            $user = auth()->user();
-        }
-
-
-
-        $bookings = Booking::where('user_id', $user->id)->get();
-
-        if (!$bookings) {
-            return "No bookings found";
-        } else {
-            return view('dashboard', ['user' => $user], ['bookings' => $bookings]);
-        }
+        return view('bop.user-detail', ['user' => $user]);
+        // if (isset($_GET['search'])) {
+        //     $user = auth()->user();
+        // }
     }
 
     /**
@@ -92,15 +84,26 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         //$request->validated();
         $user = auth()->user();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->pass_port_number = $request->pass_port_number;
+        $user->country = $request->country;
+        // $user->city = $request->city;
+        $user->role = $request->role;
         $user->email = $request->email;
+        $user->password = $request->password;
         $user->save();
+        {
+            $booking= User::find($id);
+            $booking = User::where('id',$id)->first();
+            $booking->package_id = $request->package_id;
+            $booking->user_id = $request->user_id;
+            $booking->payment_status = $request->payment_status;
+        }
 
         if ($user->role == 'admin') {
             // check if the user logging in is a "user" or an "admin"

@@ -15,11 +15,9 @@
 </nav>
 @section('content')
 <section>
-    <article>
-        <label for="search">Search</label>
-        <input type="text" name="search">
-        <br>
-    </article>
+
+
+
     <article>
         <form action="" method="POST">
         @csrf
