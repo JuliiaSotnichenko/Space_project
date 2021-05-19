@@ -33,16 +33,7 @@
 
                 <x-input id="country" class="block mt-1 w-full" type="text" name="country" :value="old('country')" required autofocus />
             </div>
-            <div>
-                <x-label for="role" :value="__('Role')" /><br>
-
-
-                <select id="role" name="role" class="form-control @error('role') is-invalid @enderror" value="{{ old('role') }}">
-                    <option value="user">User</option>
-                    <option value="admin">Admin</option>
-                </select>
-            </div>
-
+         
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" /><br>

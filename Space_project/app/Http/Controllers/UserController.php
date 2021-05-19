@@ -22,9 +22,9 @@ class UserController extends Controller
 
             return view('BackOffice.backOfficePortal'); // if admin show the back office portal page
         } elseif ($loggedUser->role == 'user') {
-            return view('dashboard'); 
+            return view('dashboard');
         } else {
-            return view('home');
+            return redirect('/');
         }
     }
     /**
@@ -58,7 +58,7 @@ class UserController extends Controller
     {
 
 
-      
+
         $loggedUser = Auth::user();
 
         $bookings = Booking::where('user_id', $loggedUser->id)->get();
@@ -73,7 +73,7 @@ class UserController extends Controller
     {
 
 
-      
+
         $loggedUser = Auth::user();
 
         $bookings = Booking::where('user_id', $loggedUser->id)->get();
@@ -119,7 +119,7 @@ class UserController extends Controller
             return view('BackOffice.backOfficePortal', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
             // if admin show the back office portal page
         } else {
-            return view('home',)->with('success', $request->last_name . ' was updated successfully.'); // change path to the user's account page (17/05 - Max)
+            return redirect('/')->with('success', $request->last_name . ' was updated successfully.'); // change path to the user's account page (17/05 - Max)
         }
     }
 
