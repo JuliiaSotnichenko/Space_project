@@ -16,9 +16,8 @@ use App\Http\Controllers\UserController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/home', [UserController::class, 'index']);
+Route::get('/admin', [UserController::class, 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
