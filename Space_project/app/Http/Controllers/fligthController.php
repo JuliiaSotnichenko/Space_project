@@ -83,19 +83,6 @@ class FligthController extends Controller
     {
         //return view('/fligth/fligthUpdate');
         $updateForm = Flight::find($id);
-        // DB::table('fligths')
-        // ->join('itineraries', function ($join) {
-        //     $join->on('fligths.itinerary_id', '=', 'itineraries.id')
-        //          ->where('fligths.id', '=', '$id');
-        // })
-        // ->get();
-
-        // $updateForm = DB::table('fligths')
-        //     ->join('itineraries', 'fligths.itinerary_id', '=', 'itineraries.id')
-        //     ->join('locations', 'fligths.location_id', '=', 'locations.id')
-        //     ->select('fligths.*', 'itineraries.name', 'locations.lauch_location')
-        //     ->where('fligths.id', '=', $id)
-        //     ->get();
 
         return view('fligth/fligthUpdate', ['fligth' => $updateForm]);
     }
@@ -110,11 +97,18 @@ class FligthController extends Controller
     public function update(StoreFligthRequest $request, $id)
     {
         //validation
-        $valid = $request->validated();
+        $request->validated();
+        $flay = Flight::find($id);
 
+        $flay->depart_date = $request->dateOfDepart;
+        $flay->depart_time = $request->timeOfDepart;
+        $flay->arrival_date = $request->dateOfArrival;
+        $flay->arrival_time = $request->timeOfArrival;
+        $flay->itinerary = $request->itinerary;
+        $flay->location = $request->location;
+        $flay->fly_ref = $request->flyref;
+        $flay->save();
 
-        //send to data base
-        $uploadDBFlower = DB::update('UPDATE flowers SET name = ?, price = ?, type=? WHERE id = ?', [$request->name, $request->price, $request->type, $id]);
         return redirect('/fligth/Allfligth');
     }
 
