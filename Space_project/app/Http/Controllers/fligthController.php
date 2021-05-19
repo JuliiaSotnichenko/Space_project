@@ -55,8 +55,8 @@ class FligthController extends Controller
         $fligth->arrival_date = $request->dateOfArrival;
         $fligth->arrival_time = $request->timeOfArrival;
         $fligth->fly_ref = $request->flyref;
-        $fligth->itinerary_id = $request->itinerary;
-        $fligth->location_id = $request->location;
+        $fligth->itinerary = $request->itinerary;
+        $fligth->location = $request->location;
 
         //3. Save the Flower : this will insert into db
         $fligth->save();

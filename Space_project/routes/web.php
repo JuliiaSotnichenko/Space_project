@@ -47,14 +47,12 @@ Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
 /**edit method */
 //show the edit form
 Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
-
-Route::get('/fligth/editFligth', [locationController::class, 'index2']);
 //update the data base
 Route::post('/fligth/editFligth', [FligthController::class, 'update']);
 /**delite fligth */
 Route::get('/fligth/deleteFligth{id}', [FligthController::class, 'destroy']);
 
-Route::get('/fligth/InsertFligth', [locationController::class, 'index']);
+
 
 
 // Back office access

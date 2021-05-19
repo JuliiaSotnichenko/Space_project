@@ -21,7 +21,7 @@ class CreateFligthsTable extends Migration
             $table->date('arrival_date');
             $table->time('arrival_time');
             $table->enum('status', ['Done', 'Not Done']);
-            $table->enum('itinerary', ['Earth Planet ', 'Moon']);
+            $table->enum('itinerary', ['Earth Planet ', 'Moon', 'Mars']);
             $table->enum('location', ['Baikonur Cosmodrome', 'Kennedy Space Center']);
             $table->string('fly_ref');
             $table->timestamps();
