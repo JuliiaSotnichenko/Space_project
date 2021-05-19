@@ -20,6 +20,12 @@ class locationController extends Controller
         $selBox = Locations::all();
         return view('fligth/fligthInsert', ['selBox' => $selBox], ['data' => $data]);
     }
+    public function index2()
+    {
+        $data = Itineraries::all();
+        $selBox = Locations::all();
+        return view('fligth/fligthUpdate', ['selBox' => $selBox], ['data' => $data]);
+    }
 
     /**
      * Show the form for creating a new resource.

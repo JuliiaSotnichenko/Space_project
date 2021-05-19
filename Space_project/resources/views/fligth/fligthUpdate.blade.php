@@ -4,53 +4,42 @@
         @csrf
         <div>
             <label for="">Fly Ref</label>
-            <input id="fly" name="flyref" type="text" placeholder="Fly Ref: ex:A1" value="{{$fligth->fly_ref}">
+            <input id="fly" name="flyref" type="text" placeholder="Fly Ref: ex:A1" value="{{$fligth->fly_ref}}">
 
         </div>
         <div>
             <label for="fitinerary">Itinerary</label>
-            <select name="itinerary" id="fitinerary">
-                @foreach($data as $row)
-                <option value="{{$row->id}}">{{$row->name}}</option>
-            @endforeach
-            </select>
+
 
         </div>
         <div>
             <label for="dod">Date of Departe</label>
-            <input id="dod" name="dateOfDepart" type="date">
+            <input id="dod" name="dateOfDepart" type="date" value="{{$fligth->depart_date}}">
 
         </div>
         <div>
             <label for="tod">Time of Departe</label>
-            <input id="tod" name="timeOfDepart" type="time">
+            <input id="tod" name="timeOfDepart" type="time" value="{{$fligth->depart_time}}">
 
         </div>
         <div>
             <label for="doa">Date of Arrival</label>
-            <input id="doa" name="dateOfArrival" type="date">
+            <input id="doa" name="dateOfArrival" type="date" value="{{$fligth->arrival_date}}">
 
         </div>
         <div>
             <label for="toa">time of Arrival</label>
-            <input id="toa" name="timeOfArrival" type="time">
+            <input id="toa" name="timeOfArrival" type="time" value="{{$fligth->arrival_time}}">
         </div>
         <div>
             <label for="flocation">Location</label>
-            <select name="location" id="flocation">
-                @foreach($selBox as $row)
-                <option value="{{$row->id}}">{{$row->lauch_location}}</option>
-                @endforeach
-            </select>
+
         </div>
         <div>
-            <input type="submit" value="Add Fligth">
+            <input type="submit" value="Update Fligth">
         </div>
     </form>
-    <div>
-        <button>Edite Fligth</button>
-        <button>Delete Fligth</button>
-    </div>
+
     <div>
         @if ($errors->any())
         <div class="alert alert-danger">

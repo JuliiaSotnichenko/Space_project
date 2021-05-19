@@ -86,16 +86,23 @@ class FligthController extends Controller
      */
     public function edit($id)
     {
-        //$updateForm = Fligth::find($id);
+        //return view('/fligth/fligthUpdate');
+        $updateForm = Fligth::find($id);
+        // DB::table('fligths')
+        // ->join('itineraries', function ($join) {
+        //     $join->on('fligths.itinerary_id', '=', 'itineraries.id')
+        //          ->where('fligths.id', '=', '$id');
+        // })
+        // ->get();
 
-        $updateForm = DB::table('fligths')
-            ->join('itineraries', 'fligths.itinerary_id', '=', 'itineraries.id')
-            ->join('locations', 'fligths.location_id', '=', 'locations.id')
-            ->select('fligths.*', 'itineraries.name', 'locations.lauch_location')
-            ->where('fligths.id', '=', $id)
-            ->get();
+        // $updateForm = DB::table('fligths')
+        //     ->join('itineraries', 'fligths.itinerary_id', '=', 'itineraries.id')
+        //     ->join('locations', 'fligths.location_id', '=', 'locations.id')
+        //     ->select('fligths.*', 'itineraries.name', 'locations.lauch_location')
+        //     ->where('fligths.id', '=', $id)
+        //     ->get();
 
-        return view('fligth/fligthUpdate', ['upShow' => $updateForm]);
+        return view('fligth/fligthUpdate', ['fligth' => $updateForm]);
     }
 
     /**
