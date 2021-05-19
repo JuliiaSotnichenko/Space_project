@@ -1,6 +1,18 @@
 @extends('BackOffice.bop-template')
 
 @section('title', 'Manage Users')
+<nav>
+    <div>
+        <img src="" alt="">
+    </div>
+    <div>
+        <ul>
+            <li><a href="/admin/users">Users</a></li>
+            <li><a href="/admin/bookings">Bookings</a></li>
+            <li><a href="/admin/flights">Flights</a></li>
+        </ul>
+    </div>
+</nav>
 @section('content')
 <section>
     <article>
@@ -8,8 +20,6 @@
         <input type="text" name="search">
         <br>
     </article>
-
-
     <article>
         <form action="" method="POST">
         @csrf
