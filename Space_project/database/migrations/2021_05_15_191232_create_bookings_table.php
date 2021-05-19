@@ -19,7 +19,6 @@ class CreateBookingsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('flight_id');
             $table->enum('payment', ['done', 'not Done']);
-            $table->enum('package', ['Package 1', 'Package 2', 'Package 3']);
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('flight_id')->references('id')->on('flights');
 
