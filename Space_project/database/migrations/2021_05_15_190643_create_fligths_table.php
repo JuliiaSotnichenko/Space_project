@@ -20,6 +20,7 @@ class CreateFligthsTable extends Migration
             $table->time('depart_time');
             $table->date('arrival_date');
             $table->time('arrival_time');
+            $table->enum('status', ['Done', 'Not Done']);
             $table->string('fly_ref');
             $table->unsignedBigInteger('itinerary_id');
             $table->unsignedBigInteger('location_id');

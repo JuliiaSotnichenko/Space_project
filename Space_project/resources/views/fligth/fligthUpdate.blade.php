@@ -9,6 +9,12 @@
         </div>
         <div>
             <label for="fitinerary">Itinerary</label>
+            <select name="itinerary" id="fitinerary">
+                <option value="{{$fligth->itinerary_id}}">{{$fligth->itinerary_id}}"</option>
+                @foreach($data as $row)
+                <option value="{{$row->id}}">{{$row->name}}</option>
+                @endforeach
+            </select>
 
 
         </div>

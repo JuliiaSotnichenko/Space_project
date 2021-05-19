@@ -112,9 +112,15 @@ class FligthController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreFligthRequest $request, $id)
     {
-        //
+        //validation
+        $valid = $request->validated();
+
+
+        //send to data base
+        $uploadDBFlower = DB::update('UPDATE flowers SET name = ?, price = ?, type=? WHERE id = ?', [$request->name, $request->price, $request->type, $id]);
+        return redirect('/fligth/Allfligth');
     }
 
     /**
