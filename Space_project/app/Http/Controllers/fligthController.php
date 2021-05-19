@@ -118,5 +118,10 @@ class FligthController extends Controller
      */
     public function destroy($id)
     {
+
+        $result = Fligth::destroy($id);
+
+        if ($result)
+            return redirect('/fligth/Allfligth')->with('success', 'Fligth deleted successfully.');
     }
 }

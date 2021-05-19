@@ -47,10 +47,7 @@
             <input type="submit" value="Add Fligth">
         </div>
     </form>
-    <div>
-        <button>Edite Fligth</button>
-        <button>Delete Fligth</button>
-    </div>
+
     <div>
         @if ($errors->any())
         <div class="alert alert-danger">

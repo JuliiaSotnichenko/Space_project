@@ -1,3 +1,5 @@
+@extends('templates.template')
+
 @section('title','Fligth | All Fligth')
 
 
@@ -5,9 +7,15 @@
 
 @foreach($allFligth as $fligth)
 <p>
-<div class=" ">
+    <style>
+        .card {
+            color: black;
+        }
+    </style>
+<div class=" card">
     <div class="">
         <div>
+            <span>id :</span> {{$fligth->id}}<br>
             <span>Reference :</span> {{$fligth->fly_ref}}
         </div>
 
@@ -51,9 +59,10 @@
 <script>
     $(function() {
         $('.mybutton').click(function(e) {
-            let but = 'deletFlower/' + $(this).val()
+            let but = '/fligth/deleteFligth' + $(this).val()
 
-            //console.log(but)
+
+            console.log(but)
             $.ajax({
                     url: but,
                     method: "get",
