@@ -74,3 +74,14 @@ Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
 // BoP delete entry
 Route::post('/admin/portal/{id}', [UserController::class, 'delete']);
 
+
+
+
+
+
+
+
+// for Juliia
+Route::get('/test', function () {
+    return view('test');
+});
