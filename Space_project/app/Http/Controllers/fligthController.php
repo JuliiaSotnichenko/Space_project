@@ -17,13 +17,7 @@ class FligthController extends Controller
     public function index()
     {
         //
-        //$allFligth = Fligth::all();
-        $allFligth = DB::table('fligths')
-            ->join('itineraries', 'fligths.itinerary_id', '=', 'itineraries.id')
-            ->join('locations', 'fligths.location_id', '=', 'locations.id')
-            ->select('fligths.*', 'itineraries.name', 'locations.lauch_location')
-            ->get();
-
+        $allFligth = Fligth::all();
         return view('/fligth/fligthAll', ['allFligth' => $allFligth]);
     }
 
