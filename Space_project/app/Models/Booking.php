@@ -17,4 +17,9 @@ class Booking extends Model
         'payment_status'
 
     ];
+
+    protected $hidden = [
+        'user_id',
+        'flight_id',
+    ];
 }
