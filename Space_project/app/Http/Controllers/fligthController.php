@@ -85,7 +85,7 @@ class FligthController extends Controller
     {
         $fligth = Flight::find($id);
 
-        return view('/booking/bookingditail', ['fligth' => $fligth]);
+        return view('booking.bookingditail', ['fligth' => $fligth]);
     }
 
     /**
