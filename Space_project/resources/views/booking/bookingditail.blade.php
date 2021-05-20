@@ -2,7 +2,7 @@
 
 @section('title','Fligth | All Fligth')
 
-
+bffiii
 <p>
     <style>
         .card {
@@ -11,7 +11,7 @@
     </style>
 <div class=" card">
     <div class="">
-        <img src="uploads/{{$fligth->file}}" class="card-img-top" alt="...">
+        <img src="../uploads/{{$fligth->file}}" class="card-img-top" alt="...">
         <div>
             <span>id :</span> {{$fligth->id}}<br>
             <span>Reference :</span> {{$fligth->fly_ref}}
@@ -34,6 +34,12 @@
             <span>Departe time:</span> {{$fligth->depart_time}}
             <br>
             <span>Arrival time:</span> {{$fligth->arrival_time}}
+        </div>
+        <div>
+            <p>
+                <span>Discription:</span> {{$fligth->discription}}
+            </p>
+
         </div>
         <div>
 

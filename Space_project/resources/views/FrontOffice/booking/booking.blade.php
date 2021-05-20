@@ -10,7 +10,7 @@
         <h6 class="card-subtitle mb-2 text-muted">Fly Ref: {{$fligth->fly_ref}}</h6>
         <p class="card-text"><span>Depart date:</span> {{$fligth->depart_date}}</p>
         <p class="card-text"><span>Departe time:</span> {{$fligth->depart_time}}</p>
-        <a href="{{ url('/bookingditail', $fligth->id) }}">Details</a>
+        <a href="{{ url('/bookingDitail', $fligth->id) }}">Details</a>
     </div>
 </div>
 <hr>
