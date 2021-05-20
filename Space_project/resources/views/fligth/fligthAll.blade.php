@@ -20,9 +20,9 @@
         </div>
 
         <div>
-            <span>Itinerary:</span> {{$fligth->name}}
+            <span>Itinerary:</span> {{$fligth->itinerary}}
             <br>
-            <span>launch Location:</span> {{$fligth->lauch_location}}
+            <span>launch Location:</span> {{$fligth->location}}
 
         </div>
         <div>
