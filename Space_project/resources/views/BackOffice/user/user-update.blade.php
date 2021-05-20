@@ -1,4 +1,4 @@
-@extends('bop-template')
+@extends('BackOffice.bop-template')
 
 @section('title', 'Update User')
 
@@ -9,12 +9,12 @@
     @csrf
     @method('PUT')
     <!-- Update Firstname -->
-    <input type="text" name="firstname" placeholder="Firstname" value="{{$user->firstname}}"><br>
+    <input type="text" name="firstname" placeholder="Firstname" value="{{$user->first_name}}"><br>
     @error('firstname')
         <div class="alert alert-danger">{{ $message }}</div>
     @enderror
     <!-- Update Lastname -->
-    <input type="text" name="lastname" placeholder="Lastname" value="{{$user->lastname}}"><br>
+    <input type="text" name="lastname" placeholder="Lastname" value="{{$user->last_name}}"><br>
     @error('lastname')
         <div class="alert alert-danger">{{ $message }}</div>
     @enderror
