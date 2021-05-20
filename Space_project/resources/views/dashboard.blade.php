@@ -30,7 +30,7 @@
 
         <!--Hidden section for paid users-->
         @if ($booking->payment == 'done' )
-        <h2>Training Info</h2>
+        <h2>Flight Info</h2>
 
 
 
