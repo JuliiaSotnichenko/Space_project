@@ -49,7 +49,7 @@
         </div>
         <div>
             <label for="disc">Discriptian</label>
-            <textarea name="fdisc" id="disc" placeholder="Fly Discription">{{$fligth->discription}}</textarea>
+            <textarea name="fdisc" id="disc" placeholder="Fly Discription">{{$fligth->description}}</textarea>
         </div>
 
         <div>

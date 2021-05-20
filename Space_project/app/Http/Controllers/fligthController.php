@@ -57,7 +57,7 @@ class FligthController extends Controller
         $fligth->fly_ref = $request->flyref;
         $fligth->itinerary = $request->itinerary;
         $fligth->location = $request->location;
-        $fligth->discription = $request->fdisc;
+        $fligth->description = $request->fdisc;
 
 
         $fileName = $request->itinerary . '_' . time() . '.' . $request->file->extension();
@@ -122,7 +122,7 @@ class FligthController extends Controller
         $flay->itinerary = $request->itinerary;
         $flay->location = $request->location;
         $flay->fly_ref = $request->flyref;
-        $flay->discription = $request->fdisc;
+        $flay->description = $request->fdisc;
         $flay->save();
 
         return redirect('/fligth/Allfligth');
