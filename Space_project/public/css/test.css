@@ -4,15 +4,15 @@
 }
 
 body{
-  /* background:url(http://artem.anmedio.ru/dev/planet/space.jpg) repeat; */
+  /* background:url(http://artem.anmedio.ru/dev/planet/space.jpg) repeat;  */
   background-color: #181743;
-  background-image: url('/images/tourist.jpeg');
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-/* .planet{
+.planet{
   width:300px;
   height:300px;
   position:absolute;
@@ -69,8 +69,8 @@ body{
   100%{
     transform:rotateZ(-360deg);
   }
-} */
-
+} 
+/* 
 .container__main{
   min-height: 80vh;
   position: relative;
@@ -110,23 +110,23 @@ body{
     }
 
 /* Main Navigation  */
-
+/* 
 .main__navig{
   display: flex;
   justify-content: space-between;
   font-size: 20px;
   background-color: rgba(2, 2, 2, 0.2);
-  /* background-color: black; */
-  height: 8vh;
-}
-.main__navig_list{
+  background-color: black; */
+  /* height: 8vh;
+} */
+/* .main__navig_list{
   display: flex;
   justify-content: space-between;
   gap: 35px;
   
-}
+} */
 
-ul li  {
+/* ul li  {
   list-style: none;
 }
 
@@ -140,4 +140,4 @@ ul li a {
   padding-right: 10px;
   display: flex;
   gap: 30px;
-}
+}  */

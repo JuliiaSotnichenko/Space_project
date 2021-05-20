@@ -80,3 +80,13 @@ Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
 // BoP update user
 Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
 Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
+
+
+
+
+
+
+// test Juliia 
+Route::get('/test', function () {
+    return view('test');
+});

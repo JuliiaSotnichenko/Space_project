@@ -17,11 +17,11 @@
   <div class="wrap">
      <div class="background"></div>
      <div class="clouds">
-         <!-- <img src="http://artem.anmedio.ru/dev/planet/clouds.png) " alt=""> -->
+         <img src="http://artem.anmedio.ru/dev/planet/clouds.png) " alt="">
      </div>   
   </div>
   <div class="mask">
-      <!-- <img src="http://artem.anmedio.ru/dev/planet/mars.jpg" alt=""> -->
+      <img src="http://artem.anmedio.ru/dev/planet/mars.jpg" alt="">
   </div>
 </div>
 </div>
@@ -37,16 +37,16 @@
 <!-- Packages card from Bootstrap -->
 <!-- Earth Rotation https://codepen.io/stephaniewalter/pen/vYGmrLR  -->
 
-<div class="comet-rain">
+<!-- <div class="comet-rain"> -->
 	<!-- symbol definition -->
-	<svg role="presentation" id="svg-comet" class="svg-defs" data-name="comet" viewBox="0 0 195 173.05" width="195" height="173.05">
+	<!-- <svg role="presentation" id="svg-comet" class="svg-defs" data-name="comet" viewBox="0 0 195 173.05" width="195" height="173.05">
 		<symbol id="comet">
 			<path d="M192.39.66c-33.66,31.46-93.3,81.16-129,108.88L3.42,156c-5,3.89-4.29,11.28.74,15.4s12.84-.83,13.1-1.07C51.09,138.62,82.6,104.72,116.64,73c8.89-8.29,66.23-59.5,77.47-70.13C196.17,1,194.24-1.08,192.39.66Z" />
 		</symbol>
-	</svg>
+	</svg> -->
 
 	<!-- gradient definition for the comets -->
-	<svg role="presentation" width="0" height="0">
+	<!-- <svg role="presentation" width="0" height="0">
 		<defs>
 			<linearGradient id="gradient" x1="194.94" y1="4.2" x2="11.72" y2="161.98" gradientUnits="userSpaceOnUse">
 				<stop offset="0%" stop-color="#fff" stop-opacity="0.03"></stop>
@@ -195,7 +195,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 </section>
 </body>
 </html>

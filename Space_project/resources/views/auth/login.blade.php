@@ -1,5 +1,7 @@
 <x-guest-layout>
     <x-auth-card class="container">
+    
+</div>
         <x-slot name="logo">
             <a href="/">
                 <!-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" />-->
@@ -11,22 +13,24 @@
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
+<div class="form_container">
 
-        <form method="POST" action="{{ route('login') }}">
+
+        <form class="login_form" method="POST" action="{{ route('login') }}">
             @csrf
 
             <!-- Email Address -->
             <div>
                 <x-label for="email" :value="__('Email')" /><br>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <x-input id="email" class="block mt-1 w-full" placeholder="email" type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" :value="__('Password')" /><br>
 
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+                <x-input id="password" class="block mt-1 w-full"  placeholder="password"  type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <!-- Remember Me -->
@@ -49,5 +53,19 @@
                 </x-button>
             </div>
         </form>
+        </div>
     </x-auth-card>
 </x-guest-layout>
+<div class="container__main">
+<div class="planet"> 
+  <div class="wrap">
+     <div class="background"></div>
+     <div class="clouds">
+         <!-- <img src="http://artem.anmedio.ru/dev/planet/clouds.png) " alt=""> -->
+     </div>   
+  </div>
+  <div class="mask">
+      <!-- <img src="http://artem.anmedio.ru/dev/planet/mars.jpg" alt=""> -->
+  </div>
+</div>
+</div>

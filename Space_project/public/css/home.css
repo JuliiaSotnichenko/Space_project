@@ -18,6 +18,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    z-index: -5;
   }
   
   .sidepanel {
@@ -127,11 +128,19 @@
     font-family: inherit;
     border: 0;
     border-radius: 0.5rem;
-    background: black;
-    color: #f7f7f7;
+    background: white;
+    color: black;
     cursor: pointer;
     outline: none;
     /* transition-property: backround, box-shadow; */
     transition-duration: .35s;
+    left: 50%;
     
+}
+.btn:hover{
+    background: #8659e9;
+}
+
+.btn:focus{
+    box-shadow: 0 0 0 3px #8659e9;
 }
