@@ -22,6 +22,7 @@
         $('.deleteButton').click(function(e) {
 
         let route = '/delete/user/' + $(this).val();
+        console.log(route);
 
             $.ajax({
                 url: route,
@@ -38,3 +39,5 @@
     });
 </script>
 @endsection
+
+
