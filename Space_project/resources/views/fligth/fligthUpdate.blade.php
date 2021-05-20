@@ -11,7 +11,7 @@
             <label for="fitinerary">Itinerary</label>
             <select name="itinerary" id="fitinerary">
                 <option value="{{$fligth->itinerary}}">{{$fligth->itinerary}}</option>
-                <option value="Earth Planet">Earth Planet</option>
+                <option value="Earth">Earth</option>
                 <option value="Moon">Moon</option>
                 <option value="Mars">Mars</option>
             </select>
@@ -47,6 +47,11 @@
             </select>
 
         </div>
+        <div>
+            <label for="disc">Discriptian</label>
+            <textarea name="fdisc" id="disc" placeholder="Fly Discription">{{$fligth->description}}</textarea>
+        </div>
+
         <div>
             <input type="submit" value="Update Fligth">
         </div>

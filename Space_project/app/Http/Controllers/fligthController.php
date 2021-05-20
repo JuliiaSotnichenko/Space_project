@@ -17,9 +17,13 @@ class FligthController extends Controller
      */
     public function index()
     {
-        //
         $allFligth = Flight::all();
         return view('/fligth/fligthAll', ['allFligth' => $allFligth]);
+    }
+    public function indexfront()
+    {
+        $allFligth = Flight::all();
+        return view('/booking/booking', ['allFligth' => $allFligth]);
     }
 
     /**
@@ -41,10 +45,11 @@ class FligthController extends Controller
      */
     public function store(StoreFligthRequest $request)
     {
+
         $request->validated();
-        //1. create new flower
+
         $fligth = new Flight();
-        //2. set properties of the fligth
+
         $fligth->depart_date = $request->dateOfDepart;
         $fligth->depart_time = $request->timeOfDepart;
         $fligth->arrival_date = $request->dateOfArrival;
@@ -52,10 +57,18 @@ class FligthController extends Controller
         $fligth->fly_ref = $request->flyref;
         $fligth->itinerary = $request->itinerary;
         $fligth->location = $request->location;
+        $fligth->description = $request->fdisc;
+
+
+        $fileName = $request->itinerary . '_' . time() . '.' . $request->file->extension();
+        $public_path = public_path('uploads');
+        $request->file->move($public_path, $fileName);
+
+        $fligth->file = $fileName;
+
 
         //3. Save the Flower : this will insert into db
         $fligth->save();
-
         // Redirect to flowers page and send information through session
         return redirect('/fligth/InsertFligth')->with('success', $request->fly_ref . ' was created successfully.');
 
@@ -70,7 +83,9 @@ class FligthController extends Controller
      */
     public function show($id)
     {
-        //
+        $fligth = Flight::find($id);
+
+        return view('booking.bookingditail', ['fligth' => $fligth]);
     }
 
     /**
@@ -107,6 +122,7 @@ class FligthController extends Controller
         $flay->itinerary = $request->itinerary;
         $flay->location = $request->location;
         $flay->fly_ref = $request->flyref;
+        $flay->description = $request->fdisc;
         $flay->save();
 
         return redirect('/fligth/Allfligth');

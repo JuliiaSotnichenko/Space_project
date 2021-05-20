@@ -38,6 +38,9 @@
             <span>Arrival time:</span> {{$fligth->arrival_time}}
         </div>
         <div>
+            <span>Discription:</span> {{$fligth->description}}
+        </div>
+        <div>
 
             <a href="{{ url('/fligth/editFligth', $fligth->id) }}">Edit</a>
             <button class="mybutton" value="{{$fligth->id}}">Delete</button>
