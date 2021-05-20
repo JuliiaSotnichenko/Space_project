@@ -24,7 +24,9 @@ class BookingValidation extends FormRequest
     public function rules()
     {
         return [
-            //
+            "user_id" => "required",
+            "flight_id" => "required",
+            "payment" => "required",
         ];
     }
 }
