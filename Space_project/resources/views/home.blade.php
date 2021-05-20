@@ -32,7 +32,30 @@
 	<div class="ships__container">
 			<div class="ship__card">
 				<div class="imgBx">
-					<img src="images/Spaceliner.jpg" alt="">
+					<img src="images/Starship.jpg" alt="">
+				</div>
+		<div class="content_card">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ab repudiandae quos amet voluptates fugiat at. Fugit sequi reiciendis repellendus eos, facilis suscipit aspernatur nulla expedita, ducimus laudantium sit iste.</p>
+		</div>		
+	</div>
+	<!-- <h2 class="title_content2">Ships</h2> -->
+	<div class="ship__card">
+				<div class="imgBx">
+					<img src="images/Space-hotel.jpg" alt="">
+				</div>
+		<div class="content_card">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ab repudiandae quos amet voluptates fugiat at. Fugit sequi reiciendis repellendus eos, facilis suscipit aspernatur nulla expedita, ducimus laudantium sit iste.</p>
+		</div>		
+	</div>
+
+	</div>
+	<a href="#" class="btn">Read more</a>
+
+	<h2 class="title_content2">Accomodation</h2>
+	<div class="ships__container">
+			<div class="ship__card">
+				<div class="imgBx">
+					<img src="images/Space-hotel.jpg" alt="">
 				</div>
 		<div class="content_card">
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ab repudiandae quos amet voluptates fugiat at. Fugit sequi reiciendis repellendus eos, facilis suscipit aspernatur nulla expedita, ducimus laudantium sit iste.</p>

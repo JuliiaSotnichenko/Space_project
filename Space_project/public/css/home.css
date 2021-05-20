@@ -1,5 +1,7 @@
 *:not(input){
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     
   }
   
@@ -92,15 +94,43 @@
 
   .content2 {
     min-height: 50vh;
+    /* display: flex;
+    justify-content: space-between; */
   }
+
 .ships__container  {
-   
-    display: flex;
-    font-weight: bold;
-    color: white;
-    margin: 20px;
-    /* vertical-align: top; */
+   /* position: relative; */
+   width: 1000px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-wrap: wrap;
+  margin-left: 40px;
 }
+
+.ships__container .ship__card {
+  /* position: relative; */
+  max-width: 450px;
+  background-color: #fff;
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+
+}
+
+.ships__container .ship__card .imgBx{
+  max-width: 150px;
+  flex: 0 0 150px;
+}
+
+.ships__container .ship__card .imgBx img{
+  max-width: 100%;
+}
+.ships__container .ship__card .content_card{
+  margin-left: 20px;
+}
+
+ 
 
 .ship__img {
     flex: 1;
@@ -118,7 +148,7 @@
 }
 
 .btn{
-    position: relative;
+    /* position: relative;
     overflow: hidden;
     display: inline-flex;
     align-items: center;
@@ -133,9 +163,20 @@
     cursor: pointer;
     outline: none;
     /* transition-property: backround, box-shadow; */
-    transition-duration: .35s;
-    left: 50%;
+    /* transition-duration: .35s;
+    left: 50%; */
+     
+
+      width: 20%;
+      cursor: pointer;
+      background: linear-gradient(90deg, deeppink, blueviolet);
+      margin: 15px;
+      border-radius: 50px;
+      display: inline-flex;
+    align-items: center;
+    justify-content: center;
     
+
 }
 .btn:hover{
     background: #8659e9;
@@ -143,4 +184,34 @@
 
 .btn:focus{
     box-shadow: 0 0 0 3px #8659e9;
+}
+
+/* responsive */
+
+@media (max-width: 991px)
+{
+  .ships__container 
+  {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px)
+{
+  .ships__container 
+  {
+    flex-direction: column;
+  }
+  .ships__container .content_card
+  {
+    flex-direction: row;
+    max-width: 500px;
+  }
+  .ships__container .content_card .imgBx
+  {
+    max-width: 100%;
+  }
+  .ships__container .content_card .ship__card{
+    margin-left: 20px;
+  } 
 }
