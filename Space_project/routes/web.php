@@ -16,6 +16,9 @@ use App\Http\Controllers\UserController;
 |
 */
 
+Route::get('/', function () {
+    return view('home');
+});
  Route::get('/home', [UserController::class, 'index']);
 
 Route::get('/dashboard', function () {
@@ -36,7 +39,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 //Auth::routes();
 
-//Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
 //show all filgths in the data base
 //Route::get('/fligth/Insertform', [FligthController::class, 'index']);
@@ -71,3 +74,14 @@ Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
 // BoP delete entry
 Route::post('/admin/portal/{id}', [UserController::class, 'delete']);
 
+
+
+
+
+
+
+
+// for Juliia
+Route::get('/test', function () {
+    return view('test');
+});
