@@ -16,7 +16,8 @@
     <!-- Delete User button -->
     <li><button class="deleteButton" value="{{$user->id}}">Delete</button></li>
     <!-- Delete User Ajax logic -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
     $(function() {
         $('.deleteButton').click(function(e) {
 

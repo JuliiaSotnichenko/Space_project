@@ -24,9 +24,7 @@
                 <x-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required autofocus />
             </div>
             <div>
-                <x-label for="pass_port_number" :value="__('Passport number')" /><br>
-
-                <x-input id="pass_port_number" class="block mt-1 w-full" type="text" name="pass_port_number" :value="old('pass_port_number')" required autofocus />
+                
             </div>
             <div>
                 <x-label for="country" :value="__('Country')" /><br>
