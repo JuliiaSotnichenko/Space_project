@@ -38,14 +38,15 @@ Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth'
 // Editing and updating account info
 Route::get('/update/user', [UserController::class, 'edit'])->middleware(['auth']);
 Route::put('/update/user', [UserController::class, 'update']);
+// Logout
 Route::get('/logout', [LoginController::class, 'logout']);
 
 //Auth::routes();
 
 //Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
-//show all filgths in the data base
-//Route::get('/fligth/Insertform', [FligthController::class, 'index']);
+
+
 
 
 /**Insert in the data base */
@@ -74,8 +75,8 @@ Route::get('/bookform/pay', [BookingController::class, 'payment']);
 // BoP page
 Route::get('/admin', [UserController::class, 'index']);
 // BoP search bar
-//Route::post('/admin/portal/{email}', [UserController::class, 'show']);
+Route::post('/admin/portal/{email}', [UserController::class, 'show']);
 // BoP update results
-//Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
+Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
 // BoP delete entry
-//Route::post('/admin/portal/{id}', [UserController::class, 'delete']);*/
+Route::post('/admin/portal/{id}', [UserController::class, 'delete']);

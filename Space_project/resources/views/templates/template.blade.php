@@ -33,9 +33,13 @@
                 <li><a href="{{ url('history') }}">History</a></li>
                 <li><a href="{{ url('contact') }}">Contact</a></li>
             </ul>
-            <ul>
+            <ul> @if(Auth::check())
+
+                <li><a href="{{ url('dashboard') }}">Account</a></li>
+                @else
                 <li><a href="{{ route('login') }}">Login</a></li>
                 <li><a href="{{ route('register') }}">Register</a></li>
+                @endif
             </ul>
         </nav>
 
@@ -55,10 +59,10 @@
 
     @yield('script')
 
-<script>
-    https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js
-</script>
-   
+    <script>
+        <link href="https: //cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
 
 
