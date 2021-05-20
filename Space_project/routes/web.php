@@ -36,16 +36,17 @@ require __DIR__ . '/auth.php';
 // Account info
 Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);
 // Editing and updating account info
-Route::get('/update/user', [UserController::class, 'edit'])->middleware(['auth']);
+Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
 Route::put('/update/user', [UserController::class, 'update']);
+// Logout
 Route::get('/logout', [LoginController::class, 'logout']);
 
 //Auth::routes();
 
 //Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
-//show all filgths in the data base
-//Route::get('/fligth/Insertform', [FligthController::class, 'index']);
+
+
 
 
 /**Insert in the data base */
