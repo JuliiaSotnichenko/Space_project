@@ -6,9 +6,12 @@
 <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 @endsection
 @section('title', 'Home')
-<img src="images/tourist.png" alt=""> 
+
 
 @section('content')
+<!-- Main backround -->
+<!-- <img src="images/tourist_space.jpg" class="img-fluid" alt="..."> -->
+ 
   <!-- Sidepanel sexy horizontal -->
   <aside class="sidepanel">
     <i class="fab fa-linkedin "></i>
@@ -25,16 +28,16 @@
 
 @section('content2')
 <section class="ships">	
-	<h2 class="title_packages">Ships</h2>
-	<div class="ships__container">
-		<img src="images/Spaceliner.jpg" alt="">
-		
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illo modi maxime excepturi vero nihil qui unde laudantium? Laboriosam sit, maxime modi soluta nemo facere exercitationem asperiores! Consequuntur, magnam libero?</p>
-	</div>
+	<h2 class="title_content2">Ships</h2>
+		<div class="ships__container">
+			<div class="ship__img">
+				<img src="images/Spaceliner.jpg" alt="">
+		</div>
+		<p class="discr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illo modi maxime excepturi vero nihil qui unde laudantium? Laboriosam sit, maxime modi soluta nemo facere exercitationem asperiores! Consequuntur, magnam libero?</p>
 	
-
-
-
+	</div>
+	<a href="#" class="btn">Read more</a>
+	
 </section>
 @endsection
 

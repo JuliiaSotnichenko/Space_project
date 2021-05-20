@@ -6,16 +6,18 @@
   body{
     /* background:url(http://artem.anmedio.ru/dev/planet/space.jpg) repeat; */
     background-color: #181743;
-    /* background-image: url('/images/tourist.jpeg'); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+   
+    
   }
 
 
-.container__main{
+.content{
     min-height: 80vh;
     position: relative;
+    background-image: url('/images/tourist_space.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   
   .sidepanel {
@@ -57,15 +59,16 @@
     display: flex;
     justify-content: space-between;
     font-size: 20px;
-    background-color: rgba(2, 2, 2, 0.2);
+    background-color: black;
     /* background-color: black; */
     height: 8vh;
+    
   }
   .main__navig_list{
     display: flex;
     justify-content: space-between;
     gap: 35px;
-    
+    margin-top: 20px;
   }
   
   ul li  {
@@ -77,9 +80,58 @@
     color: white;
     font-weight: 700;
   }
-  
+
   .main__navig_login{
     padding-right: 10px;
     display: flex;
     gap: 30px;
+    margin-top: 20px;
+    margin-right: 10px;
   }
+
+  .content2 {
+    min-height: 50vh;
+  }
+.ships__container  {
+   
+    display: flex;
+    font-weight: bold;
+    color: white;
+    margin: 20px;
+    /* vertical-align: top; */
+}
+
+.ship__img {
+    flex: 1;
+    height: 100%;
+}
+.discr {
+    flex: 1;
+    text-align: center;
+}
+.title_content2{
+    margin: 20px 20px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btn{
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5rem;
+    padding: 0 3rem;
+    font-family: inherit;
+    border: 0;
+    border-radius: 0.5rem;
+    background: black;
+    color: #f7f7f7;
+    cursor: pointer;
+    outline: none;
+    /* transition-property: backround, box-shadow; */
+    transition-duration: .35s;
+    
+}
