@@ -50,6 +50,8 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 
 /**Insert in the data base */
+//show all fily for backend
+Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
 //show the form html to insert data
 Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
 //method to insert in the data base
@@ -63,9 +65,11 @@ Route::post('/fligth/editFligth/{id}', [FligthController::class, 'update']);
 Route::get('/fligth/deleteFligth{id}', [FligthController::class, 'destroy']);
 
 /**************Book Route************* */
-Route::get('/bookform', [BookingController::class, 'index']);
+Route::get('/bookform', [FligthController::class, 'indexfront']);
+//route for  dettail page
+Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
 
-Route::get('/bookform/pay', [BookingController::class, 'payment']);
+//Route::get('/bookform/pay', [BookingController::class, 'payment']);
 
 
 
@@ -74,9 +78,10 @@ Route::get('/bookform/pay', [BookingController::class, 'payment']);
 
 // BoP page
 Route::get('/admin', [UserController::class, 'index']);
-// BoP search bar
-Route::post('/admin/portal/{email}', [UserController::class, 'show']);
-// BoP update results
-Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
-// BoP delete entry
-Route::post('/admin/portal/{id}', [UserController::class, 'delete']);
+// BoP display user
+Route::get('/admin/list', [UserController::class, 'showUser']);
+// BoP display user details
+Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
+// BoP update user
+Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
+Route::put('/admin/update/user/{id}', [UserController::class, 'update']);

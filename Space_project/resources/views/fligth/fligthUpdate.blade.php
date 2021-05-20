@@ -48,6 +48,11 @@
 
         </div>
         <div>
+            <label for="disc">Discriptian</label>
+            <textarea name="fdisc" id="disc" placeholder="Fly Discription">{{$fligth->discription}}</textarea>
+        </div>
+
+        <div>
             <input type="submit" value="Update Fligth">
         </div>
     </form>

@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
-            $table->string('pass_port_number');
+            $table->enum('training_status', ['Pre-Training', 'Training Phase 1', 'Training Phase 2', 'Training Phase 3', 'Training Complete', 'Training Approved']);
             $table->string('country');
             $table->enum('role', ['user', 'admin']);
             $table->string('email')->unique();
