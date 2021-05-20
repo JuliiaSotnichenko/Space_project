@@ -38,7 +38,7 @@
             <span>Arrival time:</span> {{$fligth->arrival_time}}
         </div>
         <div>
-            <span>Discription:</span> {{$fligth->discription}}
+            <span>Discription:</span> {{$fligth->description}}
         </div>
         <div>
 
