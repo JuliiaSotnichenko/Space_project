@@ -10,9 +10,9 @@
         <div>
             <label for="fitinerary">Itinerary</label>
             <select name="itinerary" id="fitinerary">
-                @foreach($data as $row)
-                <option value="{{$row->id}}">{{$row->name}}</option>
-                @endforeach
+                <option value="Earth Planet">Earth Planet</option>
+                <option value="Moon">Moon</option>
+                <option value="Mars">Mars</option>
             </select>
 
         </div>
@@ -38,9 +38,9 @@
         <div>
             <label for="flocation">Location</label>
             <select name="location" id="flocation">
-                @foreach($selBox as $row)
-                <option value="{{$row->id}}">{{$row->lauch_location}}</option>
-                @endforeach
+                <option value="Baikonur Cosmodrome">Baikonur Cosmodrome</option>
+                <option value="Kennedy Space Center">Kennedy Space Center</option>
+                <option value="Boca Chica Starbase">Boca Chica Starbase</option>
             </select>
         </div>
         <div>

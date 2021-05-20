@@ -1,4 +1,4 @@
-<h2> fligth insert form</h2>
+<h2> fligth update form</h2>
 <div>
     <form action="" method="post">
         @csrf
@@ -10,10 +10,10 @@
         <div>
             <label for="fitinerary">Itinerary</label>
             <select name="itinerary" id="fitinerary">
-                <option value="{{$fligth->itinerary_id}}">{{$fligth->itinerary_id}}"</option>
-                @foreach($data as $row)
-                <option value="{{$row->id}}">{{$row->name}}</option>
-                @endforeach
+                <option value="{{$fligth->itinerary}}">{{$fligth->itinerary}}</option>
+                <option value="Earth Planet">Earth Planet</option>
+                <option value="Moon">Moon</option>
+                <option value="Mars">Mars</option>
             </select>
 
 
@@ -39,6 +39,12 @@
         </div>
         <div>
             <label for="flocation">Location</label>
+            <select name="location" id="flocation">
+                <option value="{{$fligth->location}}">{{$fligth->location}}</option>
+                <option value="Baikonur Cosmodrome">Baikonur Cosmodrome</option>
+                <option value="Kennedy Space Center">Kennedy Space Center</option>
+                <option value="Boca Chica Starbase">Boca Chica Starbase</option>
+            </select>
 
         </div>
         <div>

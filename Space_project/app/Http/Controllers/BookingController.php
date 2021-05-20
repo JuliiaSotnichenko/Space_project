@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Itineraries;
-use App\Models\Locations;
 use Illuminate\Http\Request;
-use phpDocumentor\Reflection\Location;
 
-class locationController extends Controller
+class BookingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,15 +13,12 @@ class locationController extends Controller
      */
     public function index()
     {
-        $data = Itineraries::all();
-        $selBox = Locations::all();
-        return view('fligth/fligthInsert', ['selBox' => $selBox], ['data' => $data]);
+        //
+        return view('booking/booking');
     }
-    public function index2()
+    public function payment()
     {
-        $data = Itineraries::all();
-        $selBox = Locations::all();
-        return view('fligth/fligthUpdate', ['selBox' => $selBox], ['data' => $data]);
+        return view('booking/payment');
     }
 
     /**

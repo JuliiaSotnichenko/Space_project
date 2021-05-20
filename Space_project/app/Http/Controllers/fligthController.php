@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreFligthRequest;
+use App\Models\Flight;
 use App\Models\Fligth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,13 +18,7 @@ class FligthController extends Controller
     public function index()
     {
         //
-        //$allFligth = Fligth::all();
-        $allFligth = DB::table('fligths')
-            ->join('itineraries', 'fligths.itinerary_id', '=', 'itineraries.id')
-            ->join('locations', 'fligths.location_id', '=', 'locations.id')
-            ->select('fligths.*', 'itineraries.name', 'locations.lauch_location')
-            ->get();
-
+        $allFligth = Flight::all();
         return view('/fligth/fligthAll', ['allFligth' => $allFligth]);
     }
 
@@ -48,15 +43,15 @@ class FligthController extends Controller
     {
         $request->validated();
         //1. create new flower
-        $fligth = new Fligth();
+        $fligth = new Flight();
         //2. set properties of the fligth
         $fligth->depart_date = $request->dateOfDepart;
         $fligth->depart_time = $request->timeOfDepart;
         $fligth->arrival_date = $request->dateOfArrival;
         $fligth->arrival_time = $request->timeOfArrival;
         $fligth->fly_ref = $request->flyref;
-        $fligth->itinerary_id = $request->itinerary;
-        $fligth->location_id = $request->location;
+        $fligth->itinerary = $request->itinerary;
+        $fligth->location = $request->location;
 
         //3. Save the Flower : this will insert into db
         $fligth->save();
@@ -87,20 +82,7 @@ class FligthController extends Controller
     public function edit($id)
     {
         //return view('/fligth/fligthUpdate');
-        $updateForm = Fligth::find($id);
-        // DB::table('fligths')
-        // ->join('itineraries', function ($join) {
-        //     $join->on('fligths.itinerary_id', '=', 'itineraries.id')
-        //          ->where('fligths.id', '=', '$id');
-        // })
-        // ->get();
-
-        // $updateForm = DB::table('fligths')
-        //     ->join('itineraries', 'fligths.itinerary_id', '=', 'itineraries.id')
-        //     ->join('locations', 'fligths.location_id', '=', 'locations.id')
-        //     ->select('fligths.*', 'itineraries.name', 'locations.lauch_location')
-        //     ->where('fligths.id', '=', $id)
-        //     ->get();
+        $updateForm = Flight::find($id);
 
         return view('fligth/fligthUpdate', ['fligth' => $updateForm]);
     }
@@ -115,11 +97,18 @@ class FligthController extends Controller
     public function update(StoreFligthRequest $request, $id)
     {
         //validation
-        $valid = $request->validated();
+        $request->validated();
+        $flay = Flight::find($id);
 
+        $flay->depart_date = $request->dateOfDepart;
+        $flay->depart_time = $request->timeOfDepart;
+        $flay->arrival_date = $request->dateOfArrival;
+        $flay->arrival_time = $request->timeOfArrival;
+        $flay->itinerary = $request->itinerary;
+        $flay->location = $request->location;
+        $flay->fly_ref = $request->flyref;
+        $flay->save();
 
-        //send to data base
-        $uploadDBFlower = DB::update('UPDATE flowers SET name = ?, price = ?, type=? WHERE id = ?', [$request->name, $request->price, $request->type, $id]);
         return redirect('/fligth/Allfligth');
     }
 
@@ -132,7 +121,7 @@ class FligthController extends Controller
     public function destroy($id)
     {
 
-        $result = Fligth::destroy($id);
+        $result = Flight::destroy($id);
 
         if ($result)
             return redirect('/fligth/Allfligth')->with('success', 'Fligth deleted successfully.');
