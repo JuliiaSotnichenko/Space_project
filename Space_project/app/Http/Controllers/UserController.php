@@ -107,6 +107,11 @@ class UserController extends Controller
         $user = User::find($id);
         return view('BackOffice.user.user-update', ['user' => $user]);
     }
+    public function editAcc()
+    {
+        $user = auth()->user();
+        return view('update-user', ['user' => $user]);
+    }
 
     /**
      * Update the specified resource in storage.

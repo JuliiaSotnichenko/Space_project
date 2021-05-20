@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,7 @@
     <!-- Link CSS -->
     <link href="/css/main.css" rel="stylesheet">
     <script src="https://cesiumjs.org/releases/1.79.1/Build/Cesium/Cesium.js"></script>
-  <link href="https://cesiumjs.org/releases/1.79.1/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <link href="https://cesiumjs.org/releases/1.79.1/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
 
 
     @yield('style')
@@ -35,8 +36,8 @@
                 <li><a href="{{ url('about us') }}">About us</a></li>
                 <li><a href="{{ url('history') }}">History</a></li>
                 <li><a href="{{ url('contact') }}">Contact</a></li>
-            </ul>
-            <ul> @if(Auth::check())
+
+                @if(Auth::check())
 
                 <li><a href="{{ url('dashboard') }}">Account</a></li>
                 @else
@@ -66,12 +67,10 @@
 
     @yield('script')
 
-<script
-   src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'>
-</script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'>
+    </script>
 
 </body>
 
 
 </html>
-

@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <ul>
         <h1>Account details:</h1>
         @auth
@@ -18,8 +19,9 @@
         <li>Passport: {{$user->pass_port_number}}</li>
         <li>Email: {{$user->email}}</li>
 
-        <a href="update/user" class="text-sm text-gray-700 underline">Edit</a>
-        <a href="logout" class="text-sm text-gray-700 underline">Logout</a>
+
+        <button onclick="window.location.href='update/user'">Edit</button>
+        <button onclick="window.location.href='logout'">Logout</button>
 
         <h1>Booking details:</h1>
 
