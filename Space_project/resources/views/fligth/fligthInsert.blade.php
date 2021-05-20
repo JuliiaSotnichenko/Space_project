@@ -15,7 +15,7 @@
         <div>
             <label for="fitinerary">Itinerary</label>
             <select name="itinerary" id="fitinerary">
-                <option value="Earth Planet">Earth Planet</option>
+                <option value="Earth">Earth</option>
                 <option value="Moon">Moon</option>
                 <option value="Mars">Mars</option>
             </select>
