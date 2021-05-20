@@ -22,7 +22,7 @@
         <a href="logout" class="text-sm text-gray-700 underline">Logout</a>
 
         <h1>Booking details:</h1>
-        @foreach($bookings as $booking)
+
         <li>Payment: {{ $booking->payment }}</li>
         <li>Package: {{ $booking->package }}</li>
         <li>Date of creation: {{ $booking->created_at }}</li>
@@ -30,8 +30,34 @@
 
         <!--Hidden section for paid users-->
         @if ($booking->payment == 'done' )
+        <h2>Training Info</h2>
+
+
+
+
+        <li>Depart: {{ $flight->depart_date}} at {{ $flight->depart_time}}</li>
+        <li>Arrival: {{ $flight->arrival_date}} at {{ $flight->arrival_time}}</li>
+        <li>Status :{{ $flight->status}}</li>
+        <li>Itinerary :{{ $flight->itinerary}}</li>
+        <li>Location :{{ $flight->location}}</li>
+        <li>Flight ref. :{{ $flight->fly_ref}}</li>
+
+
+
+
+
+
+        <div>
+            <p>
+
+
+            </p>
+
+
+        </div>
+
         <div class="mapouter">
-            <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={{$user->country}}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org">pirate bay</a><br>
+            <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={{ $flight->location}}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org">pirate bay</a><br>
                 <style>
                     .mapouter {
                         position: relative;
@@ -161,13 +187,12 @@
         </div>
 
 
-        <h1>Trainning Info</h1>
+
+
 
 
 
         @endif
-        @endforeach
-
 
         @endauth
 

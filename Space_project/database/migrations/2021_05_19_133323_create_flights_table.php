@@ -22,7 +22,7 @@ class CreateFlightsTable extends Migration
             $table->time('arrival_time');
             $table->enum('status', ['Done', 'Not Done']);
             $table->enum('itinerary', ['Earth Planet ', 'Moon', 'Mars']);
-            $table->enum('location', ['Baikonur Cosmodrome', 'Kennedy Space Center']);
+            $table->enum('location', ['Baikonur Cosmodrome', 'NASA Kennedy Space Center']);
             $table->string('fly_ref');
             $table->timestamps();
         });
