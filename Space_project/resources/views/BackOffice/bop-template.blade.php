@@ -8,6 +8,7 @@
     <title>@yield('title')</title>
 </head>
 <body>
+<h1>COUCOU</h1>
 @yield('nav')
 
 @yield('content')

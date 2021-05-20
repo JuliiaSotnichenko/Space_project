@@ -71,11 +71,11 @@ Route::get('/bookform/pay', [BookingController::class, 'payment']);
 
 // Back office access
 
-/*// BoP page
-Route::post('/admin/portal', [UserController::class, 'index']);
+// BoP page
+Route::get('/admin', [UserController::class, 'index']);
 // BoP search bar
-Route::post('/admin/portal/{email}', [UserController::class, 'show']);
+//Route::post('/admin/portal/{email}', [UserController::class, 'show']);
 // BoP update results
-Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
+//Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
 // BoP delete entry
-Route::post('/admin/portal/{id}', [UserController::class, 'delete']);*/
+//Route::post('/admin/portal/{id}', [UserController::class, 'delete']);*/
