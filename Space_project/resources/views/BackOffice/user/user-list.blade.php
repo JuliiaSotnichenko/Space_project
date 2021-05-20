@@ -9,8 +9,8 @@
     <li>User ID: {{$user->id}}</li>
     <li>Firstname: {{ $user->first_name }}</li>
     <li>Lastname: {{ $user->last_name }}</li>
-    <li>Email: {{ $user->email }}</li>   
-    <li><a href="{{ url('/admin/user/{id}', $user->id) }}">Details</a></li>
+    <li>Email: {{ $user->email }}</li>
+    <li><a href="{{ url('/admin/user', $user->id) }}">Details</a></li>
     <br>
     @endforeach
 </ul>

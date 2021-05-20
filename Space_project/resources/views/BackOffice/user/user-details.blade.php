@@ -12,7 +12,7 @@
     <li>Country: {{ $user->country }}</li>
     <li>Training Status: {{ $user->training_status }}</li>
     <!-- User's info edit button -->
-    <li><a href="{{ url('/admin/edit/user/{id}', $user->id) }}">Edit User's informations</a></li>
+    <li><a href="{{ url("/admin/edit/user/", $user->id) }}">Edit User's informations</a></li>
     <!-- Delete User button -->
     <li><button class="deleteButton" value="{{$user->id}}">Delete</button></li>
     <!-- Delete User Ajax logic -->
@@ -33,7 +33,7 @@
             }).fail(function(result) {
                 console.log('Fail');
             });
-        });              
+        });
     });
 </script>
 @endsection
