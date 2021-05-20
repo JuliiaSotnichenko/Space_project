@@ -1,7 +1,9 @@
 <h2> fligth insert form</h2>
 <div>
     @if($message=Session::get('success'))
-    {{$message}}
+    <div>
+        {{$message}}
+    </div>
     @endif
     <form action="" method="post" enctype="multipart/form-data">
         @csrf
@@ -45,6 +47,10 @@
                 <option value="NASA Kennedy Space Center">Kennedy Space Center</option>
                 <option value="Boca Chica Starbase">Boca Chica Starbase</option>
             </select>
+        </div>
+        <div>
+            <label for="disc">Discriptian</label>
+            <textarea name="fdisc" id="disc" placeholder="Fly Discriptian"></textarea>
         </div>
         <div>
             <label for="ffile">Upload Fly Pictures</label>

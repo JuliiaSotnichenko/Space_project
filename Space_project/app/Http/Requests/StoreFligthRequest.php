@@ -27,7 +27,7 @@ class StoreFligthRequest extends FormRequest
             'flyref' => 'required|max:3',
             'dateOfDepart' => 'required|date|after:today',
             'timeOfDepart' => 'required',
-            'file' => 'required|mimes:png,jpeg,jpg',
+            'file' => 'mimes:png,jpeg,jpg',
             'dateOfArrival' => 'required|date|after:dateOfDepart'
             //
         ];

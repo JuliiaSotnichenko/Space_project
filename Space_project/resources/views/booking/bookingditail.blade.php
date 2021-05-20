@@ -11,6 +11,7 @@
     </style>
 <div class=" card">
     <div class="">
+        <img src="uploads/{{$fligth->file}}" class="card-img-top" alt="...">
         <div>
             <span>id :</span> {{$fligth->id}}<br>
             <span>Reference :</span> {{$fligth->fly_ref}}
