@@ -19,8 +19,8 @@ class UserController extends Controller
     {
         $loggedUser = Auth::user();
         if ($loggedUser->role == 'admin') { // check if the user logging in is a "user" or an "admin"
-
-            return view('BackOffice.bop-template'); // if admin show the back office portal page
+            $users = User::all();
+            return view('BackOffice.user.user-list',  ['users' => $users]); // if admin show the back office portal page
         } elseif ($loggedUser->role == 'user') {
             return view('../dashboard');
         } else {
@@ -54,12 +54,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function showUser($email)
+    public function showUser($id)
     {
 
-        $user = User::find($email);
+        $user = User::find($id);
 
-        return view('bop.user-detail', ['user' => $user]);
+        return view('BackOffice.user.user-details', ['user' => $user]);
         // if (isset($_GET['search'])) {
         //     $user = auth()->user();
         // }
@@ -71,10 +71,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-        $user = auth()->user();
-        return view('update-user', ['user' => $user]);
+        $user = User::find($id);
+        return view('BackOffice.user.user-update', ['user' => $user]);
     }
 
     /**

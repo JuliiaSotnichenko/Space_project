@@ -73,9 +73,10 @@ Route::get('/bookform/pay', [BookingController::class, 'payment']);
 
 // BoP page
 Route::get('/admin', [UserController::class, 'index']);
-// BoP search bar
-//Route::post('/admin/portal/{email}', [UserController::class, 'show']);
-// BoP update results
-//Route::post('/admin/portal/update/{id}', [UserController::class, 'update']);
-// BoP delete entry
-//Route::post('/admin/portal/{id}', [UserController::class, 'delete']);*/
+// BoP display user
+Route::get('/admin/list', [UserController::class, 'showUser']);
+// BoP display user details
+Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
+// BoP update user
+Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
+Route::post('/admin/update/user/{id}', [UserController::class, 'update']);
