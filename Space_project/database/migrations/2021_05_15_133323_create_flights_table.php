@@ -24,6 +24,7 @@ class CreateFlightsTable extends Migration
             $table->enum('itinerary', ['Earth Planet ', 'Moon', 'Mars']);
             $table->enum('location', ['Baikonur Cosmodrome', 'Kennedy Space Center']);
             $table->string('fly_ref');
+            $table->string('file');
             $table->timestamps();
         });
     }

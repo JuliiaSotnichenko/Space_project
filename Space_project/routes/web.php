@@ -49,6 +49,8 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 
 /**Insert in the data base */
+//show all fily for backend
+Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
 //show the form html to insert data
 Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
 //method to insert in the data base
@@ -62,7 +64,9 @@ Route::post('/fligth/editFligth/{id}', [FligthController::class, 'update']);
 Route::get('/fligth/deleteFligth{id}', [FligthController::class, 'destroy']);
 
 /**************Book Route************* */
-Route::get('/bookform', [BookingController::class, 'index']);
+Route::get('/bookform', [FligthController::class, 'indexfront']);
+//route for  dettail page
+Route::get('/booking/ditail/{id}', [FligthController::class, 'show']);
 
 Route::get('/bookform/pay', [BookingController::class, 'payment']);
 

@@ -1,10 +1,19 @@
-<div>
-    <h2>Booking</h2>
-    <div>
-        <div>img</div>
-        <div>p</div>
+<h2>all pakage for the user </h2>
+@if(count($allFligth) > 0)
 
-        <div> <a href="{{ url('/bookform/pay') }}">Bay this Package</a></div>
+@foreach($allFligth as $fligth)
+
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Fly to {{$fligth->itinerary}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Fly Ref: {{$fligth->fly_ref}}</h6>
+        <p class="card-text"><span>Depart date:</span> {{$fligth->depart_date}}</p>
+        <p class="card-text"><span>Departe time:</span> {{$fligth->depart_time}}</p>
+        <a href="{{ url('/booking/ditail', $fligth->id) }}">Details</a>
     </div>
-
 </div>
+<hr>
+
+@endforeach
+@endif

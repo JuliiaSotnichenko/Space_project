@@ -1,6 +1,9 @@
 <h2> fligth insert form</h2>
 <div>
-    <form action="" method="post">
+    @if($message=Session::get('success'))
+    {{$message}}
+    @endif
+    <form action="" method="post" enctype="multipart/form-data">
         @csrf
         <div>
             <label for="">Fly Ref</label>
@@ -39,9 +42,13 @@
             <label for="flocation">Location</label>
             <select name="location" id="flocation">
                 <option value="Baikonur Cosmodrome">Baikonur Cosmodrome</option>
-                <option value="Kennedy Space Center">Kennedy Space Center</option>
+                <option value="NASA Kennedy Space Center">Kennedy Space Center</option>
                 <option value="Boca Chica Starbase">Boca Chica Starbase</option>
             </select>
+        </div>
+        <div>
+            <label for="ffile">Upload Fly Pictures</label>
+            <input name="file" id="ffile" type="file">
         </div>
         <div>
             <input type="submit" value="Add Fligth">

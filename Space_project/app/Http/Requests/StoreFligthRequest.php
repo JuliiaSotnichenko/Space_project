@@ -26,7 +26,9 @@ class StoreFligthRequest extends FormRequest
         return [
             'flyref' => 'required|max:3',
             'dateOfDepart' => 'required|date|after:today',
-            'timeOfDepart' => 'required'
+            'timeOfDepart' => 'required',
+            'file' => 'required|mimes:png,jpeg,jpg',
+            'dateOfArrival' => 'required|date|after:dateOfDepart'
             //
         ];
     }
@@ -35,11 +37,16 @@ class StoreFligthRequest extends FormRequest
         return [
             'flyref.required' => 'Ref. is required',
             'flyref.max' => 'Max of 3 character.',
+            'flyref.unique' => 'The Reference must be unique',
 
             'dateOfDepart.required' => 'A Date of depart is required.',
             'dateOfDepart.date' => 'Have to be a date type.',
             'dateOfDepart.after' => 'A Date of depart have to be bigger tham today.',
-            'timeOfDepart.required' => 'time of depart is required'
+
+            'timeOfDepart.required' => 'time of depart is required',
+            'dateOfArrival.required' => 'Date of Arrival is Required',
+            'dateOfArrival.date' => 'Date of Arrival must be date type',
+            'dateOfArrival.after' => 'Date of Arrival mus be bigger then A Date of depart'
 
         ];
     }
