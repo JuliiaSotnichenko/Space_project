@@ -78,5 +78,5 @@ Route::get('/admin/list', [UserController::class, 'showUser']);
 // BoP display user details
 Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
 // BoP update user
-Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
-Route::post('/admin/update/user/{id}', [UserController::class, 'update']);
+Route::put('/admin/edit/user/{id}', [UserController::class, 'edit']);
+Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
