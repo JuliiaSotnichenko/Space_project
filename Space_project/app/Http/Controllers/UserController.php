@@ -15,7 +15,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $loggedUser = Auth::user();
         if ($loggedUser->role == 'admin') { // check if the user logging in is a "user" or an "admin"
