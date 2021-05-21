@@ -26,7 +26,7 @@
         <h1>Booking details:</h1>
 
         <li>Payment: {{ $booking->payment }}</li>
-        <li>Package: {{ $booking->package }}</li>
+        <!-- <li>Package: {{ $booking->package }}</li> //! no packages currently in booking table -->
         <li>Date of creation: {{ $booking->created_at }}</li>
         <li>Last updated: {{ $booking->updated_at}}</li>
 
