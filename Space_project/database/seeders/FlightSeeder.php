@@ -14,6 +14,8 @@ class FlightSeeder extends Seeder
      */
     public function run()
     {
+        //! Do not overwrite!
+
         DB::table('flights')->insert([
             "depart_date" => "12/04/2023",
             "depart_time" => "12:00",
