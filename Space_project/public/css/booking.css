@@ -1,35 +1,73 @@
-.bigcard{
-margin: 0px auto;
-padding: 10px;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-gap: 20px;
+body{
+   
+    background-image: url('/images/tourist.jpeg');
+    background-size: cover ;
+    background-repeat: no-repeat;
 }
-.mycard{
-    padding: 10px;
-    background-color: rgba(254, 255, 253, 0.527);
-    transition: 0.2s; 
-    transition-duration: 0.3s;  
-}
-.mycard:hover{
-    background-color: #fff;
-    transform: scale(1.02);
-    border-radius: 5px;
-    box-shadow: black 10px 10px 10px;
-}
-.imag{
+.titleh2{
+    
+    color: white;
     text-align: center;
+    padding: 20px;
 }
+
+.bigcard{
+   
+    margin: 0px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    }
+
+.mycard{
+        padding: 10px;
+        background-color: rgba(254, 255, 253, 0.658);
+        transition: 0.2s; 
+        transition-duration: 0.3s;  
+    }
+.mycard:hover{
+        background-color: #fff;
+        transform: scale(1.02);
+        border-radius: 5px;
+        box-shadow: black 5px 5px 5px;
+    }
+    .mycard:hover a{
+        background-color: rgb(170, 25, 25);
+        box-shadow: black 5px 5px 5px;
+       border-radius: 5px;
+    }
+.imag{
+        text-align: center;
+    }
 .imag img{
-    width: 260px;
-}
+        width: 260px;
+    }
 .bodyCard{
-    color: black;
-}
+        color: black;
+    }
 .bodyCard a{
-    background-color: #fff;
-    padding: 8px;
-    text-decoration: none;
-}
+       color: white;
+        padding: 8px;
+        text-decoration: none;
+        background: linear-gradient(90deg, deeppink, blueviolet);
+        transition: 0.2s; 
+        transition-duration: 0.3s; 
+        font-weight: bolder;
+    }
+
+/* booking detail */
+  .detail{
+      background-color: red;
+      margin: 0 auto;
+    }
+    .carddetail{
+      background-color: red;
+
+  }
+  .carddetail img{
+      width: 80px;
+  }
+ 
