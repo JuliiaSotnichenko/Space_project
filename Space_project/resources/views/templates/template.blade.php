@@ -15,7 +15,7 @@
 
     <!-- Link CSS -->
     <link href="/css/main.css" rel="stylesheet">
-  
+
     @yield('style')
 </head>
 
@@ -24,16 +24,12 @@
 
         <nav class="main__navig">
             <a href="{{ url('home') }}">
-                <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
+                <img class="logo" src="/images/logoSF.svg" alt="Starlight logo">
             </a>
             <ul class="main__navig_list">
-                 <!-- <a href="{{ url('home') }}">
-                <img class="logo" src="images/logo/logoSmall.png" alt="Starlight logo">
-            </a> -->
-                <li><a href="{{ url('home') }}">Home</a></li>
-                <li><a href="{{ url('menu') }}">Menu</a></li>
-                <li><a href="{{ url('about') }}">About us</a></li>
-                <li><a href="{{ url('history') }}">History</a></li>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="{{ url('/about') }}">About us</a></li>
+                <li><a href="{{ url('/bookform') }}">Pakage</a></li>
                 <li><a href="{{ url('contact') }}">Contact</a></li>
 
                 @if(Auth::check())

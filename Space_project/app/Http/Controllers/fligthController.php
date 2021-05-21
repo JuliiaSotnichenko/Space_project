@@ -23,7 +23,7 @@ class FligthController extends Controller
     public function indexfront()
     {
         $allFligth = Flight::all();
-        return view('/booking/booking', ['allFligth' => $allFligth]);
+        return view('/FrontOffice/booking/booking', ['allFligth' => $allFligth]);
     }
 
     /**
@@ -86,7 +86,7 @@ class FligthController extends Controller
     {
         $fligth = Flight::find($id);
 
-        return view('/booking/bookingditail', ['fligth' => $fligth]);
+        return view('FrontOffice/booking/bookingditail', ['fligth' => $fligth]);
     }
 
     /**
