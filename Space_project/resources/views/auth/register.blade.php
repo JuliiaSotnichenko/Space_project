@@ -1,23 +1,9 @@
 <x-guest-layout>
-    <nav class="main__navig">
-        <a href="{{ url('home') }}">
-            <!-- <img class="logo" src="images/logoSF.svg" alt="Starlight logo"> -->
-        </a>
-        <ul class="main__navig_list">
-            <li><a href="{{ url('home') }}">Home</a></li>
-            <li><a href="{{ url('about us') }}">About us</a></li>
-            <li><a href="{{ url('contact') }}">Contact</a></li>
-        </ul>
-    </nav>
+
     <x-slot name="logo">
         <a href="/">
-            <div class="font-sans text-gray-900 antialiased">
-
-                <x-slot name="logo">
-                    <a href="/">
-                        <!-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" />-->
-                    </a>
-                </x-slot>
+            <!-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" />-->
+        </a>
     </x-slot>
 
     <!-- Validation Errors -->
@@ -27,17 +13,19 @@
         <form class="login_form_reg" method="POST" action="{{ route('register') }}">
             @csrf
 
-            <!-- Name -->
+            <!--First Name -->
             <div>
                 <x-label for="first_name" /><br>
 
                 <x-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" placeholder="first name" :value="old('first_name')" required autofocus />
             </div>
+            <!--Last Name -->
             <div>
                 <x-label for="last_name" /><br>
 
                 <x-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" placeholder="last name" :value="old('last_name')" required autofocus />
             </div>
+            <!--Coountry -->
             <div>
                 <x-label for="country" /><br>
                 <x-input id="country" class="block mt-1 w-full" type="text" name="country" placeholder="country" :value="old('country')" required autofocus />
@@ -71,7 +59,19 @@
             </div>
         </form>
     </div>
-    </div>
 
-    </x-auth-card>
 </x-guest-layout>
+<!-- :value="__('Country')"  -->
+<!-- <div class="container__main">
+<div class="planet"> 
+  <div class="wrap">
+     <div class="background"></div>
+     <div class="clouds">
+         <!-- <img src="http://artem.anmedio.ru/dev/planet/clouds.png) " alt=""> -->
+</div>
+</div>
+<div class="mask">
+    <!-- <img src="http://artem.anmedio.ru/dev/planet/mars.jpg" alt=""> -->
+</div>
+</div>
+</div> -->

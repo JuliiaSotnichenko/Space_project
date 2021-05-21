@@ -155,6 +155,34 @@ class UserController extends Controller
             // if admin show the back office portal page
         }
     }
+    public function updateAcc(Request $request)
+    {
+        //$request->validated();
+        $user = auth()->user();
+        $user->first_name = $request->first_name;
+        $user->last_name = $request->last_name;
+        $user->training_status = $user->training_status;
+        $user->country = $request->country;
+        $user->role = $user->role;
+        $user->email = $request->email;
+        $user->password = $user->password;
+        $user->save(); 
+        
+        {
+            $booking = User::find($user->id);
+            $booking = User::where('id', $user->id)->first();
+            $booking->package_id = $request->package_id;
+            $booking->user_id = $request->user_id;
+            $booking->payment_status = $request->payment_status;
+        }
+
+        if ($user->role == 'user') {
+            return view('home');
+        } else { // check if the user logging in is a "user" or an "admin"
+            return view('BackOffice.user.user-update', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
+            // if admin show the back office portal page
+        }
+    }
 
     /*
      * Remove the specified resource from storage.
