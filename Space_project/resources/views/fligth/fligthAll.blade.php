@@ -16,8 +16,12 @@
 <div class=" card">
     <div class="">
         <div>
+            <img src="../uploads/{{$fligth->file}}" alt="">
+        </div>
+        <div>
 
             <span>Reference :</span> {{$fligth->fly_ref}}
+
         </div>
 
         <div>
