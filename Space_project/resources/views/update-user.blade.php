@@ -65,10 +65,6 @@
             @error('country')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
-            <input type="text" name="pass_port_number" placeholder="Passport number" value="{{$user->pass_port_number}}"><br>
-            @error('pass_port_number')
-            <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
             <input type="text" name="email" placeholder="Email" value="{{$user->email}}"><br>
             @error('email')
             <div class="alert alert-danger">{{ $message }}</div>

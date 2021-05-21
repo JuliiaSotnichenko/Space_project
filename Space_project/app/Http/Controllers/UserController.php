@@ -133,12 +133,13 @@ class UserController extends Controller
         $user = auth()->user();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
-        $user->pass_port_number = $request->pass_port_number;
         $user->country = $request->country;
         $user->role = $user->role;
         $user->email = $request->email;
         $user->password = $user->password;
-        $user->save(); {
+        $user->save(); 
+        
+        {
             $booking = User::find($user->id);
             $booking = User::where('id', $user->id)->first();
             $booking->package_id = $request->package_id;
