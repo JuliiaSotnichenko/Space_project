@@ -7,7 +7,7 @@
 @if(count($allFligth) > 0)
 
 @foreach($allFligth as $fligth)
-<p>
+
     <style>
         .card {
             color: black;
@@ -27,18 +27,18 @@
         <div>
             <span>Itinerary:</span> {{$fligth->itinerary}}
             <br>
-            <span>launch Location:</span> {{$fligth->location}}
+            <span>Launch Location:</span> {{$fligth->location}}
 
         </div>
         <div>
-            <span>Depart date:</span> {{$fligth->depart_date}}
+            <span>Date of departure:</span> {{$fligth->depart_date}}
             <br>
             <span>Arrival date:</span> {{$fligth->arrival_date}}
             <br>
 
         </div>
         <div>
-            <span>Departe time:</span> {{$fligth->depart_time}}
+            <span>Departure time:</span> {{$fligth->depart_time}}
             <br>
             <span>Arrival time:</span> {{$fligth->arrival_time}}
         </div>
@@ -46,7 +46,7 @@
             <span>Price:</span> {{$fligth->price}}
         </div>
         <div>
-            <span>Discription:</span> {{$fligth->description}}
+            <span>Description:</span> {{$fligth->description}}
         </div>
         <div>
 

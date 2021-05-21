@@ -25,9 +25,9 @@ li {
 }
 
 main {
-    background-color: lightgray;
+    background-color: #181743;
     font-family: 'Roboto', sans-serif;
-
+    color: snow;
     padding: 30px ;
 }
 
@@ -44,6 +44,35 @@ footer {
 footer p {
     text-align: center;
     color: snow;
+}
+
+.card {
+    background-color:rgba(255, 255, 255, 0.2);
+    padding: 0px 20px 20px 20px;
+}
+
+.card a {
+    padding: 10px 20px;
+}
+
+.card a:hover {
+    color: darkblue;
+    background-color: snow;
+}
+
+.mybutton {
+
+    border: 0;
+    color: blue;
+    font-weight: 700;
+    background-color: rgba(24, 23, 67, 0.2);
+    padding: 7px 20px;
+
+}
+
+.mybutton:hover {
+    color: darkblue;
+    background-color: snow;
 }
 
 @media screen and (min-width: 960px) {

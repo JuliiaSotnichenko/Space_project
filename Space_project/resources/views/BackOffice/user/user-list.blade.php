@@ -11,11 +11,9 @@
     <p>Firstname: {{ $user->first_name }}</p>
     <p>Lastname: {{ $user->last_name }}</p>
     <p>Email: {{ $user->email }}</p>
-    <p><a href="{{ url('/admin/user', $user->id) }}">Details</a></p>
+    <p><a class="mybutton" href="{{ url('/admin/user', $user->id) }}">Details</a></p>
     </li>
-    <!-- <br> -->
-    <a href="{{ url('/admin/user', $user->id) }}" class="btn btn-primary">User's details</a>
-  </div>
+
 </div>
 <br>
     @endforeach
