@@ -6,7 +6,7 @@
     <title>Document</title>
 	 <!-- Link CSS -->
 	 
-     <link href="/css/test.css" rel="stylesheet">
+     <link href="/css/aboutUs.css.css" rel="stylesheet">
 </head>
 <body>
   

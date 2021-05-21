@@ -91,7 +91,7 @@ Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
 
 
 
-// test Juliia 
-Route::get('/test', function () {
-    return view('test');
+// about Us page Juliia 
+Route::get('/aboutus', function () {
+    return view('aboutus');
 });

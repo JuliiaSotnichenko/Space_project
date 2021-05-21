@@ -11,7 +11,16 @@
 
 <x-guest-layout>
     <x-auth-card class="container">
-    
+    <nav class="main__navig">
+            <a href="{{ url('home') }}">
+                <!-- <img class="logo" src="images/logoSF.svg" alt="Starlight logo"> -->
+            </a>
+            <ul class="main__navig_list">
+                <li><a href="{{ url('home') }}">Home</a></li>
+                <li><a href="{{ url('about us') }}">About us</a></li>
+                <li><a href="{{ url('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
 </div>
         <x-slot name="logo">
             <a href="/">
