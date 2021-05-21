@@ -76,6 +76,7 @@
         </div>
     </x-auth-card>
 </x-guest-layout>
+<!-- Planet -->
 <div class="container__main">
 <div class="planet"> 
   <div class="wrap">
