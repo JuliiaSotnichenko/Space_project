@@ -31,10 +31,8 @@
                 <img class="logo" src="/images/logoSF.svg" alt="Starlight logo">
             </a>
             <ul class="main__navig_list">
-                <li><a href="{{ url('home') }}">Home</a></li>
-                <li><a href="{{ url('menu') }}">Menu</a></li>
-                <li><a href="{{ url('about us') }}">About us</a></li>
-                <li><a href="{{ url('history') }}">History</a></li>
+                <li><a href="{{ url('/') }}">Home</a></li>
+                <li><a href="{{ url('/about') }}">About us</a></li>
                 <li><a href="{{ url('/bookform') }}">Pakage</a></li>
                 <li><a href="{{ url('contact') }}">Contact</a></li>
 
