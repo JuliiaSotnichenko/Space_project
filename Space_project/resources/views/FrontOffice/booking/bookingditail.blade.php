@@ -1,19 +1,16 @@
-@extends('templates.template')
+@extends('templates/template')
+<!-- Style -->
+@section('style')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-@section('title','Fligth | All Fligth')
+@endsection
+@section('content')
 
-
-<p>
-    <style>
-        .card {
-            color: black;
-        }
-    </style>
 <div class=" card">
     <div class="">
-        <img src="uploads/{{$fligth->file}}" class="card-img-top" alt="...">
+        <img src="/uploads/{{$fligth->file}}" class="card-img-top" alt="...">
         <div>
-            <span>id :</span> {{$fligth->id}}<br>
+
             <span>Reference :</span> {{$fligth->fly_ref}}
         </div>
 
@@ -36,8 +33,14 @@
             <span>Arrival time:</span> {{$fligth->arrival_time}}
         </div>
         <div>
+            <span>Price:</span> {{$fligth->price}}
+        </div>
+        <div>
+            <span>Discription:</span> {{$fligth->description}}
+        </div>
+        <div>
 
-            <a href="{{ url('', $fligth->id) }}">Bay</a>
+            <a href="{{ url('/bookpay', $fligth->id) }}">Bay</a>
             <!-- go to payment page and insert in the data base -->
 
 
@@ -46,3 +49,4 @@
     </div>
 
 </div>
+@endsection
