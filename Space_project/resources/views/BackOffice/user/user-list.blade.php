@@ -4,14 +4,19 @@
 @section('title', 'Users list')
 <!-- Section to inject to template -->
 @section('content')
-<ul>
+<br>
     @foreach($users as $user)
-    <li>User ID: {{$user->id}}</li>
-    <li>Firstname: {{ $user->first_name }}</li>
-    <li>Lastname: {{ $user->last_name }}</li>
-    <li>Email: {{ $user->email }}</li>
-    <li><a href="{{ url('/admin/user', $user->id) }}">Details</a></li>
+    <li>
+    <p>User ID: {{$user->id}}</p>
+    <p>Firstname: {{ $user->first_name }}</p>
+    <p>Lastname: {{ $user->last_name }}</p>
+    <p>Email: {{ $user->email }}</p>
+    <p><a href="{{ url('/admin/user', $user->id) }}">Details</a></p>
+    </li>
     <br>
+    <a href="{{ url('/admin/user', $user->id) }}" class="btn btn-primary">User's details</a>
+  </div>
+</div>
+<br>
     @endforeach
-</ul>
 @endsection
