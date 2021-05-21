@@ -6,35 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Account details</title>
-<<<<<<< Updated upstream
 
 <body>
-=======
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-<link href="{{ asset('css/home.css') }}" rel="stylesheet">
-</head>
-<nav class="main__navig">
-            <a href="{{ url('home') }}">
-                <img class="logo" src="images/logoSF.svg" alt="Starlight logo">
-            </a>
-            <ul class="main__navig_list">
-                <li><a href="{{ url('home') }}">Home</a></li>
-                <li><a href="{{ url('menu') }}">Menu</a></li>
-                <li><a href="{{ url('about us') }}">About us</a></li>
-                <li><a href="{{ url('history') }}">History</a></li>
-                <li><a href="{{ url('contact') }}">Contact</a></li>
-
-                @if(Auth::check())
-
-                <li><a href="{{ url('dashboard') }}">Account</a></li>
-                @else
-                <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a href="{{ route('register') }}">Register</a></li>
-                @endif
-            </ul>
-        </nav>
-<main>
->>>>>>> Stashed changes
 
     <div>
         <ul>
@@ -117,15 +90,6 @@
             @endauth
 
 
-<<<<<<< Updated upstream
         </ul>
     </div>
 </body>
-=======
-    </ul>
-    </main>
-  
-    
-        
-    </body>
->>>>>>> Stashed changes
