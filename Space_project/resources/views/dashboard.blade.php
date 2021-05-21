@@ -23,22 +23,19 @@
         <button onclick="window.location.href='update/user'">Edit</button>
         <button onclick="window.location.href='logout'">Logout</button>
 
+        @endauth
 
-        
-        if (!isset($booking[0]))
+        @if (!$booking == null)
         <h1>Booking details:</h1>
 
         <li>Payment: {{ $booking->payment }}</li>
         <li>Package: {{ $booking->package }}</li>
         <li>Date of creation: {{ $booking->created_at }}</li>
         <li>Last updated: {{ $booking->updated_at}}</li>
-
+        
         <!--Hidden section for paid users-->
-        @elseif ($booking->payment == 'done' )
+        @if ($booking->payment == 'done' )
         <h2>Flight Info</h2>
-
-
-
 
         <li>Depart: {{ $flight->depart_date}} at {{ $flight->depart_time}}</li>
         <li>Arrival: {{ $flight->arrival_date}} at {{ $flight->arrival_time}}</li>
@@ -46,7 +43,7 @@
         <li>Itinerary :{{ $flight->itinerary}}</li>
         <li>Location :{{ $flight->location}}</li>
         <li>Flight ref. :{{ $flight->fly_ref}}</li>
-
+       
         <div>
             <p>
 
@@ -89,9 +86,11 @@
                 @endif
         </div>
 
+        @endif
+        @endif
 
-    
 
-        @endauth
+
+
 
     </ul>
