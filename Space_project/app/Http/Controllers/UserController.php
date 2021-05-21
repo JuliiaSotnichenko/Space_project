@@ -81,16 +81,16 @@ class UserController extends Controller
 
 
 
-        $loggedUser = Auth::user();
+        $loggedUser =auth()->user();
 
         $bookings = Booking::where('user_id', '=', $loggedUser->id)->get();
 
-        $flight = Flight::find($bookings[0]->flight_id)->get();
+        //$flight = Flight::find($bookings[0]->flight_id);
 
         //return ($flight);
 
-        if (!$bookings) {
-            return "No bookings found";
+        if (isset($booking[0])) {
+            return view('dashboard', ['user' => $loggedUser] );
         } else {
             return view('dashboard', ['user' => $loggedUser, 'booking' => $bookings[0], 'flight' => $flight[0]]);
         }

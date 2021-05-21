@@ -23,6 +23,9 @@
         <button onclick="window.location.href='update/user'">Edit</button>
         <button onclick="window.location.href='logout'">Logout</button>
 
+
+        
+        if (!isset($booking[0]))
         <h1>Booking details:</h1>
 
         <li>Payment: {{ $booking->payment }}</li>
@@ -31,7 +34,7 @@
         <li>Last updated: {{ $booking->updated_at}}</li>
 
         <!--Hidden section for paid users-->
-        @if ($booking->payment == 'done' )
+        @elseif ($booking->payment == 'done' )
         <h2>Flight Info</h2>
 
 
@@ -87,12 +90,7 @@
         </div>
 
 
-
-
-
-
-
-        @endif
+    
 
         @endauth
 
