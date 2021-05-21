@@ -7,28 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Account details</title>
 
-
 <body>
-    <nav class="main__navig">
-        <a href="{{ url('home') }}">
-            <img class="logo" src="images/logoSF.svg" alt="Starlight logo">
-        </a>
-        <ul class="main__navig_list">
-            <li><a href="{{ url('home') }}">Home</a></li>
-            <li><a href="{{ url('menu') }}">Menu</a></li>
-            <li><a href="{{ url('about us') }}">About us</a></li>
-            <li><a href="{{ url('history') }}">History</a></li>
-            <li><a href="{{ url('contact') }}">Contact</a></li>
 
-            @if(Auth::check())
-
-            <li><a href="{{ url('dashboard') }}">Account</a></li>
-            @else
-            <li><a href="{{ route('login') }}">Login</a></li>
-            <li><a href="{{ route('register') }}">Register</a></li>
-            @endif
-        </ul>
-    </nav>
     <div>
         <ul>
             <h1>Account details:</h1>
@@ -36,7 +16,6 @@
             <li>First name: {{$user->first_name}}</li>
             <li>Last name: {{$user->last_name}}</li>
             <li>Country: {{$user->country}}</li>
-            <li>Passport: {{$user->pass_port_number}}</li>
             <li>Email: {{$user->email}}</li>
 
 
