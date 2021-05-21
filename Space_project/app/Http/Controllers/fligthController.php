@@ -57,6 +57,7 @@ class FligthController extends Controller
         $fligth->fly_ref = $request->flyref;
         $fligth->itinerary = $request->itinerary;
         $fligth->location = $request->location;
+        $fligth->price = $request->price;
         $fligth->description = $request->fdisc;
 
 
@@ -123,6 +124,7 @@ class FligthController extends Controller
         $flay->location = $request->location;
         $flay->fly_ref = $request->flyref;
         $flay->description = $request->fdisc;
+        $flay->price = $request->price;
         $flay->save();
 
         return redirect('/fligth/Allfligth');

@@ -62,7 +62,7 @@ Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
 //update the data base
 Route::post('/fligth/editFligth/{id}', [FligthController::class, 'update']);
 /**delite fligth */
-Route::get('/fligth/deleteFligth{id}', [FligthController::class, 'destroy']);
+Route::delete('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
 
 /**************Book Route************* */
 Route::get('/bookform', [FligthController::class, 'indexfront']);
@@ -85,3 +85,13 @@ Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
 // BoP update user
 Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
 Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
+
+
+
+
+
+
+// about Us page Juliia 
+Route::get('/about', function () {
+    return view('about');
+});

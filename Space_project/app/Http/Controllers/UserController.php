@@ -81,18 +81,25 @@ class UserController extends Controller
 
 
 
-        $loggedUser = Auth::user();
+        $loggedUser = auth()->user();
 
-        $bookings = Booking::where('user_id', '=', $loggedUser->id)->get();
-
-        $flight = Flight::find($bookings[0]->flight_id)->get();
-
-        //return ($flight);
-
-        if (!$bookings) {
-            return "No bookings found";
+        $booking = Booking::where('user_id', '=', $loggedUser->id)->get();
+        //return ($loggedUser);
+        if (sizeof($booking) == 0) {
+            
+            $booking = null;
+            
+            return view('dashboard', ['user' => $loggedUser, 'booking' => $booking]);
+            
+            //return ($flight);
         } else {
-            return view('dashboard', ['user' => $loggedUser, 'booking' => $bookings[0], 'flight' => $flight[0]]);
+            
+            $flight = Flight::find($booking[0]->flight_id);
+
+            //return ($flight);
+
+
+            return view('dashboard', ['user' => $loggedUser, 'booking' => $booking[0], 'flight' => $flight]);
         }
     }
 
@@ -126,28 +133,25 @@ class UserController extends Controller
         $user = auth()->user();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
-        $user->pass_port_number = $request->pass_port_number;
+        $user->training_status = $request->training_status;
         $user->country = $request->country;
         $user->role = $user->role;
         $user->email = $request->email;
         $user->password = $user->password;
-        $user->save(); 
-        
-        {
+        $user->save(); {
             $booking = User::find($user->id);
             $booking = User::where('id', $user->id)->first();
             $booking->package_id = $request->package_id;
             $booking->user_id = $request->user_id;
             $booking->payment_status = $request->payment_status;
         }
-        
+
         if ($user->role == 'user') {
             return view('home');
-        }else{// check if the user logging in is a "user" or an "admin"
-        return view('BackOffice.user.user-update', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
-        // if admin show the back office portal page
+        } else { // check if the user logging in is a "user" or an "admin"
+            return view('BackOffice.user.user-update', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
+            // if admin show the back office portal page
         }
-
     }
 
     /*

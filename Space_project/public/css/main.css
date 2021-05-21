@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
  body {
-    width: 90%;
+    /* width: 90%; */
     /* background-color: darkblue; */
     margin: auto;
     color: white;
@@ -21,6 +21,9 @@
     display: flex;
     justify-content: space-between;
     font-size: 20px;
+    background-color: black;
+    /* background-color: black; */
+    height: 8vh;
 }
 .main__navig_list{
     display: flex;
