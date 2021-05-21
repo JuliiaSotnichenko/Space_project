@@ -1,3 +1,8 @@
+@extends('BackOffice.bop-template')
+
+@section('title','Pakage | Add Pakage')
+
+@section('content')
 <h2> fligth insert form</h2>
 <div>
     @if($message=Session::get('success'))
@@ -57,6 +62,10 @@
             <input name="file" id="ffile" type="file">
         </div>
         <div>
+            <label for="tprice">Price</label>
+            <input id="tprice" name="price" type="text">
+        </div>
+        <div>
             <input type="submit" value="Add Fligth">
         </div>
     </form>
@@ -74,3 +83,4 @@
     </div>
 
 </div>
+@endsection

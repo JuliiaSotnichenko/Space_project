@@ -1,7 +1,8 @@
-@extends('templates.template')
+@extends('BackOffice.bop-template')
 
 @section('title','Fligth | All Fligth')
 
+@section('content')
 
 @if(count($allFligth) > 0)
 
@@ -15,7 +16,7 @@
 <div class=" card">
     <div class="">
         <div>
-            <span>id :</span> {{$fligth->id}}<br>
+
             <span>Reference :</span> {{$fligth->fly_ref}}
         </div>
 
@@ -38,6 +39,9 @@
             <span>Arrival time:</span> {{$fligth->arrival_time}}
         </div>
         <div>
+            <span>Price:</span> {{$fligth->price}}
+        </div>
+        <div>
             <span>Discription:</span> {{$fligth->description}}
         </div>
         <div>
@@ -56,6 +60,8 @@
 @endforeach
 @endif
 
+@endsection
+
 
 @section('script')
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
@@ -63,13 +69,13 @@
 <script>
     $(function() {
         $('.mybutton').click(function(e) {
-            let but = '/fligth/deleteFligth' + $(this).val()
+            let but = '/fligth/deleteFligth/' + $(this).val()
 
 
             console.log(but)
             $.ajax({
                     url: but,
-                    method: "get",
+                    method: "delete",
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
