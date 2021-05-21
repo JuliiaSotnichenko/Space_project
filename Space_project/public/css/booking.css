@@ -1,4 +1,5 @@
 .bigcard{
+<<<<<<< Updated upstream
     margin: 0px auto;
     padding: 10px;
     display: flex;
@@ -33,3 +34,38 @@
         padding: 8px;
         text-decoration: none;
     }
+=======
+margin: 0px auto;
+padding: 10px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+gap: 20px;
+}
+.mycard{
+    padding: 10px;
+    background-color: rgba(254, 255, 253, 0.527);
+    transition: 0.2s; 
+    transition-duration: 0.3s;  
+}
+.mycard:hover{
+    background-color: #fff;
+    transform: scale(1.02);
+    border-radius: 5px;
+    box-shadow: black 10px 10px 10px;
+}
+.imag{
+    text-align: center;
+}
+.imag img{
+    width: 260px;
+}
+.bodyCard{
+    color: black;
+}
+.bodyCard a{
+    background-color: #fff;
+    padding: 8px;
+}
+>>>>>>> Stashed changes
