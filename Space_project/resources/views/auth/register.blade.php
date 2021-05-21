@@ -1,5 +1,19 @@
+
 <x-guest-layout>
-    <x-auth-card>
+<nav class="main__navig">
+                <a href="{{ url('home') }}">
+                    <!-- <img class="logo" src="images/logoSF.svg" alt="Starlight logo"> -->
+                </a>
+                <ul class="main__navig_list">
+                    <li><a href="{{ url('home') }}">Home</a></li>
+                    <li><a href="{{ url('about us') }}">About us</a></li>
+                    <li><a href="{{ url('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+            <x-slot name="logo">
+                <a href="/">
+    <div class="font-sans text-gray-900 antialiased">
+  
         <x-slot name="logo">
             <a href="/">
             <!-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" />-->
@@ -63,5 +77,25 @@
                 </x-button>
             </div>
         </form>
+<<<<<<< Updated upstream
     </x-auth-card>
 </x-guest-layout>
+=======
+</div>
+    
+</x-guest-layout>
+<!-- :value="__('Country')"  -->
+<!-- <div class="container__main">
+<div class="planet"> 
+  <div class="wrap">
+     <div class="background"></div>
+     <div class="clouds">
+         <!-- <img src="http://artem.anmedio.ru/dev/planet/clouds.png) " alt=""> -->
+     </div>   
+  </div>
+  <div class="mask">
+      <!-- <img src="http://artem.anmedio.ru/dev/planet/mars.jpg" alt=""> -->
+  </div>
+</div>
+</div> -->
+>>>>>>> Stashed changes
