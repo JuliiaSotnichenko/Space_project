@@ -13,6 +13,8 @@ class CreateFlightsTable extends Migration
      */
     public function up()
     {
+        //! Do not overwrite!!
+
         Schema::create('flights', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->id();
