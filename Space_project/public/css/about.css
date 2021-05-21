@@ -1,18 +1,31 @@
 *:not(input){
   box-sizing: border-box;
-  
+  margin: 0;
+  padding: 0;
 }
 
 body{
-  /* background:url(http://artem.anmedio.ru/dev/planet/space.jpg) repeat;  */
   background-color: #181743;
-
+}
+.content{
+  min-height: 90vh;
+  /* position: relative;
+  background-image: url('/images/all-images/Astronauts-moon.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  z-index: -5; */
 }
 
-.planet{
+
+
+
+
+
+
+
+
+/* .planet{
   width:300px;
   height:300px;
   position:absolute;
@@ -69,75 +82,11 @@ body{
   100%{
     transform:rotateZ(-360deg);
   }
-} 
+}  */
 /* 
 .container__main{
   min-height: 80vh;
   position: relative;
 }
 
-.sidepanel {
-  position: fixed;
-  top: 230px;
-  left: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 340px;
-  z-index: 3;
-}
-  .sidepanel img{
-    width: 20px;
-    height: 20px;
-    color: #fff;
-  }
-
-   .sidepanel__divider {
-    width: 2px;
-    height: 70px;
-    background-color: #fff;
-  }
-  .sidepanel__text {
-    height: 150px;
-    width: 25px;
-  }
-  .sidepanel__text span {
-      transform: rotate(-90deg) translate(-30%,-260%);
-      display: block;
-      width: 117px;
-      color: #fff;
-    }
-
-/* Main Navigation  */
-/* 
-.main__navig{
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  background-color: rgba(2, 2, 2, 0.2);
-  background-color: black; */
-  /* height: 8vh;
-} */
-/* .main__navig_list{
-  display: flex;
-  justify-content: space-between;
-  gap: 35px;
-  
-} */
-
-/* ul li  {
-  list-style: none;
-}
-
-ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
-}
-
-.main__navig_login{
-  padding-right: 10px;
-  display: flex;
-  gap: 30px;
-}  */
+ 
