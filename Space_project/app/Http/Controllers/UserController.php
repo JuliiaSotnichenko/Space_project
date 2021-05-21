@@ -133,6 +133,7 @@ class UserController extends Controller
         $user = auth()->user();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
+        $user->training_status = $request->training_status;
         $user->country = $request->country;
         $user->role = $user->role;
         $user->email = $request->email;

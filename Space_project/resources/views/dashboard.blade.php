@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Account details</title>
-<<<<<<< Updated upstream
-
-<body>
-=======
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 </head>
@@ -34,7 +30,6 @@
             </ul>
         </nav>
 <main>
->>>>>>> Stashed changes
 
     <div>
         <ul>
@@ -51,8 +46,14 @@
 
 
 
-            @if (!$booking == null)
-            <h1>Booking details:</h1>
+        <li>Payment: {{ $booking->payment }}</li>
+        <!-- <li>Package: {{ $booking->package }}</li> -->
+        <li>Date of creation: {{ $booking->created_at }}</li>
+        <li>Last updated: {{ $booking->updated_at}}</li>
+        
+        <!--Hidden section for paid users-->
+        @if ($booking->payment == 'done' )
+        <h2>Flight Info</h2>    
 
             <li>Payment: {{ $booking->payment }}</li>
             <li>Package: {{ $booking->package }}</li>
@@ -70,12 +71,8 @@
             <li>Location :{{ $flight->location}}</li>
             <li>Flight ref. :{{ $flight->fly_ref}}</li>
 
-            <div>
-                <p>
+       
 
-
-                </p>
-            </div>
 
             <!-- Google maps-->
 
@@ -117,15 +114,10 @@
             @endauth
 
 
-<<<<<<< Updated upstream
-        </ul>
+
     </div>
 </body>
-=======
-    </ul>
-    </main>
+
   
     
         
-    </body>
->>>>>>> Stashed changes

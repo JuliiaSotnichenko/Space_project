@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     <!-- Scripts -->
-<<<<<<< Updated upstream
+
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">StarFlight</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,9 +40,9 @@
             </form>
         </div>
     </div>
-</nav>
-=======
->>>>>>> Stashed changes
+
+</nav> -->
+
 
 </head>
 

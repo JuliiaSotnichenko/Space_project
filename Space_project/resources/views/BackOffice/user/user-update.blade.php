@@ -7,7 +7,7 @@
 <h2>Update user</h2>
 <form action="" method="POST">
     @csrf
-    @method('PUT')
+    {{-- @method('PUT') --}}
     <!-- Update Firstname -->
     <input type="text" name="firstname" placeholder="Firstname" value="{{$user->first_name}}"><br>
     @error('firstname')

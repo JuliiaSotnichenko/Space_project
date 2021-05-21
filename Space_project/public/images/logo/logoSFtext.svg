@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.28 841.89" style="enable-background:new 0 0 595.28 841.89;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
+	.st5{fill:none;}
+	.st6{font-family:'Roboto-LightItalic';}
+	.st7{font-size:43px;}
+	.st8{font-family:'Roboto-MediumItalic';}
+</style>
+<path class="st0" d="M777.05,345.93"/>
+<polyline class="st1" points="204.5,219.14 204.5,261.62 164.63,275.35 164.63,375.35 184.56,370.77 188.81,358.35 201.23,346.59 
+	204.5,297.24 211.69,284.5 "/>
+<polyline class="st1" points="218.88,232.16 218.88,261.62 258.75,275.35 258.75,375.35 238.81,370.77 234.56,358.35 222.14,346.59 
+	218.88,297.24 211.69,284.5 "/>
+<g>
+	<line class="st2" x1="195.78" y1="223.14" x2="211.69" y2="212.37"/>
+	<line class="st2" x1="227.59" y1="223.1" x2="211.69" y2="212.37"/>
+</g>
+<path class="st3" d="M106.52,402.1c26.78-10.94,64-17.73,105.17-17.73c40.98,0,78.06,6.72,104.8,17.58"/>
+<path class="st4" d="M105.96,402.33"/>
+<path class="st4" d="M317.41,402.33"/>
+<rect x="106.52" y="406.48" class="st5" width="209.97" height="53.59"/>
+<text transform="matrix(1 0 0 1 120.7803 438.7344)"><tspan x="0" y="0" class="st6 st7">Star</tspan><tspan x="75.31" y="0" class="st8 st7">Flight</tspan></text>
+</svg>

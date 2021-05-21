@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,10 +15,7 @@
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <!-- Link CSS -->
     <link href="/css/main.css" rel="stylesheet">
-    <script src="https://cesiumjs.org/releases/1.79.1/Build/Cesium/Cesium.js"></script>
-    <link href="https://cesiumjs.org/releases/1.79.1/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
-
-
+  
     @yield('style')
 </head>
 
@@ -28,7 +24,7 @@
 
         <nav class="main__navig">
             <a href="{{ url('home') }}">
-                <img class="logo" src="images/logoSF.svg" alt="Starlight logo">
+                <img class="logo" src="images/logo/logoSmall.png" alt="Starlight logo">
             </a>
             <ul class="main__navig_list">
                 <li><a href="{{ url('home') }}">Home</a></li>
