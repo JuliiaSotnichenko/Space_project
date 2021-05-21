@@ -139,7 +139,12 @@ body {
 
 /* Style */
 .container{
-  background-color: black;
+  
+  margin-top: 30px;
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 20px;
+  padding: 10px;
+
 }
 
 .form_container{
