@@ -91,6 +91,13 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
+<<<<<<< Updated upstream
         //
+=======
+        $result = User::destroy($id);
+
+        if ($result)
+            return view('BackOffice.user.user-list');
+>>>>>>> Stashed changes
     }
 }
