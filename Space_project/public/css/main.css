@@ -8,9 +8,8 @@
     color: white;
     scroll-behavior: smooth;
     font-family: 'Space Grotesk', sans-serif;
-    
+    background-color: #181743;
  }
-
 
  .home__title{
     margin: center;
@@ -21,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 20px;
-    background-color: black;
+    background-color: white;
     /* background-color: black; */
     height: 8vh;
 }
@@ -38,13 +37,13 @@ ul li  {
 
 ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: 700;
     
 
 }
 .logo{
-    width: 20vh;
+    width: 10vh;
 }
 
 

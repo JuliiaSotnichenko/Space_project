@@ -24,12 +24,15 @@
 
         <nav class="main__navig">
             <a href="{{ url('home') }}">
-                <img class="logo" src="images/logo/logoSmall.png" alt="Starlight logo">
+                <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
             </a>
             <ul class="main__navig_list">
+                 <!-- <a href="{{ url('home') }}">
+                <img class="logo" src="images/logo/logoSmall.png" alt="Starlight logo">
+            </a> -->
                 <li><a href="{{ url('home') }}">Home</a></li>
                 <li><a href="{{ url('menu') }}">Menu</a></li>
-                <li><a href="{{ url('about us') }}">About us</a></li>
+                <li><a href="{{ url('about') }}">About us</a></li>
                 <li><a href="{{ url('history') }}">History</a></li>
                 <li><a href="{{ url('contact') }}">Contact</a></li>
 
