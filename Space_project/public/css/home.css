@@ -14,7 +14,7 @@
 
 
 .content{
-    min-height: 80vh;
+    min-height: 90vh;
     position: relative;
     background-image: url('/images/tourist_space.jpg');
     background-repeat: no-repeat;
@@ -93,7 +93,7 @@
   }
 
   .content2 {
-    min-height: 50vh;
+    min-height: 90vh;
     /* display: flex;
     justify-content: space-between; */
   }
@@ -105,7 +105,7 @@
    justify-content: space-between;
    align-items: center;
    flex-wrap: wrap;
-  margin-left: 40px;
+  margin: auto;
 }
 
 .ships__container .ship__card {
@@ -124,7 +124,9 @@
 }
 
 .ships__container .ship__card .imgBx img{
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .ships__container .ship__card .content_card{
   margin-left: 20px;
@@ -170,11 +172,11 @@
       width: 20%;
       cursor: pointer;
       background: linear-gradient(90deg, deeppink, blueviolet);
-      margin: 15px;
+      margin: auto;
       border-radius: 50px;
       display: inline-flex;
-    align-items: center;
-    justify-content: center;
+      align-items: center;
+      justify-content: center;
     
 
 }
