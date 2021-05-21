@@ -51,7 +51,7 @@
         <div>
 
             <a href="{{ url('/fligth/editFligth', $fligth->id) }}">Edit</a>
-            <button class="mybutton" value="{{$fligth->id}}">Delete</button>
+            <button class="mybutton delete" value="{{$fligth->id}}">Delete</button>
 
         </div>
 

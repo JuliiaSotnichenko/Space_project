@@ -53,7 +53,9 @@
     </nav>
 
     <main>
-    @yield('content')
+
+            @yield('content')
+
     </main>
 
   @yield('footer')
