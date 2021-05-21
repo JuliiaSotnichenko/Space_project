@@ -9,6 +9,7 @@
 
 
 @section('content')
+<div class="content">
 <!-- Main backround -->
 <!-- <img src="images/tourist_space.jpg" class="img-fluid" alt="..."> -->
  
@@ -23,7 +24,7 @@
 </aside>
 
 
-
+</div>
 @endsection
 
 @section('content2')
