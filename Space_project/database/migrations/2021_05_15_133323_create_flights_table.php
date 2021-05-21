@@ -16,15 +16,15 @@ class CreateFlightsTable extends Migration
         Schema::create('flights', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->id();
-            $table->date('depart_date');
-            $table->time('depart_time');
-            $table->date('arrival_date');
-            $table->time('arrival_time');
+            $table->string('depart_date');
+            $table->string('depart_time');
+            $table->string('arrival_date');
+            $table->string('arrival_time');
             $table->enum('status', ['Done', 'Not Done']);
-            $table->enum('itinerary', ['Earth', 'Moon', 'Mars']);
-            $table->enum('location', ['Baikonur Cosmodrome', 'Kennedy Space Center', 'Boca Chica Starbase']);
+            $table->enum('itinerary', ['Orbital Hotel', 'Space Station V', 'Floshton Paradise']);
+            $table->enum('location', ['Baikonur Cosmodrome', 'Kennedy Space Center', 'Boca Chica Starbase', 'Guiana Space Center Kourou']);
             $table->string('fly_ref');
-            $table->float('price');
+            $table->enum('price', ['799000', '1249000', '5899000']);
             $table->string('file');
             $table->string('description');
             $table->timestamps();
