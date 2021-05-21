@@ -7,28 +7,29 @@
     align-items: center;
     gap: 20px;
     }
-    .mycard{
+.mycard{
         padding: 10px;
         background-color: rgba(254, 255, 253, 0.527);
         transition: 0.2s; 
         transition-duration: 0.3s;  
     }
-    .mycard:hover{
+.mycard:hover{
         background-color: #fff;
         transform: scale(1.02);
         border-radius: 5px;
         box-shadow: black 10px 10px 10px;
     }
-    .imag{
+.imag{
         text-align: center;
     }
-    .imag img{
+.imag img{
         width: 260px;
     }
-    .bodyCard{
+.bodyCard{
         color: black;
     }
-    .bodyCard a{
+.bodyCard a{
         background-color: #fff;
         padding: 8px;
         text-decoration: none;
+    }
