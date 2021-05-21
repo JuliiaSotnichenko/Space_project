@@ -44,7 +44,7 @@
     }
     .sidepanel__text {
       height: 150px;
-      width: 25px;
+      width: 40px;
     }
     .sidepanel__text span {
         transform: rotate(-90deg) translate(-30%,-260%);
@@ -55,13 +55,13 @@
   
   /* Main Navigation  */
   
-  .main__navig{
+  /* .main__navig{
     display: flex;
     justify-content: space-between;
     font-size: 20px;
-    background-color: black;
+    background-color: black; */
     /* background-color: black; */
-    height: 8vh;
+    /* height: 8vh;
     
   }
   .main__navig_list{
@@ -70,8 +70,8 @@
     gap: 35px;
     margin-top: 20px;
   }
-  
-  ul li  {
+/*    */
+  /* ul li  {
     list-style: none;
   }
   
@@ -79,15 +79,15 @@
     text-decoration: none;
     color: white;
     font-weight: 700;
-  }
+  } */ 
 
-  .main__navig_login{
+  /* .main__navig_login{
     padding-right: 10px;
     display: flex;
     gap: 30px;
     margin-top: 20px;
     margin-right: 10px;
-  }
+  } */
 
   .content2 {
     min-height: 90vh;
@@ -164,7 +164,6 @@
     /* transition-property: backround, box-shadow; */
     /* transition-duration: .35s;
     left: 50%; */
-     
 
       width: 20%;
       cursor: pointer;
@@ -174,8 +173,6 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-    
-
 }
 .btn:hover{
     background: #8659e9;
