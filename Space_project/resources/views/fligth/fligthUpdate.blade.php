@@ -48,6 +48,10 @@
 
         </div>
         <div>
+            <label for="tprice">Price</label>
+            <input id="tprice" name="price" type="text" value="{{$fligth->price}}">
+        </div>
+        <div>
             <label for="disc">Discriptian</label>
             <textarea name="fdisc" id="disc" placeholder="Fly Discription">{{$fligth->description}}</textarea>
         </div>
