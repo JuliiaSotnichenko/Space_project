@@ -4,7 +4,7 @@
 @section('title', 'Users list')
 <!-- Section to inject to template -->
 @section('content')
-<ul>
+<br>
     @foreach($users as $user)
     <li>
     <p>User ID: {{$user->id}}</p>
@@ -14,6 +14,9 @@
     <p><a href="{{ url('/admin/user', $user->id) }}">Details</a></p>
     </li>
     <br>
+    <a href="{{ url('/admin/user', $user->id) }}" class="btn btn-primary">User's details</a>
+  </div>
+</div>
+<br>
     @endforeach
-</ul>
 @endsection
