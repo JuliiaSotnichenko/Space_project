@@ -35,6 +35,7 @@
                 @if(Auth::check())
 
                 <li><a href="{{ url('dashboard') }}">Account</a></li>
+                <li><a href="{{ url('logout') }}">Logout</a></li>
                 @else
                 <li><a href="{{ route('login') }}">Login</a></li>
                 <li><a href="{{ route('register') }}">Register</a></li>
@@ -42,7 +43,7 @@
             </ul>
         </nav>
 
-        <div class="content">
+        <div >
             @yield('content')
         </div>
 
