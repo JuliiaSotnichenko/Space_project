@@ -16,7 +16,6 @@
         <li>First name: {{$user->first_name}}</li>
         <li>Last name: {{$user->last_name}}</li>
         <li>Country: {{$user->country}}</li>
-        <li>Passport: {{$user->pass_port_number}}</li>
         <li>Email: {{$user->email}}</li>
 
 
@@ -29,10 +28,9 @@
         <h1>Booking details:</h1>
 
         <li>Payment: {{ $booking->payment }}</li>
-        <!-- <li>Package: {{ $booking->package }}</li> //! no packages currently in booking table -->
         <li>Date of creation: {{ $booking->created_at }}</li>
         <li>Last updated: {{ $booking->updated_at}}</li>
-        
+
         <!--Hidden section for paid users-->
         @if ($booking->payment == 'done' )
         <h2>Flight Info</h2>
@@ -43,7 +41,7 @@
         <li>Itinerary :{{ $flight->itinerary}}</li>
         <li>Location :{{ $flight->location}}</li>
         <li>Flight ref. :{{ $flight->fly_ref}}</li>
-       
+
         <div>
             <p>
 
