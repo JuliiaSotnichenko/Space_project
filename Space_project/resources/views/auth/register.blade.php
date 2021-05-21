@@ -74,4 +74,4 @@
     <!-- <img src="http://artem.anmedio.ru/dev/planet/mars.jpg" alt=""> -->
 </div>
 </div>
-</div> -->
+</div>
