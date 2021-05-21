@@ -4,15 +4,15 @@
     padding: 0;
 }
 
+/* font-family: 'Roboto', sans-serif; */
+
 body {
     /* ? test line background-color: red; */
-
-
-
 
 }
 
 main a {
+
     text-decoration: none;
     font-weight: 700;
     /* color: aqua; */
@@ -20,16 +20,19 @@ main a {
 
 li {
     list-style: none;
+    padding-bottom: 10px;
+
 }
 
 main {
-    /* background-color: midnightblue;
-    color: snow; */
-    font-size: 1.5rem;
-    background-image: url(../images/all-images/Astronaut-high-5.jpg);
-    background-position: right;
-    background-repeat: repeat-y;
+    background-color: lightgray;
+    font-family: 'Roboto', sans-serif;
+
     padding: 30px ;
+}
+
+main a {
+    margin-bottom: 30px;
 }
 
 footer {
@@ -41,6 +44,15 @@ footer {
 footer p {
     text-align: center;
     color: snow;
+}
+
+@media screen and (min-width: 960px) {
+    main {
+        font-size: 1.5rem;
+        background-image: url(../images/all-images/Astronaut-high-5.jpg);
+        background-position: right;
+        background-repeat: repeat-y;
+    }
 }
 
 
