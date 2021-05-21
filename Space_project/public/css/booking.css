@@ -59,15 +59,28 @@ body{
     }
 
 /* booking detail */
-  .detail{
-      background-color: red;
-      margin: 0 auto;
+  .detail{            
+      padding: 10px; 
+      
+      background-color: rgba(255, 254, 254, 0.596);     
     }
     .carddetail{
-      background-color: red;
+        margin: 0px auto;
+        width: 80%;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
 
   }
   .carddetail img{
-      width: 80px;
+      width: 480px;
+  }
+  .bu{
+      text-align: center;
+     
   }
  

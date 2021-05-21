@@ -7,7 +7,7 @@
 @section('content')
 <div class="detail">
 
-    <div class=" card carddetail">
+    <div class="carddetail">
         <div class="">
             <img src="/uploads/{{$fligth->file}}" class="card-img-top" alt="...">
         </div>
@@ -42,14 +42,11 @@
                 <span>Discription:</span> {{$fligth->description}}
             </div>
         </div>
-        <div>
 
-            <a href="{{ url('/bookpay', $fligth->id) }}">Bay</a>
-            <!-- go to payment page and insert in the data base -->
-
-
-        </div>
-
+    </div>
+    <div class="bu">
+        <a href="{{ url('/bookpay', $fligth->id) }}">Bay</a>
+        <!-- go to payment page and insert in the data base -->
     </div>
 </div>
 
