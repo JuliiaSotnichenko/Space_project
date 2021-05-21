@@ -69,7 +69,7 @@ Route::get('/bookform', [FligthController::class, 'indexfront']);
 //route for  dettail page
 Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
 
-//Route::get('/bookform/pay', [BookingController::class, 'payment']);
+Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
 
 
 

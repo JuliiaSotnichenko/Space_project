@@ -16,9 +16,9 @@ class BookingController extends Controller
         //
         return view('booking/booking');
     }
-    public function payment()
+    public function payment($id)
     {
-        return view('booking/payment');
+        return view('/FrontOffice/booking/payment');
     }
 
     /**

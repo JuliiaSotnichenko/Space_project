@@ -21,6 +21,8 @@
     display: flex;
     justify-content: space-between;
     font-size: 20px;
+    background-color: black;
+    height: 8vh;
 }
 .main__navig_list{
     display: flex;
