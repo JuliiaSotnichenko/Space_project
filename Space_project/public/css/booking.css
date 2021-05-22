@@ -4,12 +4,14 @@ body{
     background-size: cover ;
     background-repeat: no-repeat;
 }
-.titleh2{
+.titleh2{    
     
     color: white;
     text-align: center;
     padding: 20px;
+    text-shadow: 5px 5px 4px black;
 }
+
 
 .bigcard{
    
@@ -35,7 +37,7 @@ body{
         box-shadow: black 5px 5px 5px;
     }
     .mycard:hover a{
-        background-color: rgb(170, 25, 25);
+      
         box-shadow: black 5px 5px 5px;
        border-radius: 5px;
     }
@@ -60,27 +62,54 @@ body{
 
 /* booking detail */
   .detail{            
-      padding: 10px; 
-      
-      background-color: rgba(255, 254, 254, 0.596);     
+      padding: 30px;       
+      background-color: rgba(255, 254, 254, 0.671);
+     
+        
     }
     .carddetail{
+        
         margin: 0px auto;
-        width: 80%;
-      padding: 10px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
+        width: 90%;
+         padding: 10px;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 20px;
 
   }
   .carddetail img{
       width: 480px;
   }
-  .bu{
-      text-align: center;
-     
+  .desc{
+    width: 40%;
+    font-weight: bold;
   }
+  .desc span{
+      color: rgba(0, 0, 107, 0.733);
+      
+      
+  }
+  .bu{
+      text-align: center;     
+      margin-top: 20px;
+  }
+  .bu a{
+    color: white;
+        padding: 8px 10px;
+        text-decoration: none;
+        background: linear-gradient(90deg, deeppink, blueviolet);
+        transition: 0.2s; 
+        transition-duration: 0.3s; 
+        font-weight: bolder;
+       
+}
+.bu a:hover{
+    box-shadow: black 5px 5px 5px;
+    border-radius: 5px;
+    padding: 8px 30px;
+}
+
  
