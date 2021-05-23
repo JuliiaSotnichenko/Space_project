@@ -26,6 +26,6 @@ class ApiController extends Controller
         if ( ! Newsletter::isSubscribed($request->user_email) ) {
              Newsletter::subscribe($request->user_email);
         }
-        return redirect('/')->with('success', 'You subscribed successfuly');
+        return redirect('/')->with('success', 'You subscribed successfully');
     }
 }
