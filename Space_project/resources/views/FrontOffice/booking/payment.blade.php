@@ -23,7 +23,10 @@
       </div>
 
 
-      <form >
+      <form action="" method="post">
+      @csrf
+      
+        @method('PUT')
           <div class="form-group">
               <h3 class="PaymentAmount">Payment</h3>
               <!-- <div class="amount-placeholder">
