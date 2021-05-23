@@ -20,9 +20,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -32,44 +30,45 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 
+// Front Office
+//LANDING Page:
+Route::get('/', function () {
+    return view('home');
+});
 
-// Account info
+// ACCOUNT Dashboard:
 Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);
-// Editing and updating account info
+// ACCOUNT Editing account info:
 Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
+// ACCOUNT Updating account info:
 Route::put('/update/user', [UserController::class, 'updateAcc']);
 // Logout
 Route::get('/logout', [LoginController::class, 'logout']);
 
-//Auth::routes();
-
-//Route::get('/', [HomeController::class, 'index']);
-/***********************Fligth Routes*********************** */
 
 
-
-
-/**Insert in the data base */
-//show all fily for backend
+//Back Office
+//FLIGHT Page:
+//FLIGHT Show all flights:
 Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
-//show the form html to insert data
+//FLIGHT Show the 'html' form to insert data:
 Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
-//method to insert in the data base
+//FLIGHT Method to insert in the data base:
 Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
-/**edit method */
-//show the edit form
+//FLIGHT Displaythe edit form:
 Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
-//update the data base
+//FLIGHT Update to the data base:
 Route::post('/fligth/editFligth/{id}', [FligthController::class, 'update']);
-/**delite fligth */
+//FLIGHT Delete Flight:
 Route::delete('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
 
-/**************Book Route************* */
+//BOOKINGS Page:
 Route::get('/bookform', [FligthController::class, 'indexfront']);
-//route for  dettail page
+//BOOKINGS Display the detail page:
 Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
-
+//BOOKINGS Display the payment page:
 Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
+//BOOKINGS Update the DB if the payment is done, confirming the booking:
 Route::post('/bookpay/{id}', [BookingController::class, 'store']);
 
 
@@ -92,7 +91,7 @@ Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
 
 
 
-// about Us page Juliia 
+// about Us page Juliia
 Route::get('/about', function () {
     return view('about');
 });
