@@ -44,7 +44,7 @@
     }
     .sidepanel__text {
       height: 150px;
-      width: 40px;
+      width: 27px;
     }
     .sidepanel__text span {
         transform: rotate(-90deg) translate(-30%,-260%);

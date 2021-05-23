@@ -26,7 +26,7 @@
     </a>
     <ul class="main__navig_list">
         <li><a href="{{ url('/') }}">Home</a></li>
-        <li><a href="{{ url('about us') }}">About us</a></li>
+        <li><a href="{{ url('about') }}">About us</a></li>
         <li><a href="{{ url('contact') }}">Contact</a></li>
     </ul>
 </nav>

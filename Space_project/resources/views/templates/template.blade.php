@@ -29,8 +29,8 @@
             <ul class="main__navig_list">
                 <li><a href="{{ url('/') }}">Home</a></li>
                 <li><a href="{{ url('/about') }}">About us</a></li>
-                <li><a href="{{ url('/bookform') }}">Pakage</a></li>
-                <li><a href="{{ url('contact') }}">Contact</a></li>
+                <li><a href="{{ url('/bookform') }}">Packages</a></li>
+                <!-- <li><a href="{{ url('contact') }}">Contact</a></li> -->
 
                 @if(Auth::check())
 
@@ -58,7 +58,111 @@
     </main>
 
     <footer>
-        <div id="copyright text-right">Spacetravel agency 2021© </div>
+<!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+     
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <a href="{{ url('/about') }}">ABOUT US</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="{{ url('/bookform') }}">Packages</a>
+            </p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Contact</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <i class="fas fa-home mr-3"></i> Luxembourg, 2121</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-envelope mr-3"></i>cj.finalfrontier@gmail.com</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-phone mr-3"></i>+352 691 280 118</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-print mr-3"></i>+352 691 280 119</p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+        <!-- Facebook -->
+        <a type="button" class="btn-floating btn-fb">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Twitter -->
+        <a type="button" class="btn-floating btn-tw">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Google +-->
+        <a type="button" class="btn-floating btn-gplus">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+        <!-- Dribbble -->
+        <a type="button" class="btn-floating btn-dribbble">
+          <i class="fab fa-dribbble"></i>
+        </a>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency  
+  </div>
+  <!-- Copyright -->
+
+        <!-- <div class="copyright-text" id="copyright text-right">Copyright © 20021 Spacetravel agency</div> -->
     </footer>
 
     @yield('script')
