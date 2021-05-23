@@ -77,14 +77,14 @@ body{
          justify-content: center;
          align-items: center;
          flex-wrap: wrap;
-         gap: 20px;
+         gap: 40px;
 
   }
   .carddetail img{
       width: 480px;
   }
   .desc{
-    width: 40%;
+    width: 30%;
     font-weight: bold;
   }
   .desc span{
