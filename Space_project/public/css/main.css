@@ -55,9 +55,17 @@ ul li a {
 
 
 footer{
-    /* display: block; */
+    
+    position: relative;
     text-align: center;
     color: white;
     background-color: #000;
+    z-index: -15;
 }
- 
+
+#menu_footer p a{
+    text-decoration: none;
+    color: white;
+
+
+}

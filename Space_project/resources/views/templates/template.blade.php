@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Link for Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <!-- <link href="{{ asset('css/home.css') }}" rel="stylesheet"> -->
@@ -75,12 +78,17 @@
       <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
 
         <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+        <h5 class="about font-weight-bold text-uppercase mb-4">About</h5>
 
-        <ul class="list-unstyled">
+        <ul id="menu_footer" class="list-unstyled">
+        <li>
+            <p>
+              <a href="{{ url('/') }}">Home</a>
+            </p>
+          </li>
           <li>
             <p>
-              <a href="{{ url('/about') }}">ABOUT US</a>
+              <a href="{{ url('/about') }}">About us</a>
             </p>
           </li>
           <li>
@@ -114,10 +122,6 @@
             <p>
               <i class="fas fa-phone mr-3"></i>+352 691 280 118</p>
           </li>
-          <li>
-            <p>
-              <i class="fas fa-print mr-3"></i>+352 691 280 119</p>
-          </li>
         </ul>
 
       </div>
@@ -143,11 +147,6 @@
         <a type="button" class="btn-floating btn-gplus">
           <i class="fab fa-google-plus-g"></i>
         </a>
-        <!-- Dribbble -->
-        <a type="button" class="btn-floating btn-dribbble">
-          <i class="fab fa-dribbble"></i>
-        </a>
-
       </div>
       <!-- Grid column -->
 

@@ -29,7 +29,7 @@
     justify-content: space-between;
     align-items: center;
     height: 340px;
-    z-index: 3;
+    z-index: 10;
   }
     .sidepanel img{
       width: 20px;
@@ -50,45 +50,13 @@
         transform: rotate(-90deg) translate(-30%,-260%);
         display: block;
         width: 150px;
-        color: #fff;
+        color: deeppink;
       }
   
-  /* Main Navigation  */
-  
-  /* .main__navig{
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    background-color: black; */
-    /* background-color: black; */
-    /* height: 8vh;
-    
-  }
-  .main__navig_list{
-    display: flex;
-    justify-content: space-between;
-    gap: 35px;
-    margin-top: 20px;
-  }
-/*    */
-  /* ul li  {
-    list-style: none;
+  .sidepanel__link a{
+    color: deeppink;
   }
   
-  ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-  } */ 
-
-  /* .main__navig_login{
-    padding-right: 10px;
-    display: flex;
-    gap: 30px;
-    margin-top: 20px;
-    margin-right: 10px;
-  } */
-
   .content2 {
     min-height: 90vh;
     /* display: flex;
@@ -123,7 +91,7 @@
 .ships__container .ship__card .imgBx img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 .ships__container .ship__card .content_card{
   margin-left: 20px;
@@ -147,32 +115,16 @@
 }
 
 .btn{
-    /* position: relative;
-    overflow: hidden;
+    width: 20%;
+    cursor: pointer;
+    background: linear-gradient(90deg, deeppink, blueviolet);
+    margin: auto;
+    border-radius: 50px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 4.5rem;
-    padding: 0 3rem;
-    font-family: inherit;
-    border: 0;
-    border-radius: 0.5rem;
-    background: white;
-    color: black;
-    cursor: pointer;
-    outline: none;
-    /* transition-property: backround, box-shadow; */
-    /* transition-duration: .35s;
-    left: 50%; */
-
-      width: 20%;
-      cursor: pointer;
-      background: linear-gradient(90deg, deeppink, blueviolet);
-      margin: auto;
-      border-radius: 50px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .btn:hover{
     background: #8659e9;
