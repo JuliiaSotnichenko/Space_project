@@ -46,7 +46,7 @@
             </ul>
         </nav>
 
-        <div >
+        <div class="content_template">
             @yield('content')
         </div>
 
