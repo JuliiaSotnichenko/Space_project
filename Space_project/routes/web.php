@@ -101,8 +101,8 @@ Route::get('/about', function () {
 });
 
 // live search
-Route::get('/livesearch',[SearchController::class, 'index']);
-Route::get('/search',[SearchController::class, 'search']);
+Route::get('/livesearch', [SearchController::class, 'index']);
+Route::get('/search', [SearchController::class, 'search']);
 
 // mailing
 Route::get('/', [ApiController::class, 'create']);

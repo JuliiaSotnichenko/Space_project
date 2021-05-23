@@ -86,14 +86,14 @@ class UserController extends Controller
         $booking = Booking::where('user_id', '=', $loggedUser->id)->get();
         //return ($loggedUser);
         if (sizeof($booking) == 0) {
-            
+
             $booking = null;
-            
+
             return view('dashboard', ['user' => $loggedUser, 'booking' => $booking]);
-            
+
             //return ($flight);
         } else {
-            
+
             $flight = Flight::find($booking[0]->flight_id);
 
             //return ($flight);
@@ -138,9 +138,7 @@ class UserController extends Controller
         $user->role = $user->role;
         $user->email = $request->email;
         $user->password = $user->password;
-        $user->save(); 
-        
-        {
+        $user->save(); {
             $booking = User::find($user->id);
             $booking = User::where('id', $user->id)->first();
             $booking->package_id = $request->package_id;
@@ -166,9 +164,7 @@ class UserController extends Controller
         $user->role = $user->role;
         $user->email = $request->email;
         $user->password = $user->password;
-        $user->save(); 
-        
-        {
+        $user->save(); {
             $booking = User::find($user->id);
             $booking = User::where('id', $user->id)->first();
             $booking->package_id = $request->package_id;

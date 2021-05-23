@@ -82,8 +82,7 @@
 }
 
 #Checkout {
-  z-index: 100001;
-  background: ;
+  z-index: 100001;  
   width: 50%;
   min-width: 300px;
   height: 100%;
@@ -232,4 +231,7 @@ input {
 input:focus {
   border-color: #b0e5e3 !important;
   background-color: #eef9f9 !important;
+}
+.data{
+  display: none;
 }

@@ -4,10 +4,47 @@
 @section('style')
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<style>
+    .success {
+        background-color: #fff;
+        color: #243B7B;
+        position: absolute;
+        top: 200px;
+        transform: translateX(-50%);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px 5px black;
+
+    }
+
+    .success a {
+        padding: 5px 20px;
+        color: white;
+        background-color: blue;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    .success a:hover {
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .success img {
+        width: 80px;
+    }
+</style>
 @endsection
 @section('title', 'Account')
 
 @section('content')
+@if($message = Session::get('success'))
+<strong class="success">
+    <img src="/images/done.png" alt="img">
+    <p>Well Done</p>
+    <p>{{$message}}</p>
+    <a href="{{ url('/dashboard') }}">Continue</a>
+</strong>
+@endif
 <div class="container">
     <ul class="text-light">
         <h1>Account details:</h1>
