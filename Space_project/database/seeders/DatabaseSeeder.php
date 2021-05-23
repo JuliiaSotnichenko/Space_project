@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
                 //$this->call(locationsSeeder::class);
                 //$this->call(itinerariSeeder::class);
                $this->call(FlightSeeder::class);
+               $this->call(AdminUserSeeder::class);
         }
 }

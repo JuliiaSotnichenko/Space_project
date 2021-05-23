@@ -37,7 +37,7 @@ require __DIR__ . '/auth.php';
 Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);
 // Editing and updating account info
 Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
-Route::put('/update/user', [UserController::class, 'update']);
+Route::put('/update/user', [UserController::class, 'updateAcc']);
 // Logout
 Route::get('/logout', [LoginController::class, 'logout']);
 

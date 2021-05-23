@@ -2,19 +2,19 @@
 
 <!-- Style -->
 @section('style')
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
 <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 @endsection
 @section('title', 'Home')
 
 
 @section('content')
+<div class="content">
 <!-- Main backround -->
 <!-- <img src="images/tourist_space.jpg" class="img-fluid" alt="..."> -->
  
   <!-- Sidepanel sexy horizontal -->
   <aside class="sidepanel">
-    <i class="fab fa-linkedin "></i>
     <a target="_blank"  href="#" class="sidepanel__link__linkedn"><img src="images/social/61109%20(1).png" alt="linkedn"></a>
     <a target="_blank" href="#" class="sidepanel__link"><img src="images/social/instagram.svg" alt="instagram"></a>
     <a target="_blank"  href="#" class="sidepanel__link"><img src="images/social/github.svg" alt="github"></a>
@@ -23,7 +23,7 @@
 </aside>
 
 
-
+</div>
 @endsection
 
 @section('content2')

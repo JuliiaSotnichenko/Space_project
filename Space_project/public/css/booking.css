@@ -1,0 +1,115 @@
+body{
+   
+    background-image: url('/images/tourist.jpeg');
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+.titleh2{    
+    
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 5px 5px 4px black;
+}
+
+
+.bigcard{
+   
+    margin: 0px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    }
+
+.mycard{
+        padding: 10px;
+        background-color: rgba(254, 255, 253, 0.658);
+        transition: 0.2s; 
+        transition-duration: 0.3s;  
+    }
+.mycard:hover{
+        background-color: #fff;
+        transform: scale(1.02);
+        border-radius: 5px;
+        box-shadow: black 5px 5px 5px;
+    }
+    .mycard:hover a{
+      
+        box-shadow: black 5px 5px 5px;
+       border-radius: 5px;
+    }
+.imag{
+        text-align: center;
+    }
+.imag img{
+        width: 260px;
+    }
+.bodyCard{
+        color: black;
+    }
+.bodyCard a{
+       color: white;
+        padding: 8px;
+        text-decoration: none;
+        background: linear-gradient(90deg, deeppink, blueviolet);
+        transition: 0.2s; 
+        transition-duration: 0.3s; 
+        font-weight: bolder;
+    }
+
+/* booking detail */
+  .detail{            
+      padding: 30px;       
+      background-color: rgba(255, 254, 254, 0.671);
+     
+        
+    }
+    .carddetail{
+        
+        margin: 0px auto;
+        width: 90%;
+         padding: 10px;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 20px;
+
+  }
+  .carddetail img{
+      width: 480px;
+  }
+  .desc{
+    width: 40%;
+    font-weight: bold;
+  }
+  .desc span{
+      color: rgba(0, 0, 107, 0.733);
+      
+      
+  }
+  .bu{
+      text-align: center;     
+      margin-top: 20px;
+  }
+  .bu a{
+    color: white;
+        padding: 8px 10px;
+        text-decoration: none;
+        background: linear-gradient(90deg, deeppink, blueviolet);
+        transition: 0.2s; 
+        transition-duration: 0.3s; 
+        font-weight: bolder;
+       
+}
+.bu a:hover{
+    box-shadow: black 5px 5px 5px;
+    border-radius: 5px;
+    padding: 8px 30px;
+}
+
+ 

@@ -1,0 +1,105 @@
+* :not(input){
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* font-family: 'Roboto', sans-serif; */
+
+body {
+    /* ? test line background-color: red; */
+
+}
+
+main a {
+
+    text-decoration: none;
+    font-weight: 700;
+    /* color: aqua; */
+}
+
+li {
+    list-style: none;
+    padding-bottom: 10px;
+
+}
+
+main {
+    background-color: #181743;
+    font-family: 'Roboto', sans-serif;
+    color: snow;
+    padding: 10px 30px ;
+}
+
+main a {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: black;
+    margin: auto;
+    padding: 30px;
+}
+
+footer p {
+    text-align: center;
+    color: snow;
+}
+
+.card {
+    background-color:rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    background-image: url(../images/all-images/Astronaut-high-5.jpg); /** placeholder until better image/styling is found */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+}
+
+.card a {
+    margin: 5px 25px;
+    padding: 10px 20px;
+}
+
+.link {
+    margin: 5px 25px;
+}
+
+.card a:hover {
+    color: darkblue;
+    background-color: snow;
+}
+
+.mybutton {
+
+    border: 0;
+    color: blue;
+    font-weight: 700;
+    background-color: rgba(24, 23, 67, 0.2);
+    padding: 7px 20px;
+
+}
+
+.mybutton:hover {
+    color: darkblue;
+    background-color: snow;
+}
+
+.delete {
+    color: red;
+}
+
+.delete:hover {
+    background-color: red;
+    color: white;
+}
+
+@media screen and (min-width: 960px) {
+    main {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
