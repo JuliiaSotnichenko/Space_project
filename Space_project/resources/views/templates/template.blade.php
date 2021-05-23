@@ -152,17 +152,21 @@
 
     </div>
     <!-- Grid row -->
-
+    <form action="{{ url('/') }}" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail">Email</label>
+        <input type="email" name="user_email" id="exampleInputEmail" class="form-control">
+    </div>
+    {{ csrf_field() }}
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
   </div>
   <!-- Footer Links -->
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency  
   </div>
-  <!-- Copyright -->
-
-        <!-- <div class="copyright-text" id="copyright text-right">Copyright © 20021 Spacetravel agency</div> -->
-    </footer>
+  
 
     @yield('script')
 
