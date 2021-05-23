@@ -12,7 +12,7 @@
     <div class="form_container_reg">
         <form class="login_form_reg" method="POST" action="{{ route('register') }}">
             @csrf
-
+            
             <!--First Name -->
             <div>
                 <x-label for="first_name" /><br>
@@ -47,7 +47,10 @@
 
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" placeholder="confirm password" name="password_confirmation" required />
             </div>
-
+            <div class="input-group mb-4">
+        <input type="checkbox" name="subscribed" value="1" />
+        Subscribe to the newsletter
+    </div>
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}

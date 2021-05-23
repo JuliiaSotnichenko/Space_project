@@ -21,6 +21,13 @@ class ApiController extends Controller
 
 
     // for mailing 
+
+    public function create()
+    {
+        return view('/home');
+    }
+
+
     public function store(Request $request)
     {
         if ( ! Newsletter::isSubscribed($request->user_email) ) {
@@ -28,4 +35,7 @@ class ApiController extends Controller
         }
         return redirect('/')->with('success', 'You subscribed successfully');
     }
+
+
+
 }

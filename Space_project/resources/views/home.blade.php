@@ -77,15 +77,19 @@
 	</div>
 	<!-- Subscribe -->
 
-	<!-- <form action="{{ url('/') }}" method="post">
+	  <form action="{{ url('/') }}" method="post">
     <div class="form-group">
-        <label for="exampleInputEmail">Email</label>
-        <input type="email" name="user_email" id="exampleInputEmail" class="form-control">
-    </div>
-    {{ csrf_field() }}
-    <button type="submit" class="btn btn-primary">Submit</button>
+        <label for="exampleInputEmail"></label>
+        <input type="email" name="user_email" id="exampleInputEmail" class="form-control" placeholder="Email Address">
+        {{ csrf_field() }}
+		<div class="myBtn">
+	  		<button type="submit" class="btn">Subscribe</button>
+	  </div>
+	  </div>
+	 
+	  
 </form>
-	 -->
+	
 
 </section>
 @endsection

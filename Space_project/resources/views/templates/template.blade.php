@@ -147,21 +147,27 @@
         <a type="button" class="btn-floating btn-gplus">
           <i class="fab fa-google-plus-g"></i>
         </a>
+        <!-- Subscribe -->
+
+
       </div>
       <!-- Grid column -->
 
     </div>
     <!-- Grid row -->
-    <form action="{{ url('/') }}" method="post">
-    <div class="form-group">
-        <label for="exampleInputEmail">Email</label>
-        <input type="email" name="user_email" id="exampleInputEmail" class="form-control">
-    </div>
-    {{ csrf_field() }}
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+   
   </div>
-  <!-- Footer Links -->
+   
+  <!-- <form action="{{ url('/') }}" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail"></label>
+        <input type="email" name="user_email" id="exampleInputEmail" class="form-control" placeholder="Email Address">
+        {{ csrf_field() }}
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+      </div>
+    
+</form> -->
+
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency  

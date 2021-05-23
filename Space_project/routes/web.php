@@ -105,9 +105,12 @@ Route::get('/livesearch',[SearchController::class, 'index']);
 Route::get('/search',[SearchController::class, 'search']);
 
 // mailing
+Route::get('/', [ApiController::class, 'create']);
 Route::post('/', [ApiController::class, 'store']);
 
 
 // Route::get('manageMailChimp', 'MailChimpController@manageMailChimp');
 
-// Route::post('subscribe',['as'=>'subscribe','uses'=>'MailChimpController@subscribe']);
+// Route::get('create',['as'=>'subscribe','uses'=>'ApiController@subscribe']);
+
+// Route::post('store',['as'=>'subscribe','uses'=>'ApiController@subscribe']);

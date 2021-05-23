@@ -56,7 +56,6 @@ ul li a {
 
 footer{
     
-    /* position: relative; */
     text-align: center;
     color: white;
     background-color: #000;
@@ -69,3 +68,13 @@ footer{
 
 
 }
+
+/* style for subscribe */
+.form-control{
+    border-radius: 10px;
+    width: 25%;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+
