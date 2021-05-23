@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\FligthController;
 use App\Http\Controllers\ItineraryController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SearchController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -101,3 +103,11 @@ Route::get('/about', function () {
 // live search
 Route::get('/livesearch',[SearchController::class, 'index']);
 Route::get('/search',[SearchController::class, 'search']);
+
+// mailing
+Route::post('/', [ApiController::class, 'store']);
+
+
+// Route::get('manageMailChimp', 'MailChimpController@manageMailChimp');
+
+// Route::post('subscribe',['as'=>'subscribe','uses'=>'MailChimpController@subscribe']);

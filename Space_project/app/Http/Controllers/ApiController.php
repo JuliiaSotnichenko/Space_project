@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use Newsletter;
+// use Newsletter;
 
 use App\Models\Flight;
 use App\Models\Booking;
@@ -9,7 +9,7 @@ use App\Models\Booking;
 
 
 use Illuminate\Http\Request;
-use Spatie\Newsletter\Newsletter as NewsletterNewsletter;
+use Spatie\Newsletter\NewsletterFacade as Newsletter;
 
 class ApiController extends Controller
 {
@@ -26,6 +26,6 @@ class ApiController extends Controller
         if ( ! Newsletter::isSubscribed($request->user_email) ) {
              Newsletter::subscribe($request->user_email);
         }
-
+        return redirect('/')->with('success', 'You subscribed successfuly');
     }
 }
