@@ -16,9 +16,13 @@ class BookingController extends Controller
         //
         return view('booking/booking');
     }
+
+    // For payment
+
     public function payment($id)
     {
         return view('/FrontOffice/booking/payment');
+       
     }
 
     /**
@@ -39,7 +43,7 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return redirect('/dashboard')->with('success', 'Your payment was successful.');
     }
 
     /**

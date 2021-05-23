@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -70,6 +71,7 @@ Route::get('/bookform', [FligthController::class, 'indexfront']);
 Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
 
 Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
+Route::post('/bookpay/{id}', [BookingController::class, 'store']);
 
 
 
@@ -91,7 +93,11 @@ Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
 
 
 
-// about Us page Juliia 
+// about Us page 
 Route::get('/about', function () {
     return view('about');
 });
+
+// live search
+Route::get('/livesearch',[SearchController::class, 'index']);
+Route::get('/search',[SearchController::class, 'search']);

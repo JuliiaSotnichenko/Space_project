@@ -23,7 +23,10 @@
       </div>
 
 
-      <form >
+      <form action="" method="post">
+      @csrf
+      
+        <!-- @method('PUT') -->
           <div class="form-group">
               <h3 class="PaymentAmount">Payment</h3>
               <!-- <div class="amount-placeholder">
@@ -33,20 +36,21 @@
           </div>
           <div class="form-group">
               <label or="NameOnCard">Name on card</label>
-              <input id="NameOnCard" class="form-control" type="text" maxlength="255"></input>
+              <input name="NameOnCard" id="NameOnCard" class="form-control" type="text" maxlength="255"></input>
           </div>
           <div class="form-group">
               <label for="CreditCardNumber">Card number</label>
-              <input id="CreditCardNumber" class="null card-image form-control" type="text"></input>
-          </div>
+              <input name="CreditCardNumber" id="CreditCardNumber" class="null card-image form-control" type="text"></input>
+         
+            </div>
           <div class="expiry-date-group form-group">
               <label for="ExpiryDate">Expiry date</label>
-              <input id="ExpiryDate" class="form-control" type="text" placeholder="MM / YY" maxlength="7"></input>
+              <input name="ExpiryDate" id="ExpiryDate" class="form-control" type="text" placeholder="MM / YY" maxlength="7"></input>
           </div>
           <div class="security-code-group form-group">
               <label for="SecurityCode">Security code</label>
               <div class="input-container" >
-                  <input id="SecurityCode" class="form-control" type="text" ></input>
+                  <input name="SecurityCode" id="SecurityCode" class="form-control" type="text" ></input>
                   <i id="cvc" class="fa fa-question-circle"></i>
               </div>
               <div class="cvc-preview-container two-card hide">
@@ -63,6 +67,17 @@
       </form>
   </div>
 </div>
+<div>
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+    </div>
 
 @endsection
 

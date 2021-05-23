@@ -15,7 +15,6 @@
  
   <!-- Sidepanel sexy horizontal -->
   <aside class="sidepanel">
-    <i class="fab fa-linkedin "></i>
     <a target="_blank"  href="#" class="sidepanel__link__linkedn"><img src="images/social/61109%20(1).png" alt="linkedn"></a>
     <a target="_blank" href="#" class="sidepanel__link"><img src="images/social/instagram.svg" alt="instagram"></a>
     <a target="_blank"  href="#" class="sidepanel__link"><img src="images/social/github.svg" alt="github"></a>
