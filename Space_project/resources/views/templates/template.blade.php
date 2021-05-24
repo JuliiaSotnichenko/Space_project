@@ -70,8 +70,6 @@
       <!-- Grid row -->
       <div class="row">
 
-
-
         <hr class="clearfix w-100 d-md-none">
 
         <!-- Grid column -->
@@ -154,33 +152,7 @@
         <!-- Grid column -->
 
       </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-
-          <!-- ? Entire section that followed here was a duplicate from the social links above -->
-
-      </div>
-      <!-- Grid column -->
-
     </div>
-    <!-- Grid row -->
-
-    </div>
-
-    <!-- <form action="{{ url('/') }}" method="post">
-    <div class="form-group">
-        <label for="exampleInputEmail"></label>
-        <input type="email" name="user_email" id="exampleInputEmail" class="form-control" placeholder="Email Address">
-        {{ csrf_field() }}
-    <button type="submit" class="btn btn-primary">Subscribe</button>
-      </div>
-
-</form> -->
-
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency
@@ -191,7 +163,5 @@
 
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'>
     </script>
-
 </body>
-
 </html>

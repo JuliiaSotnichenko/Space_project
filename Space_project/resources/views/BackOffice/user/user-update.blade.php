@@ -4,6 +4,7 @@
 
 @section('content')
 
+
 <h2>Update user</h2>
 <form action="" method="POST">
     @csrf
