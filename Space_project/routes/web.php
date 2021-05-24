@@ -36,13 +36,13 @@ require __DIR__ . '/auth.php';
 
 // FRONT OFFICE
 //ACCOUNT PAGE
-// Account: Dashboard
+// Account: Dashboard.
 Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);
-// Account: Editing account info
+// Account: Editing account info.
 Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
-// Account: Updating account info
+// Account: Updating account info.
 Route::put('/update/user', [UserController::class, 'updateAcc']);
-// Account: Logout
+// Account: Logout.
 Route::get('/logout', [LoginController::class, 'logout']);
 
 // ABOUT US PAGE
