@@ -16,12 +16,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
-    {
+    public function index()
+    { // check if the user logging in is a "user" or an "admin"
+        // if admin show the back office portal page
         $loggedUser = Auth::user();
-        if ($loggedUser->role == 'admin') { // check if the user logging in is a "user" or an "admin"
+        if ($loggedUser->role == 'admin') {
             $users = User::all();
-            return view('BackOffice.user.user-list',  ['users' => $users]); // if admin show the back office portal page
+            return view('BackOffice.user.user-list',  ['users' => $users]);
         } elseif ($loggedUser->role == 'user') {
             return view('../dashboard');
         } else {
@@ -34,7 +35,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    { // Taken care of by the Register/Authentificate process
         return view('auth.register');
     }
 
@@ -46,7 +47,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // A user is created from the register protocole
+        // A user is created from the register protocole.
+        // Taken care of by the Register/Authentificate process.
     }
 
     /**
@@ -56,7 +58,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function showUser($id)
-    {
+    { // BackOffice Display user info.
 
         $user = User::find($id);
 
@@ -71,33 +73,21 @@ class UserController extends Controller
         } else {
             return view('dashboard', ['user' => $loggedUser], ['bookings' => $bookings]);
         }
-        //return view('bop.user-detail', ['user' => $user]);
-        // if (isset($_GET['search'])) {
-        //     $user = auth()->user();
-        // }
     }
     public function showAcc()
-    {
-
-
-
+    { // FrontOffice Display user info on ACCOUNT/Dashboard page.
         $loggedUser = auth()->user();
 
         $booking = Booking::where('user_id', '=', $loggedUser->id)->get();
-        //return ($loggedUser);
+
         if (sizeof($booking) == 0) {
 
             $booking = null;
 
             return view('dashboard', ['user' => $loggedUser, 'booking' => $booking]);
-
-            //return ($flight);
         } else {
 
             $flight = Flight::find($booking[0]->flight_id);
-
-            //return ($flight);
-
 
             return view('dashboard', ['user' => $loggedUser, 'booking' => $booking[0], 'flight' => $flight]);
         }
@@ -110,13 +100,16 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
+    { //BackOffice Display the User Update form.
+        //FrontOffice Display the User Update form one the ACCOUNT/Dashboard page.
         $user = User::find($id);
+
         return view('BackOffice.user.user-update', ['user' => $user]);
     }
     public function editAcc()
     {
         $user = auth()->user();
+
         return view('update-user', ['user' => $user]);
     }
 
@@ -128,8 +121,8 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request)
-    {
-        //$request->validated();
+    { //BackOffice Insert the User Update form to the DataBase.
+
         $user = auth()->user();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
@@ -154,8 +147,8 @@ class UserController extends Controller
         }
     }
     public function updateAcc(Request $request)
-    {
-        //$request->validated();
+    { //FrontOffice Insert the User Update form to the DataBase.
+
         $user = auth()->user();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
@@ -187,7 +180,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {
+    { // Remove User data.
         $result = User::destroy($id);
 
         if ($result)

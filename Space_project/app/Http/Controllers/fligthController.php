@@ -67,8 +67,6 @@ class FligthController extends Controller
 
         $fligth->file = $fileName;
 
-
-        //3. Save the Flower : this will insert into db
         $fligth->save();
         // Redirect fligth page and send information through session
         return redirect('/fligth/InsertFligth')->with('success', $request->fly_ref . ' was created successfully.');
@@ -97,7 +95,6 @@ class FligthController extends Controller
      */
     public function edit($id)
     {
-        //return view('/fligth/fligthUpdate');
         $updateForm = Flight::find($id);
 
         return view('fligth/fligthUpdate', ['fligth' => $updateForm]);
@@ -112,7 +109,7 @@ class FligthController extends Controller
      */
     public function update(StoreFligthRequest $request, $id)
     {
-        //validation
+        //Validation
         $request->validated();
         $flay = Flight::find($id);
 
