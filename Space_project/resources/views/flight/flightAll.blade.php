@@ -1,12 +1,12 @@
 @extends('BackOffice.bop-template')
 
-@section('title','Fligth | All Fligth')
+@section('title','Flight | All Flight')
 
 @section('content')
 
-@if(count($allFligth) > 0)
+@if(count($allFlight) > 0)
 
-@foreach($allFligth as $fligth)
+@foreach($allFlight as $flight)
 
     <style>
         .card {
@@ -16,42 +16,42 @@
 <div class=" card">
     <div class="">
         <div>
-            <img src="../uploads/{{$fligth->file}}" alt="">
+            <img src="../uploads/{{$flight->file}}" alt="">
         </div>
         <div>
 
-            <span>Reference :</span> {{$fligth->fly_ref}}
+            <span>Reference :</span> {{$flight->fly_ref}}
 
         </div>
 
         <div>
-            <span>Itinerary:</span> {{$fligth->itinerary}}
+            <span>Itinerary:</span> {{$flight->itinerary}}
             <br>
-            <span>Launch Location:</span> {{$fligth->location}}
+            <span>Launch Location:</span> {{$flight->location}}
 
         </div>
         <div>
-            <span>Date of departure:</span> {{$fligth->depart_date}}
+            <span>Date of departure:</span> {{$flight->depart_date}}
             <br>
-            <span>Arrival date:</span> {{$fligth->arrival_date}}
+            <span>Arrival date:</span> {{$flight->arrival_date}}
             <br>
 
         </div>
         <div>
-            <span>Departure time:</span> {{$fligth->depart_time}}
+            <span>Departure time:</span> {{$flight->depart_time}}
             <br>
-            <span>Arrival time:</span> {{$fligth->arrival_time}}
+            <span>Arrival time:</span> {{$flight->arrival_time}}
         </div>
         <div>
-            <span>Price:</span> {{$fligth->price}}
+            <span>Price:</span> {{$flight->price}}
         </div>
         <div>
-            <span>Description:</span> {{$fligth->description}}
+            <span>Description:</span> {{$flight->description}}
         </div>
         <div>
 
-            <a href="{{ url('/fligth/editFligth', $fligth->id) }}">Edit</a>
-            <button class="mybutton delete" value="{{$fligth->id}}">Delete</button>
+            <a href="{{ url('/flight/editFlight', $flight->id) }}">Edit</a>
+            <button class="mybutton delete" value="{{$flight->id}}">Delete</button>
 
         </div>
 
@@ -73,7 +73,7 @@
 <script>
     $(function() {
         $('.mybutton').click(function(e) {
-            let but = '/fligth/deleteFligth/' + $(this).val()
+            let but = '/flight/deleteFlight/' + $(this).val()
 
 
             console.log(but)
@@ -84,7 +84,7 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                 }).done(function(result) {
-                    //console.log(result)
+
                     $('body').html(result)
                 })
                 .fail(function(result) {
