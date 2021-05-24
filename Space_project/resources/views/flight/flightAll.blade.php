@@ -8,11 +8,11 @@
 
 @foreach($allFlight as $flight)
 
-    <style>
-        .card {
-            color: black;
-        }
-    </style>
+<style>
+    .card {
+        color: black;
+    }
+</style>
 <div class=" card">
     <div class="">
         <div>
@@ -50,8 +50,8 @@
         </div>
         <div>
 
-            <a class="edit" href="{{ url('/fligth/editFligth', $fligth->id) }}">Edit</a>
-            <button class="mybutton delete" value="{{$fligth->id}}">Delete</button>
+            <a class="edit" href="{{ url('/fligth/editFlight', $flight->id) }}">Edit</a>
+            <button class="mybutton delete" value="{{$flight->id}}">Delete</button>
 
         </div>
 

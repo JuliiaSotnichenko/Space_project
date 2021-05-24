@@ -24,7 +24,7 @@
 </div>
 <div class="container">
     <div id="Checkout" class="inline">
-        <h1>Pay Invoice</h1>
+        <h1>Payment Methods</h1>
         <div class="card-row">
             <span class="visa"></span>
             <span class="mastercard"></span>

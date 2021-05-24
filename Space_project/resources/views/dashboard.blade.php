@@ -30,9 +30,9 @@
         </ul>
 
 
-            <div>
-                <a id="edit" href="{{ url('update/user') }}" class="btn btn-light">Edit</a>
-            </div>
+        <div>
+            <a id="edit" href="{{ url('update/user') }}" class="btn btn-light">Edit</a>
+        </div>
     <!-- </article> -->
 
     @if (!$booking == null)
@@ -59,14 +59,14 @@
     </article>
 
 
-        <div>
-            <p>
+    <div>
+        <p>
 
 
-            </p>
-        </div>
+        </p>
+    </div>
 
-        <!-- Google maps-->
+    <!-- Google maps-->
     <div id="launchInfo">
 
         <div class="mapouter">
@@ -92,22 +92,22 @@
         <div>
             <div>
                 @if( $flight->location == 'Kennedy Space Center')
-                    <!-- Giving the clients the addresses to the Spaceports -->
-                    <p>Space Commerce Way <br>
+                <!-- Giving the clients the addresses to the Spaceports -->
+                <p>Space Commerce Way <br>
                     Merritt Island <br>
                     FL 32953<br>
                     United States</p>
                 @ifelse( $flight->location == 'Baikonur Cosmodrome')
-                    <p>Abay Avenue 5<br>
+                <p>Abay Avenue 5<br>
                     Baikonur<br>
                     Kazakhstan</p>
                 @ifelse( $flight->location == 'Guiana Space Center Kourou')
-                    <p>Route de l'Espace<br>
+                <p>Route de l'Espace<br>
                     Kourou<br>
                     French Guiana</p>
                 @else
 
-                    <P style="color: red">Spaceport not found</P>
+                <P style="color: red">Spaceport not found</P>
                 @endif
             </div>
             <div>
@@ -133,12 +133,12 @@
         </div>
     </div>
 
-        @endif
-        @endif
+    @endif
+    @endif
 
 
 
-        @endauth
+    @endauth
 
     </ul>
 </div>

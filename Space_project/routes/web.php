@@ -34,68 +34,61 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-
-
-// Account info
+// FRONT OFFICE
+//ACCOUNT PAGE
+// Account: Dashboard.
 Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);
-// Editing and updating account info
+// Account: Editing account info.
 Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
+// Account: Updating account info.
 Route::put('/update/user', [UserController::class, 'updateAcc']);
-// Logout
+// Account: Logout.
 Route::get('/logout', [LoginController::class, 'logout']);
 
-/***********************Fligth Routes*********************** */
-
-
-
-
-/**Insert in the data base */
-//show all fily for backend
-Route::get('/flight/AllFlight', [FlightController::class, 'index']);
-//show the form html to insert data
-Route::get('/flight/InsertFligth', [FlightController::class, 'create']);
-//method to insert in the data base
-Route::post('/flight/InsertFlight', [FlightController::class, 'store']);
-/**edit method */
-//show the edit form
-Route::get('/flight/editFlight/{id}', [FlightController::class, 'edit']);
-//update the data base
-Route::post('/flight/editFlight/{id}', [FlightController::class, 'update']);
-/**delite fligth */
-Route::delete('/flight/deleteFligth/{id}', [FlightController::class, 'destroy']);
-
-/**************Book Route************* */
-Route::get('/bookform', [FlightController::class, 'indexfront']);
-//route for  dettail page
-Route::get('/bookingDetail/{id}', [FlightController::class, 'show']);
-
-Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
-Route::post('/bookpay/{id}', [BookingController::class, 'store']);
-
-
-
-
-// Back office access
-
-// BoP page
-Route::get('/admin', [UserController::class, 'index']);
-// BoP display user
-Route::get('/admin/list', [UserController::class, 'showUser']);
-// BoP display user details
-Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
-// BoP update user
-Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
-Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
-
-
-
-
-
-
-// about Us page
+// ABOUT US PAGE
 Route::get('/about', function () {
     return view('about');
 });
+
+
+// BACK OFFICE
+// FLIGHT PAGE
+// Flight: Show all flights.
+Route::get('/flight/AllFlight', [FlightController::class, 'index']);
+// Flight: Show the html for to create an entry.
+Route::get('/flight/InsertFlight', [FlightController::class, 'create']);
+// Flight: Method to insert into the DB.
+Route::post('/flight/InsertFlight', [FlightController::class, 'store']);
+// Flight: Show the edit form.
+Route::get('/flight/editFlight/{id}', [FlightController::class, 'edit']);
+// Flight: Update the DB from the edit form.
+Route::post('/flight/editFlight/{id}', [FlightController::class, 'update']);
+// Flight: Delete flight.
+Route::delete('/flight/deleteFligth/{id}', [FlightController::class, 'destroy']);
+
+// BOOKING PAGE
+// Bookings: Show all flights.
+Route::get('/booking/form', [FlightController::class, 'indexfront']);
+// Bookings: Display booking details.
+Route::get('/booking/detail/{id}', [FlightController::class, 'show']);
+// Bookings: Payment methods.
+Route::get('/booking/payment/{id}', [BookingController::class, 'payment']);
+Route::post('/booking/paymentStore/{id}', [BookingController::class, 'store']);
+
+
+// USERS PAGE
+// Users: display all users.
+Route::get('/admin', [UserController::class, 'index']);
+// Users: display specific user.
+Route::get('/admin/list', [UserController::class, 'showUser']);
+// Users: display user's details.
+Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
+// Users: Display the edit form.
+Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
+// Users: update user's data in DB.
+Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
+
+
 
 // live search
 Route::get('/livesearch', [SearchController::class, 'index']);
