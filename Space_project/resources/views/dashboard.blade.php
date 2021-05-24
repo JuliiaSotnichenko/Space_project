@@ -33,10 +33,10 @@
             <div>
                 <a id="edit" href="{{ url('update/user') }}" class="btn btn-light">Edit</a>
             </div>
-    </article>
+    <!-- </article> -->
 
     @if (!$booking == null)
-    <article>
+    <!-- <article> -->
         <h1>Booking details:</h1>
 
         <ul>
