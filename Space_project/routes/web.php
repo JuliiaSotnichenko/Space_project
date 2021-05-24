@@ -53,7 +53,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 //show all fily for backend
 Route::get('/flight/AllFlight', [FlightController::class, 'index']);
 //show the form html to insert data
-Route::get('/flight/InsertFligth', [FlightController::class, 'create']);
+Route::get('/flight/InsertFlight', [FlightController::class, 'create']);
 //method to insert in the data base
 Route::post('/flight/InsertFlight', [FlightController::class, 'store']);
 /**edit method */
