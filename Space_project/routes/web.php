@@ -54,23 +54,23 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 /**Insert in the data base */
 //show all fily for backend
-Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
+Route::get('/flight/AllFlight', [FligthController::class, 'index']);
 //show the form html to insert data
-Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
+Route::get('/flight/InsertFligth', [FligthController::class, 'create']);
 //method to insert in the data base
-Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
+Route::post('/flight/InsertFlight', [FligthController::class, 'store']);
 /**edit method */
 //show the edit form
-Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
+Route::get('/flight/editFlight/{id}', [FligthController::class, 'edit']);
 //update the data base
-Route::post('/fligth/editFligth/{id}', [FligthController::class, 'update']);
+Route::post('/flight/editFlight/{id}', [FligthController::class, 'update']);
 /**delite fligth */
-Route::delete('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
+Route::delete('/flight/deleteFligth/{id}', [FligthController::class, 'destroy']);
 
 /**************Book Route************* */
 Route::get('/bookform', [FligthController::class, 'indexfront']);
 //route for  dettail page
-Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
+Route::get('/bookingDetail/{id}', [FligthController::class, 'show']);
 
 Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
 Route::post('/bookpay/{id}', [BookingController::class, 'store']);
@@ -95,7 +95,7 @@ Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
 
 
 
-// about Us page 
+// about Us page
 Route::get('/about', function () {
     return view('about');
 });
