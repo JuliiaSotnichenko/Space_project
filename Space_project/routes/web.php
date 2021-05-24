@@ -45,6 +45,11 @@ Route::put('/update/user', [UserController::class, 'updateAcc']);
 // Account: Logout
 Route::get('/logout', [LoginController::class, 'logout']);
 
+// ABOUT US PAGE
+Route::get('/about', function () {
+    return view('about');
+});
+
 
 // BACK OFFICE
 // FLIGHT PAGE
@@ -64,36 +69,26 @@ Route::delete('/flight/deleteFligth/{id}', [FlightController::class, 'destroy'])
 // BOOKING PAGE
 // Bookings: Show all flights.
 Route::get('/booking/form', [FlightController::class, 'indexfront']);
-//route for  dettail page
+// Bookings: Display booking details.
 Route::get('/booking/detail/{id}', [FlightController::class, 'show']);
-
+// Bookings: Payment methods.
 Route::get('/booking/payment/{id}', [BookingController::class, 'payment']);
 Route::post('/booking/paymentStore/{id}', [BookingController::class, 'store']);
 
 
-
-
-// Back office access
-
-// BoP page
+// USERS PAGE
+// Users: display all users.
 Route::get('/admin', [UserController::class, 'index']);
-// BoP display user
+// Users: display specific user.
 Route::get('/admin/list', [UserController::class, 'showUser']);
-// BoP display user details
+// Users: display user's details.
 Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
-// BoP update user
+// Users: Display the edit form.
 Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
+// Users: update user's data in DB.
 Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
 
 
-
-
-
-
-// about Us page
-Route::get('/about', function () {
-    return view('about');
-});
 
 // live search
 Route::get('/livesearch', [SearchController::class, 'index']);
