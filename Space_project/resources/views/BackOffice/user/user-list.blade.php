@@ -5,6 +5,9 @@
 <!-- Section to inject to template -->
 @section('content')
 
+<div class="card_backContainer">
+
+
     @foreach($users as $user)
     <div class="card">
     <li>
@@ -18,4 +21,10 @@
 </div>
 
     @endforeach
+
+    </div>
+
+
+
+   
 @endsection

@@ -40,14 +40,29 @@ footer p {
     color: snow;
 }
 
+
+.card_backContainer{
+    width: 1000px;
+   /* display: flex;
+   justify-content: space-between;
+   align-items: center; */
+   /* flex-wrap: wrap; */
+  margin: auto;
+}
+
+
+
+
 .card {
-    background-color:rgba(255, 255, 255, 0.2);
+    background-color:white;
     padding: 20px;
     background-image: url(../images/all-images/Astronaut-high-5.jpg); /** placeholder until better image/styling is found */
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: 10px;
+    color: black;
+    border-radius: 20px;
 }
 
 .card a {
@@ -59,12 +74,12 @@ footer p {
     margin: 5px 25px;
 }
 
-.card a:hover {
+/* .card a:hover {
     color: darkblue;
     background-color: snow;
-}
+} */
 
-.mybutton {
+/* .mybutton {
 
     border: 0;
     color: blue;
@@ -77,7 +92,33 @@ footer p {
 .mybutton:hover {
     color: darkblue;
     background-color: snow;
+} */
+
+
+.mybutton{
+    width: 20%;
+    cursor: pointer;
+    background: linear-gradient(90deg, deeppink, blueviolet);
+    margin: auto;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    color: white;
 }
+
+.mybutton:hover{
+    background: #8659e9;
+}
+
+.mybutton:focus{
+    box-shadow: 0 0 0 3px #8659e9;
+}
+
+
 
 .delete {
     color: red;
@@ -87,6 +128,17 @@ footer p {
     background-color: red;
     color: white;
 }
+
+/*  */
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 960px) {
     main {

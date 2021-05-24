@@ -75,6 +75,7 @@
 
 	<a href="#" class="btn">Read more</a>	
 	</div>
+	
 	<!-- Subscribe -->
 
 	  <form action="{{ url('/') }}" method="post">
