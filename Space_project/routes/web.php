@@ -34,43 +34,41 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-
-
-// Account info
+// FRONT OFFICE
+//ACCOUNT PAGE
+// Account: Dashboard
 Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);
-// Editing and updating account info
+// Account: Editing account info
 Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
+// Account: Updating account info
 Route::put('/update/user', [UserController::class, 'updateAcc']);
-// Logout
+// Account: Logout
 Route::get('/logout', [LoginController::class, 'logout']);
 
-/***********************Fligth Routes*********************** */
 
-
-
-
-/**Insert in the data base */
-//show all fily for backend
+// BACK OFFICE
+// FLIGHT PAGE
+// Flight: Show all flights.
 Route::get('/flight/AllFlight', [FlightController::class, 'index']);
-//show the form html to insert data
+// Flight: Show the html for to create an entry.
 Route::get('/flight/InsertFlight', [FlightController::class, 'create']);
-//method to insert in the data base
+// Flight: Method to insert into the DB.
 Route::post('/flight/InsertFlight', [FlightController::class, 'store']);
-/**edit method */
-//show the edit form
+// Flight: Show the edit form.
 Route::get('/flight/editFlight/{id}', [FlightController::class, 'edit']);
-//update the data base
+// Flight: Update the DB from the edit form.
 Route::post('/flight/editFlight/{id}', [FlightController::class, 'update']);
-/**delite fligth */
+// Flight: Delete flight.
 Route::delete('/flight/deleteFligth/{id}', [FlightController::class, 'destroy']);
 
-/**************Book Route************* */
-Route::get('/bookform', [FlightController::class, 'indexfront']);
+// BOOKING PAGE
+// Bookings: Show all flights.
+Route::get('/booking/form', [FlightController::class, 'indexfront']);
 //route for  dettail page
-Route::get('/bookingDetail/{id}', [FlightController::class, 'show']);
+Route::get('/booking/detail/{id}', [FlightController::class, 'show']);
 
-Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
-Route::post('/bookpay/{id}', [BookingController::class, 'store']);
+Route::get('/booking/payment/{id}', [BookingController::class, 'payment']);
+Route::post('/booking/paymentStore/{id}', [BookingController::class, 'store']);
 
 
 
