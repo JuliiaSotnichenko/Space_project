@@ -50,8 +50,8 @@
         </div>
         <div>
 
-            <a href="{{ url('/flight/editFlight', $flight->id) }}">Edit</a>
-            <button class="mybutton delete" value="{{$flight->id}}">Delete</button>
+            <a class="edit" href="{{ url('/fligth/editFligth', $fligth->id) }}">Edit</a>
+            <button class="mybutton delete" value="{{$fligth->id}}">Delete</button>
 
         </div>
 
