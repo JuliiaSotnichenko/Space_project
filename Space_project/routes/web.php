@@ -54,11 +54,11 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 /**Insert in the data base */
 //show all fily for backend
-Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
+Route::get('/flight/AllFlight', [FligthController::class, 'index']);
 //show the form html to insert data
-Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
+Route::get('/flight/InsertFligth', [FligthController::class, 'create']);
 //method to insert in the data base
-Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
+Route::post('/flight/InsertFlight', [FligthController::class, 'store']);
 /**edit method */
 //show the edit form
 Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
@@ -95,7 +95,7 @@ Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
 
 
 
-// about Us page 
+// about Us page
 Route::get('/about', function () {
     return view('about');
 });
