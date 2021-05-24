@@ -4,6 +4,8 @@
 @section('style')
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+
 <style>
     .success {
         background-color: #fff;
@@ -86,6 +88,7 @@
         </div>
 
         <!-- Google maps-->
+    <div id="launchInfo">
 
         <div class="mapouter">
             <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={{ $flight->location}}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org">pirate bay</a><br>
@@ -107,24 +110,39 @@
                 </style>
             </div>
         </div>
-        <div> @if( $flight->location == 'NASA Kennedy Space Center')
-            <!-- weather widget start -->
-            <a target="_blank" href="https://hotelmix.fr/weather/orlando-19887">
-                <!-- weather widget start -->
-                <a target="_blank" href="https://www.booked.net/weather/orlando-19887">
-                    <img src="https://w.bookcdn.com/weather/picture/32_19887_1_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=&anc_id=48006" alt="booked.net" /></a>
-                <!-- weather widget end -->
+        <div>
+            <div>
+                @if( $flight->location == 'Kennedy Space Center')
+                    <!-- Show the addresses of the Spaceports -->
+                    <p>Space Commerce Way <br> Merritt Island <br> FL 32953<br> United States</p>
                 @ifelse( $flight->location == 'Baikonur Cosmodrome')
-                <!-- weather widget start -->
-                <a target="_blank" href="https://www.booked.net/weather/ayteke-bi-w651588">
-                    <img src="https://w.bookcdn.com/weather/picture/32_w651588_1_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=&anc_id=48006" alt="booked.net" /></a>
-                <!-- weather widget end -->
-                @else
-                <!-- weather widget start --><a target="_blank" href="https://hotelmix.fr/weather/kourou-17000">
-                    <img src="https://w.bookcdn.com/weather/picture/32_17000_1_3_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=581&anc_id=94940" alt="booked.net" /></a>
-                <!-- weather widget end -->
+                    <p>Abay Avenue 5<br> Baikonur<br> Kazakhstan</p>
+                    @else
+                    <p>Route de l'Espace<br> Kourou<br>French Guiana</p>
                 @endif
+            </div>
+            <div>
+                @if( $flight->location == 'Kennedy Space Center')
+                <!-- weather widget start -->
+                <a target="_blank" href="https://hotelmix.fr/weather/orlando-19887">
+                    <!-- weather widget start -->
+                    <a target="_blank" href="https://www.booked.net/weather/orlando-19887">
+                        <img src="https://w.bookcdn.com/weather/picture/32_19887_1_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=&anc_id=48006" alt="booked.net" /></a>
+                    <!-- weather widget end -->
+                    @ifelse( $flight->location == 'Baikonur Cosmodrome')
+                    <!-- weather widget start -->
+                    <a target="_blank" href="https://www.booked.net/weather/ayteke-bi-w651588">
+                        <img src="https://w.bookcdn.com/weather/picture/32_w651588_1_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=&anc_id=48006" alt="booked.net" /></a>
+                    <!-- weather widget end -->
+                    @else
+                    <!-- weather widget start --><a target="_blank" href="https://hotelmix.fr/weather/kourou-17000">
+                        <img src="https://w.bookcdn.com/weather/picture/32_17000_1_3_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=581&anc_id=94940" alt="booked.net" /></a>
+                    <!-- weather widget end -->
+                    @endif
+            </div>
+
         </div>
+    </div>
 
         @endif
         @endif
