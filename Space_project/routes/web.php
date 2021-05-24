@@ -44,9 +44,6 @@ Route::put('/update/user', [UserController::class, 'updateAcc']);
 // Logout
 Route::get('/logout', [LoginController::class, 'logout']);
 
-//Auth::routes();
-
-//Route::get('/', [HomeController::class, 'index']);
 /***********************Fligth Routes*********************** */
 
 
@@ -54,23 +51,23 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 /**Insert in the data base */
 //show all fily for backend
-Route::get('/flight/AllFlight', [FligthController::class, 'index']);
+Route::get('/flight/AllFlight', [FlightController::class, 'index']);
 //show the form html to insert data
-Route::get('/flight/InsertFligth', [FligthController::class, 'create']);
+Route::get('/flight/InsertFligth', [FlightController::class, 'create']);
 //method to insert in the data base
-Route::post('/flight/InsertFlight', [FligthController::class, 'store']);
+Route::post('/flight/InsertFlight', [FlightController::class, 'store']);
 /**edit method */
 //show the edit form
-Route::get('/flight/editFlight/{id}', [FligthController::class, 'edit']);
+Route::get('/flight/editFlight/{id}', [FlightController::class, 'edit']);
 //update the data base
-Route::post('/flight/editFlight/{id}', [FligthController::class, 'update']);
+Route::post('/flight/editFlight/{id}', [FlightController::class, 'update']);
 /**delite fligth */
-Route::delete('/flight/deleteFligth/{id}', [FligthController::class, 'destroy']);
+Route::delete('/flight/deleteFligth/{id}', [FlightController::class, 'destroy']);
 
 /**************Book Route************* */
-Route::get('/bookform', [FligthController::class, 'indexfront']);
+Route::get('/bookform', [FlightController::class, 'indexfront']);
 //route for  dettail page
-Route::get('/bookingDetail/{id}', [FligthController::class, 'show']);
+Route::get('/bookingDetail/{id}', [FlightController::class, 'show']);
 
 Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
 Route::post('/bookpay/{id}', [BookingController::class, 'store']);
