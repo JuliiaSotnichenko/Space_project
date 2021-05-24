@@ -71,7 +71,7 @@ class FligthController extends Controller
         //3. Save the Flower : this will insert into db
         $fligth->save();
         // Redirect fligth page and send information through session
-        return redirect('/fligth/InsertFligth')->with('success', $request->fly_ref . ' was created successfully.');
+        return redirect('/fligth/InsertFligth')->with('success', $request->fly_ref . ' Pakage created successfully.');
 
         /************************************ */
     }

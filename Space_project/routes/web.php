@@ -65,7 +65,7 @@ Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
 //update the data base
 Route::post('/fligth/editFligth/{id}', [FligthController::class, 'update']);
 /**delite fligth */
-Route::delete('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
+Route::post('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
 
 /**************Book Route************* */
 Route::get('/bookform', [FligthController::class, 'indexfront']);

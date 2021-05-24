@@ -2,7 +2,51 @@
 
 @section('title','Pakage | Add Pakage')
 
+<style>
+    .success {
+        background-color: #fff;
+        color: #243B7B;
+        position: absolute;
+        width: 400px;
+        top: 200px;
+        left: 450px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px 5px black;
+
+
+    }
+
+    .success a {
+        padding: 5px 20px;
+        color: white;
+        background-color: blue;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    .success a:hover {
+        box-shadow: 5px 5px 5px black;
+        color: white;
+    }
+
+    .success img {
+        width: 80px;
+    }
+</style>
+
+
+
 @section('content')
+@if($message = Session::get('success'))
+<strong class="success">
+    <img src="/images/done.png" alt="img">
+    <p>Well Done</p>
+    <p>{{$message}}</p>
+    <a href="{{ url('/fligth/InsertFligth') }}">Continue</a>
+</strong>
+@endif
 <h2> fligth insert form</h2>
 <div>
     @if($message=Session::get('success'))
