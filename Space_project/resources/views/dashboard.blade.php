@@ -6,35 +6,6 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
-<style>
-    .success {
-        background-color: #fff;
-        color: #243B7B;
-        position: absolute;
-        top: 200px;
-        transform: translateX(-50%);
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 10px 10px 10px 5px black;
-
-    }
-
-    .success a {
-        padding: 5px 20px;
-        color: white;
-        background-color: blue;
-        border-radius: 10px;
-        text-decoration: none;
-    }
-
-    .success a:hover {
-        box-shadow: 5px 5px 5px black;
-    }
-
-    .success img {
-        width: 80px;
-    }
-</style>
 @endsection
 @section('title', 'Account')
 
@@ -48,37 +19,45 @@
 </strong>
 @endif
 <div class="container">
-    <ul class="text-light">
-        <h1>Account details:</h1>
-        @auth
-        <li class="">First name: {{$user->first_name}}</li>
-        <li class="">Last name: {{$user->last_name}}</li>
-        <li class="">Country: {{$user->country}}</li>
-        <li class="">Email: {{$user->email}}</li>
+    <article>
+        <ul>
+            <h1>Your account details:</h1>
+            @auth
+            <li class="">First name: {{$user->first_name}}</li>
+            <li class="">Last name: {{$user->last_name}}</li>
+            <li class="">Country: {{$user->country}}</li>
+            <li class="">Email: {{$user->email}}</li>
+        </ul>
 
 
-        <div>
-            <a href="{{ url('update/user') }}" class="btn btn-light">Edit</a>
-        </div>
+            <div>
+                <a id="edit" href="{{ url('update/user') }}" class="btn btn-light">Edit</a>
+            </div>
+    </article>
 
-
-        @if (!$booking == null)
+    @if (!$booking == null)
+    <article>
         <h1>Booking details:</h1>
 
-        <li>Payment: {{ $booking->payment }}</li>
-        <li>Date of creation: {{ $booking->created_at }}</li>
-        <li>Last updated: {{ $booking->updated_at}}</li>
+        <ul>
+            <li>Payment: {{ $booking->payment }}</li>
+            <li>Date of creation: {{ $booking->created_at }}</li>
+            <li>Last updated: {{ $booking->updated_at}}</li>
+        </ul>
 
         <!--Hidden section for paid users-->
         @if ($booking->payment == 'done' )
         <h2>Flight Info</h2>
+        <ul>
+            <li>Depart: {{ $flight->depart_date}} at {{ $flight->depart_time}}</li>
+            <li>Arrival: {{ $flight->arrival_date}} at {{ $flight->arrival_time}}</li>
+            <li>Status :{{ $flight->status}}</li>
+            <li>Itinerary :{{ $flight->itinerary}}</li>
+            <li>Location :{{ $flight->location}}</li>
+            <li>Flight ref. :{{ $flight->fly_ref}}</li>
+        </ul>
+    </article>
 
-        <li>Depart: {{ $flight->depart_date}} at {{ $flight->depart_time}}</li>
-        <li>Arrival: {{ $flight->arrival_date}} at {{ $flight->arrival_time}}</li>
-        <li>Status :{{ $flight->status}}</li>
-        <li>Itinerary :{{ $flight->itinerary}}</li>
-        <li>Location :{{ $flight->location}}</li>
-        <li>Flight ref. :{{ $flight->fly_ref}}</li>
 
         <div>
             <p>
@@ -113,12 +92,22 @@
         <div>
             <div>
                 @if( $flight->location == 'Kennedy Space Center')
-                    <!-- Show the addresses of the Spaceports -->
-                    <p>Space Commerce Way <br> Merritt Island <br> FL 32953<br> United States</p>
+                    <!-- Giving the clients the addresses to the Spaceports -->
+                    <p>Space Commerce Way <br>
+                    Merritt Island <br>
+                    FL 32953<br>
+                    United States</p>
                 @ifelse( $flight->location == 'Baikonur Cosmodrome')
-                    <p>Abay Avenue 5<br> Baikonur<br> Kazakhstan</p>
-                    @else
-                    <p>Route de l'Espace<br> Kourou<br>French Guiana</p>
+                    <p>Abay Avenue 5<br>
+                    Baikonur<br>
+                    Kazakhstan</p>
+                @ifelse( $flight->location == 'Guiana Space Center Kourou')
+                    <p>Route de l'Espace<br>
+                    Kourou<br>
+                    French Guiana</p>
+                @else
+
+                    <P style="color: red">Spaceport not found</P>
                 @endif
             </div>
             <div>
