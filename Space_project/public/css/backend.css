@@ -42,7 +42,7 @@ footer p {
 
 
 .card_backContainer{
-    width: 1000px;
+    max-width: 1200px;
    /* display: flex;
    justify-content: space-between;
    align-items: center; */
@@ -126,6 +126,16 @@ footer p {
     background-color: red;
     color: white;
 }
+
+/* footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer img {
+    min-width: 80px;
+
+} */
 
 /*  */
 
