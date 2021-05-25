@@ -33,10 +33,10 @@
         <div>
             <a id="edit" href="{{ url('update/user') }}" class="btn btn-light">Edit</a>
         </div>
-    <!-- </article> -->
+        <!-- </article> -->
 
-    @if (!$booking == null)
-    <!-- <article> -->
+        @if (!$booking == null)
+        <!-- <article> -->
         <h1>Booking details:</h1>
 
         <ul>
@@ -91,17 +91,17 @@
         </div>
         <div>
             <div>
-                @if( $flight->location == 'Kennedy Space Center')
+                @if( $flight->location == 'NASA Kennedy Space Center')
                 <!-- Giving the clients the addresses to the Spaceports -->
                 <p>Space Commerce Way <br>
                     Merritt Island <br>
                     FL 32953<br>
                     United States</p>
-                @ifelse( $flight->location == 'Baikonur Cosmodrome')
+                @elseif( $flight->location == 'Baikonur Cosmodrome')
                 <p>Abay Avenue 5<br>
                     Baikonur<br>
                     Kazakhstan</p>
-                @ifelse( $flight->location == 'Guiana Space Center Kourou')
+                @elseif( $flight->location == 'Guiana Space Center Kourou')
                 <p>Route de l'Espace<br>
                     Kourou<br>
                     French Guiana</p>
@@ -111,14 +111,14 @@
                 @endif
             </div>
             <div>
-                @if( $flight->location == 'Kennedy Space Center')
+                @if( $flight->location == 'NASA Kennedy Space Center')
                 <!-- weather widget start -->
                 <a target="_blank" href="https://hotelmix.fr/weather/orlando-19887">
                     <!-- weather widget start -->
                     <a target="_blank" href="https://www.booked.net/weather/orlando-19887">
                         <img src="https://w.bookcdn.com/weather/picture/32_19887_1_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=&anc_id=48006" alt="booked.net" /></a>
                     <!-- weather widget end -->
-                    @ifelse( $flight->location == 'Baikonur Cosmodrome')
+                    @elseif( $flight->location == 'Baikonur Cosmodrome')
                     <!-- weather widget start -->
                     <a target="_blank" href="https://www.booked.net/weather/ayteke-bi-w651588">
                         <img src="https://w.bookcdn.com/weather/picture/32_w651588_1_1_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=&anc_id=48006" alt="booked.net" /></a>
