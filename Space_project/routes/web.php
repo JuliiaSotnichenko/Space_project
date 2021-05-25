@@ -31,7 +31,8 @@ Route::get('/', function () {
             $users = User::all();
             return view('BackOffice.user.user-list',  ['users' => $users]); // if admin show the back office portal page
         } elseif ($loggedUser->role == 'user') {
-            return view('../dashboard');
+
+            return view('home',);
         }
     }
 
