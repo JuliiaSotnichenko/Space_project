@@ -23,19 +23,18 @@
 </head>
 
 <body>
-  <main>
 
-    <nav class="main__navig">
+    <!-- <nav class="main__navig">
       <a href="{{ url('/') }}">
         <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
       </a>
       <ul class="main__navig_list">
         <li><a href="{{ url('/') }}">Home</a></li>
         <li><a href="{{ url('/about') }}">About us</a></li>
-        <li><a href="{{ url('/bookform') }}">Packages</a></li>
+        <li><a href="{{ url('/bookform') }}">Packages</a></li> -->
         <!-- <li><a href="{{ url('contact') }}">Contact</a></li> -->
 
-        @if(Auth::check())
+        <!-- @if(Auth::check())
 
         <li><a href="{{ url('dashboard') }}">Account</a></li>
         <li><a href="{{ url('logout') }}">Logout</a></li>
@@ -44,7 +43,51 @@
         <li><a href="{{ route('register') }}">Register</a></li>
         @endif
       </ul>
-    </nav>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navi">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" href="{{url('/admin')}}">StarFlight</a> -->
+      <a href="{{ url('/') }}">
+        <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{url('/')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{'/about'}}">About</a>
+          </li>
+          @if(Auth::check())
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('dashboard') }}">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('logout') }}">Log Out</a>
+          </li>
+          @else
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('login') }}">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('register') }}">Register</a>
+          </li>
+          @endif
+        </ul>
+        <!-- search bar needed on front-end? -->
+        <!-- <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form> -->
+      </div>
+    </div>
+  </nav>
+
+  <main>
 
     <div class="content_template">
       @yield('content')
