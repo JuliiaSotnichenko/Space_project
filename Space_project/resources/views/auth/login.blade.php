@@ -13,11 +13,13 @@
         margin: 50px;
         width: 350px;
 
+        transition-duration: 0.3s;
+
 
     }
 
     .success a {
-        padding: 5px 20px;
+        padding: 10px 20px;
         color: white;
         background-color: red;
         border-radius: 10px;
@@ -60,8 +62,8 @@
         <form class="login_form" method="POST" action="{{ route('login') }}">
             @csrf
 
-              <!-- Email Address -->
-              <div>
+            <!-- Email Address -->
+            <div>
                 <x-label for="email" :value="__('E-mail :')" /><br>
                 <x-input id="email" class="block mt-1 w-full" placeholder="" type="email" name="email" :value="old('Email')" required autofocus />
             </div>

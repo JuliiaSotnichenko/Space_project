@@ -42,6 +42,7 @@
                 <x-label for="password_confirmation" />Confirm password:<br>
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" placeholder="" name="password_confirmation" required />
             </div>
+            <!-- Subscribe -->
             <div class="input-group mb-4">
 
             </div>
