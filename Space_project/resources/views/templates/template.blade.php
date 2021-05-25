@@ -77,15 +77,51 @@
 
           <!-- Links -->
           <h5 class="about font-weight-bold text-uppercase mb-4">About</h5>
+          <ul class="list-unstyled">
+          <li>
+            <p>
+              <a href="{{ url('/about') }}">ABOUT US</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="{{ url('/bookform') }}">Packages</a>
+            </p>
+          </li>
+        </ul>
 
-        <div class="content2">
-            @yield('content2')
+      </div>
+      <!-- Grid column -->
 
-        </div>
-        <div class="content3">
-            @yield('content3')
+      <hr class="clearfix w-100 d-md-none">
 
-        </div>
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Contact</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <i class="fas fa-home mr-3"></i> Luxembourg, 2121</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-envelope mr-3"></i>cj.finalfrontier@gmail.com</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-phone mr-3"></i>+352 691 280 118</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-print mr-3"></i>+352 691 280 119</p>
+          </li>
+        </ul>
+
+      </div>
+    
         <!-- Grid column -->
 
         <hr class="clearfix w-100 d-md-none">
@@ -115,8 +151,7 @@
     </div>
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency
-        </div>
+        <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency</div>
 
 
         @yield('script')
