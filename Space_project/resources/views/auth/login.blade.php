@@ -1,3 +1,47 @@
+<style>
+    .success {
+        z-index: 1;
+        background-color: #fff;
+        color: #243B7B;
+        position: absolute;
+        top: 250px;
+        right: 460px;
+        /* transform: translateX(50%); */
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px 5px black;
+        margin: 50px;
+        width: 350px;
+
+
+    }
+
+    .success a {
+        padding: 5px 20px;
+        color: white;
+        background-color: red;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    .success a:hover {
+        box-shadow: 5px 5px 5px black;
+        color: white;
+        text-decoration: none;
+    }
+
+    .success img {
+        width: 80px;
+    }
+</style>
+@if($message = Session::get('success'))
+<strong class="success">
+    <img src="/images/notdon.png" alt="img">
+    <p>{{$message}}</p>
+    <a href="{{ url('/login') }}">Continue</a>
+</strong>
+@endif
+
 <x-guest-layout>
     <x-slot name="logo">
         <a href="/">
