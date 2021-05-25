@@ -93,16 +93,16 @@
             <div>
                 @if( $flight->location == 'Kennedy Space Center')
                 <!-- Giving the clients the addresses to the Spaceports -->
-                <p>Space Commerce Way <br>
+                <p class="address">Space Commerce Way <br>
                     Merritt Island <br>
                     FL 32953<br>
                     United States</p>
                 @ifelse( $flight->location == 'Baikonur Cosmodrome')
-                <p>Abay Avenue 5<br>
+                <p class="address">Abay Avenue 5<br>
                     Baikonur<br>
                     Kazakhstan</p>
                 @ifelse( $flight->location == 'Guiana Space Center Kourou')
-                <p>Route de l'Espace<br>
+                <p class="address">Route de l'Espace<br>
                     Kourou<br>
                     French Guiana</p>
                 @else
