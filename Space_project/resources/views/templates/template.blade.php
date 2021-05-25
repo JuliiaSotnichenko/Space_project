@@ -119,17 +119,7 @@
               <i class="fas fa-print mr-3"></i>+352 691 280 119</p>
           </li>
         </ul>
-          <nav class="main__navig">
-            <a href="{{ url('/') }}">
-              <img class="logo" src="/images/logoSF.svg" alt="Starlight logo">
-            </a>
-            <ul class="main__navig_list">
-              <li><a href="{{ url('/') }}">Home</a></li>
-              <li><a href="{{ url('/about') }}">About us</a></li>
-              <li><a href="{{ url('/bookform') }}">Packages</a></li>
-              <!-- <li><a href="{{ url('contact') }}">Contact</a></li> -->
-
-              @if(Auth::check())
+          
 
       </div>
     

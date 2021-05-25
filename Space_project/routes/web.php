@@ -10,7 +10,8 @@ use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SearchController;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,17 @@ use App\Http\Controllers\SearchController;
 */
 
 Route::get('/', function () {
+    $loggedUser = Auth::user();
+    if ($loggedUser != null) {
+        if ($loggedUser->role == 'admin') { // check if the user logging in is a "user" or an "admin"
+            $users = User::all();
+            return view('BackOffice.user.user-list',  ['users' => $users]); // if admin show the back office portal page
+        } elseif ($loggedUser->role == 'user') {
+            return view('../dashboard');
+        }
+    }
+
+
     return view('home');
 });
 
@@ -125,7 +137,7 @@ Route::get('/livesearch', [SearchController::class, 'index']);
 Route::get('/search', [SearchController::class, 'search']);
 
 // mailing
-Route::get('/', [ApiController::class, 'create']);
+//Route::get('/', [ApiController::class, 'create']);
 Route::post('/', [ApiController::class, 'store']);
 
 
