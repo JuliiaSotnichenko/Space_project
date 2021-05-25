@@ -51,13 +51,12 @@ Route::get('/about', function () {
 });
 
 
-// BACK OFFICE
-// FLIGHT PAGE
-// Flight: Show all flights.
-Route::get('/flight/AllFlight', [FlightController::class, 'index']);
-// Flight: Show the html for to create an entry.
-Route::get('/flight/InsertFlight', [FlightController::class, 'create']);
-// Flight: Method to insert into the DB.
+/**Insert in the data base */
+//show all fily for backend
+Route::get('/flight/AllFlight', [FligthController::class, 'index']);
+//show the form html to insert data
+Route::get('/flight/InsertFligth', [FlightController::class, 'create']);
+//method to insert in the data base
 Route::post('/flight/InsertFlight', [FlightController::class, 'store']);
 // Flight: Show the edit form.
 Route::get('/flight/editFlight/{id}', [FlightController::class, 'edit']);
