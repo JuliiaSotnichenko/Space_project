@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreFlightRequest;
 use App\Http\Requests\StoreFligthRequest;
 use App\Models\Flight;
 use App\Models\Fligth;
@@ -43,7 +44,7 @@ class FligthController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFligthRequest $request)
+    public function store(StoreFlightRequest $request)
     {
 
         $request->validated();
@@ -110,7 +111,7 @@ class FligthController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreFligthRequest $request, $id)
+    public function update(StoreFlightRequest $request, $id)
     {
         //validation
         $request->validated();

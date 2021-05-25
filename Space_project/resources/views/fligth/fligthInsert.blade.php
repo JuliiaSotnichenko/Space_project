@@ -64,9 +64,9 @@
         <div>
             <label for="fitinerary">Itinerary</label>
             <select name="itinerary" id="fitinerary">
-                <option value="Earth">Earth</option>
-                <option value="Moon">Moon</option>
-                <option value="Mars">Mars</option>
+                <option value="Orbital Hotel">Orbital Hotel</option>
+                <option value="Space Station V">Space Station V</option>
+                <option value="Floshton Paradise">Floshton Paradise</option>
             </select>
 
         </div>
@@ -93,8 +93,9 @@
             <label for="flocation">Location</label>
             <select name="location" id="flocation">
                 <option value="Baikonur Cosmodrome">Baikonur Cosmodrome</option>
-                <option value="NASA Kennedy Space Center">Kennedy Space Center</option>
+                <option value="Kennedy Space Center">Kennedy Space Center</option>
                 <option value="Boca Chica Starbase">Boca Chica Starbase</option>
+                <option value="Guiana Space Center Kourou">Guiana Space Center Kourou</option>
             </select>
         </div>
         <div>
@@ -107,7 +108,14 @@
         </div>
         <div>
             <label for="tprice">Price</label>
-            <input id="tprice" name="price" type="text">
+            <select name="price" id="tprice">
+                <option value="799000">799.000€</option>
+                <option value="1249000">1.249.000€</option>
+                <option value="5899000">5.899.000€</option>
+
+
+            </select>
+
         </div>
         <div>
             <input type="submit" value="Add Fligth">

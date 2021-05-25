@@ -6,6 +6,7 @@ use App\Http\Requests\BookingValidation;
 use App\Models\Booking;
 use App\Models\Flight;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
@@ -24,8 +25,13 @@ class BookingController extends Controller
 
     public function payment($id)
     {
-        $packag = Flight::find($id);
-        return view('/FrontOffice/booking/payment', ['packag' => $packag]);
+        $user = Auth::user();
+        if ($user != null) {
+            $packag = Flight::find($id);
+            return view('/FrontOffice/booking/payment', ['packag' => $packag]);
+        } else {
+            return redirect('/login')->with('success', 'You have to be Loggedl.');
+        }
     }
 
     /**
@@ -48,6 +54,7 @@ class BookingController extends Controller
     {
         $request->validated();
         $book = new Booking();
+
 
         $book->user_id = $request->user;
         $book->flight_id = $request->pakage;
