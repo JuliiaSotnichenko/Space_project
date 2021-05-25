@@ -124,10 +124,8 @@
                 <p>Route de l'Espace<br>
                     Kourou<br>
                     French Guiana</p>
-                @else
-                <!-- weather widget start --><a target="_blank" href="https://hotelmix.fr/weather/kourou-17000">
-                    <img src="https://w.bookcdn.com/weather/picture/32_17000_1_3_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=581&anc_id=94940" alt="booked.net" /></a>
-                <!-- weather widget end -->
+               
+              
                 @endif
             </div>
             <div>
