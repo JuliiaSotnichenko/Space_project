@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body {
+    min-height: 100%;
+}
+
 /* font-family: 'Roboto', sans-serif; */
 main a {
 
@@ -19,6 +23,7 @@ li {
 }
 
 main {
+    min-height: 84vh;
     background-color: #181743;
     font-family: 'Roboto', sans-serif;
     color: snow;
@@ -30,6 +35,8 @@ main a {
 }
 
 footer {
+
+    transform: translate();
     background-color: black;
     margin: auto;
     padding: 30px;
