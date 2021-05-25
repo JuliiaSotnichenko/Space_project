@@ -18,16 +18,16 @@
 
             <!-- Email Address -->
             <div>
-                <x-label for="email" :value="__('Email')" /><br>
+                <x-label for="email" :value="__('E-mail :')" /><br>
 
-                <x-input id="email" class="block mt-1 w-full" placeholder="email" type="email" name="email" :value="old('email')" required autofocus />
+                <x-input id="email" class="block mt-1 w-full" placeholder="" type="email" name="email" :value="old('Email')" required autofocus />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" /><br>
+                <x-label for="password" :value="__('Password :')" /><br>
 
-                <x-input id="password" class="block mt-1 w-full" placeholder="password" type="password" name="password" required autocomplete="current-password" />
+                <x-input id="password" class="block mt-1 w-full" placeholder="" type="password" name="password" required autocomplete="current-password" />
             </div>
 
             <!-- Remember Me -->
