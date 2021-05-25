@@ -73,11 +73,16 @@
         <hr class="clearfix w-100 d-md-none">
 
         <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+        <div id="menu_footer" class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
 
           <!-- Links -->
           <h5 class="about font-weight-bold text-uppercase mb-4">About</h5>
-          <ul class="list-unstyled">
+          <ul  class="list-unstyled">
+            <li>
+            <p>
+              <a href="{{ url('/') }}">Home</a>
+            </p>
+          </li>
           <li>
             <p>
               <a href="{{ url('/about') }}">ABOUT US</a>
@@ -119,17 +124,7 @@
               <i class="fas fa-print mr-3"></i>+352 691 280 119</p>
           </li>
         </ul>
-          <nav class="main__navig">
-            <a href="{{ url('/') }}">
-              <img class="logo" src="/images/logoSF.svg" alt="Starlight logo">
-            </a>
-            <ul class="main__navig_list">
-              <li><a href="{{ url('/') }}">Home</a></li>
-              <li><a href="{{ url('/about') }}">About us</a></li>
-              <li><a href="{{ url('/bookform') }}">Packages</a></li>
-              <!-- <li><a href="{{ url('contact') }}">Contact</a></li> -->
-
-              @if(Auth::check())
+      
 
       </div>
     
@@ -176,22 +171,7 @@
     </div>
     <!-- Grid row -->
 
-    </div>
-
-    <!-- <form action="{{ url('/') }}" method="post">
-    <div class="form-group">
-        <label for="exampleInputEmail"></label>
-        <input type="email" name="user_email" id="exampleInputEmail" class="form-control" placeholder="Email Address">
-        {{ csrf_field() }}
-    <button type="submit" class="btn btn-primary">Subscribe</button>
-      </div>
-</form> -->
-
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency
-    </div>
-
+</div>
 
     @yield('script')
 
