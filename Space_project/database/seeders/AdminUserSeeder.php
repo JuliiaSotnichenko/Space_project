@@ -15,6 +15,8 @@ class AdminUserSeeder extends Seeder
      */
     public function run()
     {
+        // Adding the admins to the database when seeding
+
         DB::table('users')->insert([
             "first_name" => "Steve",
             "last_name" => "Zeid",
