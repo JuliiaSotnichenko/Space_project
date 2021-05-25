@@ -25,7 +25,11 @@ h1 {
 
 .profile-card {
     padding:20px;
-
+    background-color: #fff;
+    color: #181743;
+    border: 2px solid silver;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .infodump {
@@ -33,7 +37,8 @@ h1 {
 }
 
 h4 {
-    color: silver;
+    color: gray;
     padding-left: 30px;
+    font-size: 28px;
 }
 
