@@ -27,7 +27,7 @@
 
     <nav class="main__navig">
       <a href="{{ url('/') }}">
-        <img class="logo" src="/images/logoSF.svg" alt="Starlight logo">
+        <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
       </a>
       <ul class="main__navig_list">
         <li><a href="{{ url('/') }}">Home</a></li>
