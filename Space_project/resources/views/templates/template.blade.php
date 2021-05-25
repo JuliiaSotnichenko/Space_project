@@ -77,57 +77,61 @@
 
           <!-- Links -->
           <h5 class="about font-weight-bold text-uppercase mb-4">About</h5>
-          <ul  class="list-unstyled">
+          <ul class="list-unstyled">
             <li>
-            <p>
-              <a href="{{ url('/') }}">Home</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="{{ url('/about') }}">ABOUT US</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="{{ url('/bookform') }}">Packages</a>
-            </p>
-          </li>
-        </ul>
+              <p>
+                <a href="{{ url('/') }}">Home</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="{{ url('/about') }}">ABOUT US</a>
+              </p>
+            </li>
+            <li>
+              <p>
+                <a href="{{ url('/bookform') }}">Packages</a>
+              </p>
+            </li>
+          </ul>
 
-      </div>
-      <!-- Grid column -->
+        </div>
+        <!-- Grid column -->
 
-      <hr class="clearfix w-100 d-md-none">
+        <hr class="clearfix w-100 d-md-none">
 
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
 
-        <!-- Contact details -->
-        <h5 class="font-weight-bold text-uppercase mb-4">Contact</h5>
+          <!-- Contact details -->
+          <h5 class="font-weight-bold text-uppercase mb-4">Contact</h5>
 
-        <ul class="list-unstyled">
-          <li>
-            <p>
-              <i class="fas fa-home mr-3"></i> Luxembourg, 2121</p>
-          </li>
-          <li>
-            <p>
-              <i class="fas fa-envelope mr-3"></i>cj.finalfrontier@gmail.com</p>
-          </li>
-          <li>
-            <p>
-              <i class="fas fa-phone mr-3"></i>+352 691 280 118</p>
-          </li>
-          <li>
-            <p>
-              <i class="fas fa-print mr-3"></i>+352 691 280 119</p>
-          </li>
-        </ul>
-      
+          <ul class="list-unstyled">
+            <li>
+              <p>
+                <i class="fas fa-home mr-3"></i> Luxembourg, 2121
+              </p>
+            </li>
+            <li>
+              <p>
+                <i class="fas fa-envelope mr-3"></i>cj.finalfrontier@gmail.com
+              </p>
+            </li>
+            <li>
+              <p>
+                <i class="fas fa-phone mr-3"></i>+352 691 280 118
+              </p>
+            </li>
+            <li>
+              <p>
+                <i class="fas fa-print mr-3"></i>+352 691 280 119
+              </p>
+            </li>
+          </ul>
 
-      </div>
-    
+
+        </div>
+
         <!-- Grid column -->
 
         <hr class="clearfix w-100 d-md-none">
@@ -156,8 +160,8 @@
       </div>
     </div>
 
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency</div>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency</div>
     <hr class="clearfix w-100 d-md-none">
 
     <!-- Grid column -->
@@ -171,7 +175,7 @@
     </div>
     <!-- Grid row -->
 
-</div>
+    </div>
 
     @yield('script')
 
