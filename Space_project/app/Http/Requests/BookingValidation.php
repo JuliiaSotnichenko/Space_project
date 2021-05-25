@@ -25,9 +25,9 @@ class BookingValidation extends FormRequest
     {
         return [
             'NameOnCard' => 'string|required',
-            'CreditCardNumber' => 'numeric|required',
-            'ExpiryDate' => 'required|max:5',
-            'SecurityCode' => 'required|max:3',
+            'CreditCardNumber' => 'required|',
+            'ExpiryDate' => 'required',
+            'SecurityCode' => 'required',
 
         ];
     }

@@ -44,22 +44,21 @@
               </div> -->
             </div>
             <div class="form-group">
-                <label or="NameOnCard">Name on card</label>
-                <input name="NameOnCard" id="NameOnCard" class="form-control" type="text" maxlength="255" value=""></input>
+                <label for="NameOnCard">Name on card</label>
+                <input name="NameOnCard" id="NameOnCard" class="form-control pyfor" type="text" maxlength="255"></input>
             </div>
             <div class="form-group">
                 <label for="CreditCardNumber">Card number</label>
-                <input name="CreditCardNumber" value="" id="CreditCardNumber" class="null card-image form-control" type="text"></input>
-
+                <input name="CreditCardNumber" id="CreditCardNumber" class="null card-image form-control pyfor" type="text"></input>
             </div>
             <div class="expiry-date-group form-group">
                 <label for="ExpiryDate">Expiry date</label>
-                <input name="ExpiryDate" id="ExpiryDate" class="form-control" type="text" placeholder="MM / YY" maxlength="7"></input>
+                <input name="ExpiryDate" id="ExpiryDate" class="form-control " type="text" placeholder="MM / YY" maxlength="7"></input>
             </div>
             <div class="security-code-group form-group">
                 <label for="SecurityCode">Security code</label>
                 <div class="input-container">
-                    <input name="SecurityCode" id="SecurityCode" class="form-control" type="text"></input>
+                    <input name="SecurityCode" id="SecurityCode" class="form-control pycod " type="text"></input>
                     <i id="cvc" class="fa fa-question-circle"></i>
                 </div>
                 <div class="cvc-preview-container two-card hide">
@@ -74,7 +73,7 @@
                 <input type="text" name="user" value="{{ Auth::user()->id }}" hidden>
                 <input type="text" name="payment" value="done" hidden>
             </div>
-            <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
+            <button id="PayButton" class="btn btn-block btn-success  " type="submit">
                 <span class="submit-button-lock"></span>
                 <span class="align-middle">Pay</span>
             </button>

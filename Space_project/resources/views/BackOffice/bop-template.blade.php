@@ -42,7 +42,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Log Out</a>
+            <a class="nav-link" href="{{ url('logout') }}">Log Out</a>
           </li>
         </ul>
         <form class="d-flex">
