@@ -23,8 +23,6 @@ class AdminUserSeeder extends Seeder
             "role" => "admin",
             "email" => "steve.zeid@hot.mail",
             "password" => Hash::make('Agent4336'),
-            "created_at" => date(now()),
-            "updated_at" => date(now())
 
         ]);
     }

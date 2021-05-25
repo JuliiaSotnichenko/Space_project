@@ -43,44 +43,45 @@
 </strong>
 @endif
 
-@if(count($allFlight) > 0)
+@if(count($allFligth) > 0)
 
-@foreach($allFlight as $flight)
+@foreach($allFligth as $fligth)
+
 
 <div class=" card">
     <div class="">
         <div>
-            <img src="../uploads/{{$flight->file}}" alt="">
+            <img src="../uploads/{{$fligth->file}}" alt="">
         </div>
         <div>
 
-            <span>Reference :</span> {{$flight->fly_ref}}
+            <span>Reference :</span> {{$fligth->fly_ref}}
 
         </div>
 
         <div>
-            <span>Itinerary:</span> {{$flight->itinerary}}
+            <span>Itinerary:</span> {{$fligth->itinerary}}
             <br>
-            <span>Launch Location:</span> {{$flight->location}}
+            <span>Launch Location:</span> {{$fligth->location}}
 
         </div>
         <div>
-            <span>Date of departure:</span> {{$flight->depart_date}}
+            <span>Date of departure:</span> {{$fligth->depart_date}}
             <br>
-            <span>Arrival date:</span> {{$flight->arrival_date}}
+            <span>Arrival date:</span> {{$fligth->arrival_date}}
             <br>
 
         </div>
         <div>
-            <span>Departure time:</span> {{$flight->depart_time}}
+            <span>Departure time:</span> {{$fligth->depart_time}}
             <br>
-            <span>Arrival time:</span> {{$flight->arrival_time}}
+            <span>Arrival time:</span> {{$fligth->arrival_time}}
         </div>
         <div>
-            <span>Price:</span> {{$flight->price}}
+            <span>Price:</span> {{$fligth->price}}
         </div>
         <div>
-            <span>Description:</span> {{$flight->description}}
+            <span>Description:</span> {{$fligth->description}}
         </div>
         <div>
 
@@ -98,7 +99,7 @@
 <script>
     $(function() {
         $('.mybutton').click(function(e) {
-            let but = '/flight/deleteFlight/' + $(this).val()
+            let but = '/fligth/deleteFligth/' + $(this).val()
 
             console.log(but)
             $.ajax({
@@ -108,7 +109,7 @@
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     }
                 }).done(function(result) {
-
+                    //console.log(result)
                     $('body').html(result)
                 })
                 .fail(function(result) {

@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreFlightRequest;
-
+use App\Http\Requests\StoreFligthRequest;
 use App\Models\Flight;
 use App\Models\Fligth;
 use Illuminate\Http\Request;
@@ -19,7 +18,7 @@ class FligthController extends Controller
     public function index()
     {
         $allFligth = Flight::all();
-        return view('/flight/flightAll', ['allFligth' => $allFligth]);
+        return view('/fligth/fligthAll', ['allFligth' => $allFligth]);
     }
     public function indexfront()
     {
@@ -35,7 +34,7 @@ class FligthController extends Controller
     public function create()
     {
         //
-        return view('flight/flightInsert');
+        return view('fligth/fligthInsert');
     }
 
     /**
@@ -44,31 +43,33 @@ class FligthController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFlightRequest $request)
+    public function store(StoreFligthRequest $request)
     {
 
         $request->validated();
 
-        $flight = new Flight();
+        $fligth = new Flight();
 
-        $flight->depart_date = $request->dateOfDepart;
-        $flight->depart_time = $request->timeOfDepart;
-        $flight->arrival_date = $request->dateOfArrival;
-        $flight->arrival_time = $request->timeOfArrival;
-        $flight->fly_ref = $request->flyref;
-        $flight->itinerary = $request->itinerary;
-        $flight->location = $request->location;
-        $flight->price = $request->price;
-        $flight->description = $request->fdisc;
+        $fligth->depart_date = $request->dateOfDepart;
+        $fligth->depart_time = $request->timeOfDepart;
+        $fligth->arrival_date = $request->dateOfArrival;
+        $fligth->arrival_time = $request->timeOfArrival;
+        $fligth->fly_ref = $request->flyref;
+        $fligth->itinerary = $request->itinerary;
+        $fligth->location = $request->location;
+        $fligth->price = $request->price;
+        $fligth->description = $request->fdisc;
 
 
         $fileName = $request->itinerary . '_' . time() . '.' . $request->file->extension();
         $public_path = public_path('uploads');
         $request->file->move($public_path, $fileName);
 
-        $flight->file = $fileName;
+        $fligth->file = $fileName;
 
-        $flight->save();
+
+        //3. Save the Flower : this will insert into db
+        $fligth->save();
         // Redirect fligth page and send information through session
         return redirect('/fligth/InsertFligth')->with('success', $request->fly_ref . ' Pakage created successfully.');
 
@@ -83,9 +84,9 @@ class FligthController extends Controller
      */
     public function show($id)
     {
-        $flight = Flight::find($id);
+        $fligth = Flight::find($id);
 
-        return view('FrontOffice/booking/bookingdetail', ['flight' => $flight]);
+        return view('FrontOffice/booking/bookingditail', ['fligth' => $fligth]);
     }
 
     /**
@@ -96,9 +97,10 @@ class FligthController extends Controller
      */
     public function edit($id)
     {
+        //return view('/fligth/fligthUpdate');
         $updateForm = Flight::find($id);
 
-        return view('flight/flightUpdate', ['flight' => $updateForm]);
+        return view('fligth/fligthUpdate', ['fligth' => $updateForm]);
     }
 
     /**
@@ -108,24 +110,24 @@ class FligthController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreFlightRequest $request, $id)
+    public function update(StoreFligthRequest $request, $id)
     {
-        //Validation
+        //validation
         $request->validated();
-        $flight = Flight::find($id);
+        $flay = Flight::find($id);
 
-        $flight->depart_date = $request->dateOfDepart;
-        $flight->depart_time = $request->timeOfDepart;
-        $flight->arrival_date = $request->dateOfArrival;
-        $flight->arrival_time = $request->timeOfArrival;
-        $flight->itinerary = $request->itinerary;
-        $flight->location = $request->location;
-        $flight->fly_ref = $request->flyref;
-        $flight->description = $request->fdisc;
-        $flight->price = $request->price;
-        $flight->save();
+        $flay->depart_date = $request->dateOfDepart;
+        $flay->depart_time = $request->timeOfDepart;
+        $flay->arrival_date = $request->dateOfArrival;
+        $flay->arrival_time = $request->timeOfArrival;
+        $flay->itinerary = $request->itinerary;
+        $flay->location = $request->location;
+        $flay->fly_ref = $request->flyref;
+        $flay->description = $request->fdisc;
+        $flay->price = $request->price;
+        $flay->save();
 
-        return redirect('/flight/AllFlight');
+        return redirect('/fligth/Allfligth');
     }
 
     /**
@@ -140,6 +142,6 @@ class FligthController extends Controller
         $result = Flight::destroy($id);
 
         if ($result)
-            return redirect('/flight/AllFlight')->with('success', 'Flight deleted successfully.');
+            return redirect('/fligth/Allfligth')->with('success', 'Fligth deleted successfully.');
     }
 }

@@ -161,7 +161,27 @@
       <!-- Grid column -->
       <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
 
+<<<<<<< HEAD
           <!-- ? Entire section that followed here was a duplicate from the social links above -->
+=======
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+        <!-- Facebook -->
+        <a type="button" class="btn-floating btn-fb">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <!-- Twitter -->
+        <a type="button" class="btn-floating btn-tw">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <!-- Google +-->
+        <a type="button" class="btn-floating btn-gplus">
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+        <!-- Subscribe -->
+
+>>>>>>> parent of 36ac19a (Merge branch 'test' into ivan)
 
       </div>
       <!-- Grid column -->
@@ -178,7 +198,11 @@
         {{ csrf_field() }}
     <button type="submit" class="btn btn-primary">Subscribe</button>
       </div>
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> parent of 36ac19a (Merge branch 'test' into ivan)
 </form> -->
 
 
