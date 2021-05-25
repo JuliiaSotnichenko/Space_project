@@ -146,12 +146,10 @@ class UserController extends Controller
             $booking->payment_status = $request->payment_status;
         }
 
-        if ($user->role == 'user') {
-            return view('home');
-        } else { // check if the user logging in is a "user" or an "admin"
+      // check if the user logging in is a "user" or an "admin"
             return view('BackOffice.user.user-update', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
             // if admin show the back office portal page
-        }
+       
     }
     public function updateAcc(Request $request)
     {
