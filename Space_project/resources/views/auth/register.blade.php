@@ -47,8 +47,12 @@
 
                 <x-input id="password_confirmation" class="block mt-1 w-full" type="password" placeholder="confirm password" name="password_confirmation" required />
             </div>
+            <!-- Subscribe -->
             <div class="input-group mb-4">
-       
+        <div class="input-group mb-4">
+        <input class="verif" type="checkbox" name="subscribed" value="1" />
+                 Subscribe to the newsletter
+    </div>
     </div>
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
