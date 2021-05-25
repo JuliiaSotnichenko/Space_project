@@ -44,6 +44,11 @@ ul li a {
     margin-right: 40px;
 
 }
+
+.logo_nav{
+    align-items: start;
+}
+
 .logo{
     display: flex;
     width: 100%;
