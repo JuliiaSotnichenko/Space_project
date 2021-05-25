@@ -63,6 +63,10 @@ footer p {
 .card {
     background-color:white;
     padding: 20px;
+    background-image: url(../images/all-images/Astronaut-high-5.jpg); /** placeholder until better image/styling is found */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
     margin-bottom: 10px;
     color: black;
     border-radius: 20px;
@@ -100,8 +104,6 @@ footer p {
 
 .mybutton{
     width: 20%;
-    min-width: 80px;
-    max-width: 150px;
     cursor: pointer;
     background: linear-gradient(90deg, deeppink, blueviolet);
     margin: auto;
@@ -158,13 +160,6 @@ footer img {
 @media screen and (min-width: 960px) {
     main {
         font-size: 1.5rem;
-    }
-
-    .card {
-    background-image: url(../images/all-images/Astronaut-high-5.jpg); /** placeholder until better image/styling is found */
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
     }
 }
 

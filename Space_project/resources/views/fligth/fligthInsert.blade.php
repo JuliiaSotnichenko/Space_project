@@ -1,9 +1,53 @@
 @extends('BackOffice.bop-template')
 
-@section('title','Package | Add Package')
+@section('title','Pakage | Add Pakage')
+
+<style>
+    .success {
+        background-color: #fff;
+        color: #243B7B;
+        position: absolute;
+        width: 400px;
+        top: 200px;
+        left: 450px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 10px 5px black;
+
+
+    }
+
+    .success a {
+        padding: 5px 20px;
+        color: white;
+        background-color: blue;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    .success a:hover {
+        box-shadow: 5px 5px 5px black;
+        color: white;
+    }
+
+    .success img {
+        width: 80px;
+    }
+</style>
+
+
 
 @section('content')
-<h2> Flight insert form</h2>
+@if($message = Session::get('success'))
+<strong class="success">
+    <img src="/images/done.png" alt="img">
+    <p>Well Done</p>
+    <p>{{$message}}</p>
+    <a href="{{ url('/fligth/InsertFligth') }}">Continue</a>
+</strong>
+@endif
+<h2> fligth insert form</h2>
 <div>
     @if($message=Session::get('success'))
     <div>
@@ -27,12 +71,12 @@
 
         </div>
         <div>
-            <label for="dod">Date of Departure</label>
+            <label for="dod">Date of Departe</label>
             <input id="dod" name="dateOfDepart" type="date">
 
         </div>
         <div>
-            <label for="tod">Time of Departure</label>
+            <label for="tod">Time of Departe</label>
             <input id="tod" name="timeOfDepart" type="time">
 
         </div>
@@ -42,23 +86,23 @@
 
         </div>
         <div>
-            <label for="toa">Time of Arrival</label>
+            <label for="toa">time of Arrival</label>
             <input id="toa" name="timeOfArrival" type="time">
         </div>
         <div>
             <label for="flocation">Location</label>
             <select name="location" id="flocation">
-                <option value="Baikonur Kosmodroma">Baikonur Kosmodroma</option>
-                <option value="Cap Canaveral - Kennedy Space Center">Cap Canaveral - Kennedy Space Center</option>
-                <option value="Kourou Guiana Space Center">Kourou Guiana Space Center</option>
+                <option value="Baikonur Cosmodrome">Baikonur Cosmodrome</option>
+                <option value="NASA Kennedy Space Center">Kennedy Space Center</option>
+                <option value="Boca Chica Starbase">Boca Chica Starbase</option>
             </select>
         </div>
         <div>
-            <label for="disc">Description</label>
-            <textarea name="fdisc" id="disc" placeholder="Flight Description"></textarea>
+            <label for="disc">Discriptian</label>
+            <textarea name="fdisc" id="disc" placeholder="Fly Discriptian"></textarea>
         </div>
         <div>
-            <label for="ffile">Upload Flight Pictures</label>
+            <label for="ffile">Upload Fly Pictures</label>
             <input name="file" id="ffile" type="file">
         </div>
         <div>

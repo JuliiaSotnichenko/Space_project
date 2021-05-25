@@ -34,22 +34,46 @@ Route::get('/dashboard', function () {
 
 require __DIR__ . '/auth.php';
 
-// FRONT OFFICE
-//ACCOUNT PAGE
-// Account: Dashboard.
+
+
+// Account info
 Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);
-// Account: Editing account info.
+// Editing and updating account info
 Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
-// Account: Updating account info.
 Route::put('/update/user', [UserController::class, 'updateAcc']);
-// Account: Logout.
+// Logout
 Route::get('/logout', [LoginController::class, 'logout']);
 
-// ABOUT US PAGE
-Route::get('/about', function () {
-    return view('about');
-});
+//Auth::routes();
 
+//Route::get('/', [HomeController::class, 'index']);
+/***********************Fligth Routes*********************** */
+
+
+
+
+/**Insert in the data base */
+//show all fily for backend
+Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
+//show the form html to insert data
+Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
+//method to insert in the data base
+Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
+/**edit method */
+//show the edit form
+Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
+//update the data base
+Route::post('/fligth/editFligth/{id}', [FligthController::class, 'update']);
+/**delite fligth */
+Route::post('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
+
+/**************Book Route************* */
+Route::get('/bookform', [FligthController::class, 'indexfront']);
+//route for  dettail page
+Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
+
+Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
+Route::post('/bookpay/{id}', [BookingController::class, 'store']);
 
 /**Insert in the data base */
 //show all fily for backend
@@ -78,16 +102,23 @@ Route::post('/booking/paymentStore/{id}', [BookingController::class, 'store']);
 // USERS PAGE
 // Users: display all users.
 Route::get('/admin', [UserController::class, 'index']);
-// Users: display specific user.
+// BoP display user
 Route::get('/admin/list', [UserController::class, 'showUser']);
-// Users: display user's details.
+// BoP display user details
 Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
-// Users: Display the edit form.
+// BoP update user
 Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
-// Users: update user's data in DB.
 Route::put('/admin/update/user/{id}', [UserController::class, 'update']);
 
 
+
+
+
+
+// about Us page 
+Route::get('/about', function () {
+    return view('about');
+});
 
 // live search
 Route::get('/livesearch', [SearchController::class, 'index']);

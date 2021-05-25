@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@yield('title')</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Link for Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <!-- <link href="{{ asset('css/home.css') }}" rel="stylesheet"> -->
-    <!-- Link CSS -->
-    <link href="/css/main.css" rel="stylesheet">
+  <!-- Link for Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <!-- <link href="{{ asset('css/home.css') }}" rel="stylesheet"> -->
+  <!-- Link CSS -->
+  <link href="/css/main.css" rel="stylesheet">
 
-    @yield('style')
+  @yield('style')
 </head>
 
 <body>
@@ -77,15 +77,62 @@
 
           <!-- Links -->
           <h5 class="about font-weight-bold text-uppercase mb-4">About</h5>
+          <ul class="list-unstyled">
+          <li>
+            <p>
+              <a href="{{ url('/about') }}">ABOUT US</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="{{ url('/bookform') }}">Packages</a>
+            </p>
+          </li>
+        </ul>
 
-        <div class="content2">
-            @yield('content2')
+      </div>
+      <!-- Grid column -->
 
-        </div>
-        <div class="content3">
-            @yield('content3')
+      <hr class="clearfix w-100 d-md-none">
 
-        </div>
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Contact</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <i class="fas fa-home mr-3"></i> Luxembourg, 2121</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-envelope mr-3"></i>cj.finalfrontier@gmail.com</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-phone mr-3"></i>+352 691 280 118</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-print mr-3"></i>+352 691 280 119</p>
+          </li>
+        </ul>
+          <nav class="main__navig">
+            <a href="{{ url('/') }}">
+              <img class="logo" src="/images/logoSF.svg" alt="Starlight logo">
+            </a>
+            <ul class="main__navig_list">
+              <li><a href="{{ url('/') }}">Home</a></li>
+              <li><a href="{{ url('/about') }}">About us</a></li>
+              <li><a href="{{ url('/bookform') }}">Packages</a></li>
+              <!-- <li><a href="{{ url('contact') }}">Contact</a></li> -->
+
+              @if(Auth::check())
+
+      </div>
+    
         <!-- Grid column -->
 
         <hr class="clearfix w-100 d-md-none">
@@ -115,13 +162,41 @@
     </div>
 
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency
-        </div>
+        <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency</div>
+    <hr class="clearfix w-100 d-md-none">
+
+    <!-- Grid column -->
+    <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+      <!-- ? Entire section that followed here was a duplicate from the social links above -->
+
+    </div>
+    <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    </div>
+
+    <!-- <form action="{{ url('/') }}" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail"></label>
+        <input type="email" name="user_email" id="exampleInputEmail" class="form-control" placeholder="Email Address">
+        {{ csrf_field() }}
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+      </div>
+</form> -->
 
 
-        @yield('script')
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency
+    </div>
+
+
+    @yield('script')
 
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'>
     </script>
 </body>
+
 </html>
