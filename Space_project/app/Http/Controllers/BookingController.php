@@ -15,11 +15,14 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        //
-        return view('booking/booking');
+        $allBookings = Booking::all();
+        return view('BackOffice.booking.booking-details', ['allBookings' => $allBookings]);
     }
+
+
 
     // For payment
 
