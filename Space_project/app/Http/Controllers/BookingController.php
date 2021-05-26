@@ -97,8 +97,15 @@ class BookingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validated();
+
+        $book->user_id = $request->user;
+        $book->flight_id = $request->pakage;
+        $book->payment = $request->payment;
+        $book->save();
+        return redirect('/booking/form')->with('success', 'Your update was successful.');
     }
+
 
     /**
      * Remove the specified resource from storage.
