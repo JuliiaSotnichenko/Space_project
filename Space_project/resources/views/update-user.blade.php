@@ -10,7 +10,7 @@
 @section('content')
 <style>
     .content_template{
-  min-height: 50vh;
+        min-height: 50vh;
 }
     .mycontainer {
         width: 400px;
@@ -18,14 +18,17 @@
         font-family: 'Space Grotesk', sans-serif;
         line-height: 20px;
         padding: 10px;
-        background-color: white;
+        background-color: rgb(208, 207, 209);
         margin: auto;
-        margin-top: 80px;
+        margin-top: 36px;
         border-radius: 10px;
 
     }
     .mycontainer:hover{
-        box-shadow: 5px 5px 5px black;
+        background-color: white;
+        transform: scale(1.02);
+        border-radius: 5px;
+        box-shadow: black 5px 5px 5px;
     }
 
 h2{
@@ -36,6 +39,7 @@ h2{
 footer{
  height: 45vh;
 }
+
 
 
 </style>
