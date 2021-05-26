@@ -104,7 +104,7 @@ Route::delete('/flight/deleteFligth/{id}', [FlightController::class, 'destroy'])
 
 // BOOKING PAGE
 // Bookings: Show all flights.
-Route::get('/booking/form', [BookingController::class, 'index']);
+Route::get('/booking/form', [FlightController::class, 'indexfront']);
 // Bookings: Display booking details.
 Route::get('/booking/detail/{id}', [FlightController::class, 'show']);
 // Bookings: Payment methods.
@@ -123,7 +123,8 @@ Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
 Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
 Route::put('/admin/edit/user/{id}', [UserController::class, 'update']);
 
-
+// Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
+// Route::put('/update/user', [UserController::class, 'updateAcc']);
 
 
 
