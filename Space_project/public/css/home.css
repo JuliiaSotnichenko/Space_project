@@ -10,7 +10,7 @@
   }
 
 
-.content{
+.content_template{
     min-height: 90vh;
     position: relative;
     background-image: url('/images/tourist_space.jpg');
@@ -164,6 +164,10 @@ form{
 
 @media (max-width: 768px)
 {
+  
+
+
+
   .ships__container 
   {
     flex-direction: column;
