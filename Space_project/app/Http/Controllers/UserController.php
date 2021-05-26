@@ -127,7 +127,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request,)
     {
         //$request->validated();
         $user = auth()->user();
@@ -146,12 +146,10 @@ class UserController extends Controller
             $booking->payment_status = $request->payment_status;
         }
 
-        if ($user->role == 'user') {
-            return view('home');
-        } else { // check if the user logging in is a "user" or an "admin"
-            return view('BackOffice.user.user-update', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
-            // if admin show the back office portal page
-        }
+        // check if the user logging in is a "user" or an "admin"
+        return view('BackOffice.user.user-update', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
+        // if admin show the back office portal page
+
     }
     public function updateAcc(Request $request)
     {
@@ -164,13 +162,7 @@ class UserController extends Controller
         $user->role = $user->role;
         $user->email = $request->email;
         $user->password = $user->password;
-        $user->save(); {
-            $booking = User::find($user->id);
-            $booking = User::where('id', $user->id)->first();
-            $booking->package_id = $request->package_id;
-            $booking->user_id = $request->user_id;
-            $booking->payment_status = $request->payment_status;
-        }
+        $user->save();
 
         if ($user->role == 'user') {
             return view('home');
