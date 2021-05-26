@@ -105,6 +105,7 @@ Route::delete('/flight/deleteFligth/{id}', [FlightController::class, 'destroy'])
 // BOOKING PAGE
 // Bookings: Show all flights.
 Route::get('/booking/form', [BookingController::class, 'index']);
+Route::post('/booking/form{id}', [BookingController::class, 'destroy']);
 // Bookings: Display booking details.
 Route::get('/booking/detail/{id}', [FlightController::class, 'show']);
 // Bookings: Payment methods.
