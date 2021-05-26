@@ -146,7 +146,64 @@ footer img {
 
 } */
 
-/*  */
+/*insert pakage  */
+.success {
+    background-color: #fff;
+    color: #243B7B;
+    position: absolute;
+    width: 400px;
+    top: 200px;
+    left: 450px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 5px black;
+
+
+}
+
+.success a {
+    padding: 5px 20px;
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.success a:hover {
+    box-shadow: 5px 5px 5px black;
+    color: white;
+}
+
+.success img {
+    width: 80px;
+}
+
+.t2 {
+    text-align: center;
+}
+
+.bgform {
+    background-color: rgba(255, 255, 255, 0.644);
+    color: rgba(52, 52, 53, 0.829);
+    margin: 0px auto;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+.rowall{
+    display: flex;
+    justify-content: center;
+}
+.fon{
+    font-size:  0.9rem;
+}
+.butdiv{
+    text-align: center;
+    margin-top: 20px;
+    
+}
 
 
 
