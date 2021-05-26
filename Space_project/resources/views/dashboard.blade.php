@@ -38,7 +38,7 @@
 
 @section('content')
 
-<div class="form_container block ">
+<div class="form_container blokk ">
     <ul class=" listAcc">
         <h1>Account details:</h1>
         @auth
