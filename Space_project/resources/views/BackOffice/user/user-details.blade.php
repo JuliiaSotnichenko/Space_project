@@ -18,7 +18,7 @@
 
 
     <!-- User's info display -->
-    <h2>User detail</h2>
+    <h2>User details</h2>
     <hr>
     <li>Firstname: {{ $user->first_name }}</li>
     <li>Lastname: {{ $user->last_name }}</li>
