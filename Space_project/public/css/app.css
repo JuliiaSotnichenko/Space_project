@@ -147,12 +147,14 @@ justify-content: center;
 
 /* Style */
 .listAcc{
+  list-style: none;
 
   font-size: 20px;
 }
 .listAcc h1{
 
   font-weight: bolder;
+  
 }
 .blokk{
   margin: auto;
