@@ -49,6 +49,8 @@
 
     </div>
     <div class="bu">
+
+
         <a href="{{ url('/bookpay', $fligth->id) }}">Bay</a>
         <!-- go to payment page and insert in the data base -->
     </div>

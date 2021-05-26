@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BookingValidation;
+use App\Models\Booking;
+use App\Models\Flight;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BookingController extends Controller
 {
@@ -11,18 +15,26 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        //
-        return view('booking/booking');
+        $allBookings = Booking::all();
+        return view('BackOffice.booking.booking-details', ['allBookings' => $allBookings]);
     }
+
+
 
     // For payment
 
     public function payment($id)
     {
-        return view('/FrontOffice/booking/payment');
-       
+        $user = Auth::user();
+        if ($user != null) {
+            $packag = Flight::find($id);
+            return view('/FrontOffice/booking/payment', ['packag' => $packag]);
+        } else {
+            return redirect('/login')->with('success', 'You have to be Loggedl.');
+        }
     }
 
     /**
@@ -41,8 +53,16 @@ class BookingController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BookingValidation $request)
     {
+        $request->validated();
+        $book = new Booking();
+
+
+        $book->user_id = $request->user;
+        $book->flight_id = $request->pakage;
+        $book->payment = $request->payment;
+        $book->save();
         return redirect('/dashboard')->with('success', 'Your payment was successful.');
     }
 
@@ -88,6 +108,9 @@ class BookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $result = Booking::destroy($id);
+
+        if ($result)
+            return redirect('/booking/form')->with('success', 'Booking deleted successfully.');
     }
 }

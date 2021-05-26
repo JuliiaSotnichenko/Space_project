@@ -12,12 +12,15 @@
 
 .content{
     min-height: 90vh;
-    position: relative;
+    /* position: relative; */
     background-image: url('/images/tourist_space.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size:cover;
     z-index: -5;
+    width: 100%;
+    
+     
   }
   
   .sidepanel {
@@ -125,6 +128,7 @@
     justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
+    position: relative;
 }
 .btn:hover{
     background: #8659e9;
@@ -134,6 +138,23 @@
     box-shadow: 0 0 0 3px #8659e9;
 }
 
+
+/* style for subscribe */
+.form-control{
+  border-radius: 10px;
+  width: 25%;
+  align-items: center;
+  display: flex;
+  margin: auto;
+}
+
+form{
+  display: block;
+  margin: auto;
+}
+.myBtn{
+  display: flex;
+}
 /* responsive */
 
 @media (max-width: 991px)
