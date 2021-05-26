@@ -33,6 +33,24 @@
     .success img {
         width: 80px;
     }
+
+    .myBtn{
+        color: white;
+        padding: 8px 10px;
+        text-decoration: none;
+        background: linear-gradient(90deg, deeppink, blueviolet);
+        transition: 0.2s; 
+        transition-duration: 0.3s; 
+        font-weight: bolder;
+        width: 49%;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+
+
 </style>
 @endsection
 @section('title', 'Account')
@@ -56,7 +74,7 @@
         <li class="">Email: {{$user->email}}</li>
 
         <div>
-            <a href="{{ url('update/user') }}" class="btn btn-light">Edit</a>
+            <a href="{{ url('update/user') }}" class="myBtn btn-light">Edit</a>
         </div>
         <hr>
         <!-- </article> -->

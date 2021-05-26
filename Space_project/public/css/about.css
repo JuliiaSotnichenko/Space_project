@@ -11,7 +11,13 @@ body{
 
 article {
     max-width: 1024px;
-    margin: auto;
+    margin: 20px auto;
+    padding:20px;
+    /* background-color: #fff; */
+    color: #181743;
+    border: 2px solid silver;
+    border-radius: 10px;
+
 }
 
 .content{
@@ -21,24 +27,48 @@ article {
 h1 {
     text-align: center;
     color: silver;
+
 }
 
-.profile-card {
-    padding:20px;
-    background-color: #fff;
-    color: #181743;
-    border: 2px solid silver;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
+/* .profile-card {
+
+} */
 
 .infodump {
     padding: 10px 20px;
 }
 
 h4 {
-    color: gray;
-    padding-left: 30px;
-    font-size: 28px;
+    color: gold;
+    padding-left: 6vw;
+    font-size: 32px;
+
 }
 
+p {
+    font-size: 20px;
+    color: snow;
+    padding-left: 20px;
+}
+
+article:hover {
+    transition: 0.5s;
+    box-shadow: 6px 6px 5px gray;
+}
+
+h1:hover {
+    transition: 0.5s;
+    text-shadow: 4px 4px 4px gray;
+}
+
+h4:hover {
+    transition: 0.5s;
+    text-shadow: 4px 4px 4px goldenrod;
+}
+
+@media screen and (max-width: 1024px) {
+    article {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

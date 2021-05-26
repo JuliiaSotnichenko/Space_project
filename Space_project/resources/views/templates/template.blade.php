@@ -14,7 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Link for Bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> -->
   <!-- <link href="{{ asset('css/home.css') }}" rel="stylesheet"> -->
   <!-- Link CSS -->
   <link href="/css/main.css" rel="stylesheet">
@@ -24,27 +25,46 @@
 
 <body>
   <main>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mynav">
+      <div class="container-fluid mynav2">
+        <a class="navbar-brand" href="{{ url('/') }}">
+          <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url('/about') }}">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url('/bookform') }}">Packages</a>
+            </li>
+            @if(Auth::check())
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url('dashboard') }}">Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ url('logout') }}">Logout</a>
+            </li>
+            @else
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ route('login') }}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{{ route('register') }}">Register</a>
+            </li>
+            @endif
 
-    <nav class="main__navig">
-      <a href="{{ url('/') }}">
-        <img class="logo" style="width:150px; padding-right:10px" src="/images/logo/logoSmall.png" alt="Starlight logo">
-      </a>
-      <ul class="main__navig_list">
-        <li><a href="{{ url('/') }}">Home</a></li>
-        <li><a href="{{ url('/about') }}">About us</a></li>
-        <li><a href="{{ url('/bookform') }}">Packages</a></li>
-        <!-- <li><a href="{{ url('contact') }}">Contact</a></li> -->
-
-        @if(Auth::check())
-
-        <li><a href="{{ url('dashboard') }}">Account</a></li>
-        <li><a href="{{ url('logout') }}">Logout</a></li>
-        @else
-        <li><a href="{{ route('login') }}">Login</a></li>
-        <li><a href="{{ route('register') }}">Register</a></li>
-        @endif
-      </ul>
+          </ul>
+        </div>
+      </div>
     </nav>
+
 
     <div class="content_template">
       @yield('content')
@@ -164,11 +184,12 @@
     <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency</div>
     <hr class="clearfix w-100 d-md-none">
 
-    
-    @yield('script')
 
-    <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'>
-    </script>
+    @yield('script')
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'>
+    </script> -->
 </body>
 
 </html>
