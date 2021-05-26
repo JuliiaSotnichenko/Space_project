@@ -108,6 +108,9 @@ class BookingController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $result = Booking::destroy($id);
+
+        if ($result)
+            return redirect('/booking/form')->with('success', 'Booking deleted successfully.');
     }
 }

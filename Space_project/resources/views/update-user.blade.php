@@ -8,7 +8,64 @@
 @section('title', 'Update Account')
 
 @section('content')
-<div class="container text-light">
+<style>
+    .content_template{
+        min-height: 50vh;
+}
+    .mycontainer {
+        width: 30%;
+        height: 60%;
+        font-family: 'Space Grotesk', sans-serif;
+        line-height: 20px;
+        padding: 10px;
+        background-color: white;
+        margin: auto;
+        margin-top: 40px;
+        border-radius: 10px;
+        transition: 0.3;
+        transition-duration: 0.3;
+
+    }
+    .mycontainer:hover{
+        /* background-color: rgba(255, 255, 255, 0.8); */
+        transform: scale(1.02);
+        border-radius: 20px;
+        box-shadow: black 5px 5px 5px;
+    }
+
+h2{
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input{
+    margin: 5px;
+    border-radius: 12px;
+    width: 73%;
+}
+
+.mybtn{
+        color: white;
+        padding: 8px 10px;
+        text-decoration: none;
+        background: linear-gradient(90deg, deeppink, blueviolet);
+        transition: 0.2s; 
+        transition-duration: 0.3s; 
+        font-weight: bolder;
+        width: 49%;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+}
+footer{
+ height: 45vh;
+}
+
+
+
+</style>
+<div class="mycontainer text-light">
 
     <h2>Update User</h2>
     <form action="" method="post">
@@ -31,7 +88,7 @@
         @error('email')
         <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input class="btn btn-light" type="submit" value="Update">
+        <input class="mybtn btn btn-light" type="submit" value="Update">
         @else
         @endauth
     </form>

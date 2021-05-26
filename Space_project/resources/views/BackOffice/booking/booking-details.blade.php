@@ -72,6 +72,7 @@
 
 
     </div>
+    <button class="mybutton" value="{{$booking->id}}">Delete</button>
 </div>
 </div>
 @endforeach
@@ -82,7 +83,7 @@
 <script>
     $(function() {
         $('.mybutton').click(function(e) {
-            let but = '/fligth/deleteFligth/' + $(this).val()
+            let but = '/booking/form' + $(this).val()
 
             console.log(but)
             $.ajax({

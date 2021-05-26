@@ -68,6 +68,8 @@ body {
   background-color: #181743;
   background-size: cover;
   text-align: center;
+justify-content: center;
+  width: auto;
   
   color: black;
  
@@ -151,6 +153,15 @@ body {
 .listAcc h1{
 
   font-weight: bolder;
+}
+.blokk{
+  margin: auto;
+  background-color: white;
+  border-radius: 12px;
+  width: 60%;
+  border: 5px;
+  padding: 10px;
+  margin-bottom: 30px;
 }
 
 .container{
