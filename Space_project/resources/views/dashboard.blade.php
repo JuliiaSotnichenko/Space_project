@@ -37,23 +37,16 @@
 @section('title', 'Account')
 
 @section('content')
-@if($message = Session::get('success'))
-<strong class="success">
-    <img src="/images/done.png" alt="img">
-    <p>Well Done</p>
-    <p>{{$message}}</p>
-    <a href="{{ url('/dashboard') }}">Continue</a>
-</strong>
-@endif
-<div class="form_container ">
-    <ul class="text-light listAcc">
+
+<div class="form_container block ">
+    <ul class=" listAcc">
         <h1>Account details:</h1>
         @auth
         <li class="">First name: {{$user->first_name}}</li>
         <li class="">Last name: {{$user->last_name}}</li>
         <li class="">Country: {{$user->country}}</li>
         <li class="">Email: {{$user->email}}</li>
-        <hr>
+
         <div>
             <a href="{{ url('update/user') }}" class="btn btn-light">Edit</a>
         </div>
@@ -81,6 +74,8 @@
         <li>Flight ref.: {{ $flight->fly_ref}}</li>
 
         <div>
+            <hr>
+            <h2>Adress</h2>
             @if( $flight->location == 'NASA Kennedy Space Center')
             <!-- Giving the clients the addresses to the Spaceports -->
             <p class="address">NASA Space Commerce Way <br>
