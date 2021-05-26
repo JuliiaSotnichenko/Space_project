@@ -24,57 +24,16 @@
 
 <body>
   <main>
-  <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-    <a href="{{ url('/') }}">
-        <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
-      </a>
-    </div>
-    <ul class="nav navbar-nav">
-    <li><a href="{{ url('/') }}">Home</a></li>
-        <li><a href="{{ url('/about') }}">About us</a></li>
-        <li><a href="{{ url('/bookform') }}">Packages</a></li>
-   
-   
-     
 
-        @if(Auth::check())
-
-        <li><a href="{{ url('dashboard') }}">Account</a></li>
-        <li><a href="{{ url('logout') }}">Logout</a></li>
-        @else
-        <li><a href="{{ route('login') }}">Login</a></li>
-        <li><a href="{{ route('register') }}">Register</a></li>
-        @endif 
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-    </ul>
-  </div>
-</nav>
-
-
- 
-
-
-
-    <!-- <nav class="main__navig">
-      <div class="logo_nav"> 
+    <nav class="main__navig">
       <a href="{{ url('/') }}">
         <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
       </a>
-      </div>
-     
       <ul class="main__navig_list">
         <li><a href="{{ url('/') }}">Home</a></li>
         <li><a href="{{ url('/about') }}">About us</a></li>
         <li><a href="{{ url('/bookform') }}">Packages</a></li>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-    </a>
-      
+        <!-- <li><a href="{{ url('contact') }}">Contact</a></li> -->
 
         @if(Auth::check())
 
@@ -85,7 +44,7 @@
         <li><a href="{{ route('register') }}">Register</a></li>
         @endif
       </ul>
-    </nav> -->
+    </nav>
 
     <div class="content_template">
       @yield('content')
@@ -126,7 +85,7 @@
             </li>
             <li>
               <p>
-                <a href="{{ url('/about') }}">About us</a>
+                <a href="{{ url('/about') }}">ABOUT US</a>
               </p>
             </li>
             <li>
@@ -205,48 +164,22 @@
     <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency</div>
     <hr class="clearfix w-100 d-md-none">
 
-  </footer>
+    <!-- Grid column -->
+    <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
 
+      <!-- ? Entire section that followed here was a duplicate from the social links above -->
+
+    </div>
+    <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    </div>
 
     @yield('script')
 
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'>
-    </script>
-
-    <!-- CDN JQuery -->
- <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-    (function ($) {
-  // Begin jQuery
-  $(function () {
-    // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $("nav ul li a:not(:only-child)").click(function (e) {
-      $(this).siblings(".nav-dropdown").toggle();
-      // Close one dropdown when selecting another
-      $(".nav-dropdown").not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    // Clicking away from dropdown will remove the dropdown class
-    $("html").click(function () {
-      $(".nav-dropdown").hide();
-    });
-    // Toggle open and close nav styles on click
-    $("#nav-toggle").click(function () {
-      $("nav ul").slideToggle();
-    });
-    // Hamburger to X toggle
-    $("#nav-toggle").on("click", function () {
-      this.classList.toggle("active");
-    });
-  }); // end DOM ready
-})(jQuery); // end jQuery
-
     </script>
 </body>
 
