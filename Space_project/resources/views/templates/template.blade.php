@@ -26,12 +26,9 @@
   <main>
 
     <nav class="main__navig">
-      <div class="logo_nav"> 
       <a href="{{ url('/') }}">
         <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
       </a>
-      </div>
-     
       <ul class="main__navig_list">
         <li><a href="{{ url('/') }}">Home</a></li>
         <li><a href="{{ url('/about') }}">About us</a></li>
@@ -88,7 +85,7 @@
             </li>
             <li>
               <p>
-                <a href="{{ url('/about') }}">About us</a>
+                <a href="{{ url('/about') }}">ABOUT US</a>
               </p>
             </li>
             <li>
@@ -167,8 +164,18 @@
     <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency</div>
     <hr class="clearfix w-100 d-md-none">
 
-  </footer>
+    <!-- Grid column -->
+    <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
 
+      <!-- ? Entire section that followed here was a duplicate from the social links above -->
+
+    </div>
+    <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+    </div>
 
     @yield('script')
 
