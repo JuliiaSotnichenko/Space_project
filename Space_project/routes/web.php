@@ -84,7 +84,6 @@ Route::post('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
 Route::get('/bookform', [FligthController::class, 'indexfront']);
 //route for  dettail page
 Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
-
 Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
 Route::post('/bookpay/{id}', [BookingController::class, 'store']);
 
