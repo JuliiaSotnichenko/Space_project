@@ -182,8 +182,10 @@ class UserController extends Controller
     public function destroy($id)
     {
         $result = User::destroy($id);
-
+        // $result = User::find($id);
+        // $result->delete();
         if ($result)
             return 'Deleted successfully';
     }
 }
+
