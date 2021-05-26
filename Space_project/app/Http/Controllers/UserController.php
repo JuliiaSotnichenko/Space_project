@@ -127,10 +127,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,)
+    public function update(Request $request, $id)
     {
         //$request->validated();
-        $user = auth()->user();
+        $user = User::find($id);
+        $user->id = $request->id;
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->training_status = $request->training_status;

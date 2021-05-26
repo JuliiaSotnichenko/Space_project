@@ -85,7 +85,7 @@
             </li>
             <li>
               <p>
-                <a href="{{ url('/about') }}">ABOUT US</a>
+                <a href="{{ url('/about') }}">About us</a>
               </p>
             </li>
             <li>
@@ -164,19 +164,7 @@
     <div class="footer-copyright text-center py-3">Copyright © 2021 Spacetravel agency</div>
     <hr class="clearfix w-100 d-md-none">
 
-    <!-- Grid column -->
-    <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-
-      <!-- ? Entire section that followed here was a duplicate from the social links above -->
-
-    </div>
-    <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
-    </div>
-
+    
     @yield('script')
 
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js'>
