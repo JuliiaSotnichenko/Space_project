@@ -30,7 +30,6 @@
     gap: 30px;
     text-align: center;
     align-items: center;
-    
 }
 
 ul li  {
@@ -55,7 +54,6 @@ ul li a {
 
 
 footer{
-    /* position: relative; */
     text-align: center;
     color: white;
     background-color: #000;
@@ -74,5 +72,21 @@ footer{
     align-items: center;
     display: flex;
     margin: auto;
+}
+
+}
+
+/* style for subscribe */
+.form-control{
+    border-radius: 10px;
+    width: 25%;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+
+/* Making the navbar reactive */
+@media screen and (min-width: 768px) {
+
 }
 
