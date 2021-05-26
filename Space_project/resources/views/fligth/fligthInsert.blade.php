@@ -22,10 +22,9 @@
 
     <div class="container">
         <div class="bgform">
-
             <h2 class="t2"> Insert Pakage</h2>
             <div class="row rowall">
-                <div class="col "></div>
+
                 <div class="col">
                     <form action="" method="post" enctype="multipart/form-data">
                         @csrf
@@ -95,7 +94,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="col"></div>
+
 
             </div>
         </div>

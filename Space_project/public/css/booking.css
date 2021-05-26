@@ -42,6 +42,8 @@ body{
         transform: scale(1.02);
         border-radius: 5px;
         box-shadow: black 5px 5px 5px;
+        
+       
     }
     .mycard:hover a{
       
@@ -112,7 +114,7 @@ body{
         transition: 0.2s; 
         transition-duration: 0.3s; 
         font-weight: bolder;
-       
+        
 }
 .bu a:hover{
     box-shadow: black 5px 5px 5px;

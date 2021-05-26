@@ -184,6 +184,6 @@ class UserController extends Controller
         $result = User::destroy($id);
 
         if ($result)
-            return 'Deleted successfully';
-    }
-}
+            return redirect('admin/edit/user')->with('success', 'Booking deleted successfully.');
+}}
+
