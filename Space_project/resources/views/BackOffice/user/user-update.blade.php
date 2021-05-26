@@ -31,12 +31,12 @@
     @enderror
     <!-- Update Training Status -->
     <select name="training_status" id="training_status">
-        <option value="0">Pre-Training</option>
-        <option value="1">Training Phase 1</option>
-        <option value="2">Training Phase 2</option>
-        <option value="3">Training Phase 3</option>
-        <option value="4">Training Complete</option>
-        <option value="5">Training Approved</option>
+        <option value="Pre-Training">Pre-Training</option>
+        <option value="Training Phase 1">Training Phase 1</option>
+        <option value="Training Phase 2">Training Phase 2</option>
+        <option value="Training Phase 3">Training Phase 3</option>
+        <option value="Training Complete">Training Complete</option>
+        <option value="Training Approved">Training Approved</option>
         < /select><br>
             @error('training_status')
             <div class="alert alert-danger">{{ $message }}</div>
