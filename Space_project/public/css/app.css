@@ -73,6 +73,12 @@ body {
  
 }
 
+/* Style for update user */
+.content_template{
+  min-height: 70vh;
+}
+
+
 .planet{
   width:300px;
   height:300px;
