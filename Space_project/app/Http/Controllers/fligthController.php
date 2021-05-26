@@ -128,7 +128,7 @@ class FligthController extends Controller
         $flay->price = $request->price;
         $flay->save();
 
-        return redirect('/fligth/Allfligth');
+        return redirect('/fligth/Allfligth')->with('success', ' Pakage Updated.');
     }
 
     /**

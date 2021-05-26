@@ -84,7 +84,6 @@ Route::post('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
 Route::get('/bookform', [FligthController::class, 'indexfront']);
 //route for  dettail page
 Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
-
 Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
 Route::post('/bookpay/{id}', [BookingController::class, 'store']);
 
@@ -102,14 +101,14 @@ Route::post('/flight/editFlight/{id}', [FlightController::class, 'update']);
 // Flight: Delete flight.
 Route::delete('/flight/deleteFligth/{id}', [FlightController::class, 'destroy']);
 
-// BOOKING PAGE
-// Bookings: Show all flights.
-Route::get('/booking/form', [FlightController::class, 'indexfront']);
-// Bookings: Display booking details.
-Route::get('/booking/detail/{id}', [FlightController::class, 'show']);
-// Bookings: Payment methods.
-Route::get('/booking/payment/{id}', [BookingController::class, 'payment']);
-Route::post('/booking/paymentStore/{id}', [BookingController::class, 'store']);
+// // BOOKING PAGE
+// // Bookings: Show all flights.
+// Route::get('/booking/form', [FlightController::class, 'indexfront']);
+// // Bookings: Display booking details.
+// Route::get('/booking/detail/{id}', [FlightController::class, 'show']);
+// // Bookings: Payment methods.
+// Route::get('/booking/payment/{id}', [BookingController::class, 'payment']);
+// Route::post('/booking/paymentStore/{id}', [BookingController::class, 'store']);
 
 
 // USERS PAGE
