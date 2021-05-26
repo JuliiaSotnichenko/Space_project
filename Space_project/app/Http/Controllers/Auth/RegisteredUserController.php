@@ -36,9 +36,7 @@ class RegisteredUserController extends Controller
         $request->validate([
             'first_name' => ['required', 'string', 'max:255'],
             'last_name' => ['required', 'string', 'max:255'],
-            'pass_port_number' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
-            'role' =>  ['boolean', (['user', 'admin'])],
             'email' => 'required|string|email|max:255|unique:users',
             'password' => ['required', 'confirmed', Rules\Password::min(8)],
         ]);
@@ -46,9 +44,8 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
-            'pass_port_number' => $request->pass_port_number,
             'country' => $request->country,
-            'role' => $request->role,
+            'role' => 'user',
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
@@ -57,6 +54,6 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect('/');
     }
 }

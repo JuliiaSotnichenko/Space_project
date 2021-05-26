@@ -1,78 +1,75 @@
 <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
+
+    <x-slot name="logo">
+        <a href="/">
             <!-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" />-->
-            </a>
-        </x-slot>
+        </a>
+    </x-slot>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    <!-- Validation Errors -->
+    <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('register') }}">
+    <div class="form_container_reg">
+        <form class="login_form_reg" method="POST" action="{{ route('register') }}">
             @csrf
 
-            <!-- Name -->
             <div>
-                <x-label for="first_name" :value="__('First name')" />
-
-                <x-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" :value="old('first_name')" required autofocus />
+                <x-label for="first_name" />First name:<br>
+                <x-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" placeholder="" :value="old('first_name')" required autofocus />
             </div>
+            <!--Last Name -->
             <div>
-                <x-label for="last_name" :value="__('Last name')" />
-
-                <x-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required autofocus />
+                <x-label for="last_name" />Last name:<br>
+                <x-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" placeholder="" :value="old('last_name')" required autofocus />
             </div>
+            <!--Coountry -->
             <div>
-                <x-label for="pass_port_number" :value="__('Passport number')" />
-
-                <x-input id="pass_port_number" class="block mt-1 w-full" type="text" name="pass_port_number" :value="old('pass_port_number')" required autofocus />
+                <x-label for="country" />Country:<br>
+                <x-input id="country" class="block mt-1 w-full" type="text" name="country" placeholder="" :value="old('country')" required autofocus />
             </div>
-            <div>
-                <x-label for="country" :value="__('Country')" />
-
-                <x-input id="country" class="block mt-1 w-full" type="text" name="country" :value="old('country')" required autofocus />
-            </div>
-            <div>
-                <x-label for="role" :value="__('Role')" />
-
-
-                <select id="role" name="role" class="form-control @error('role') is-invalid @enderror" value="{{ old('role') }}">
-                    <option value="user">User</option>
-                    <option value="admin">Admin</option>
-                </select>
-            </div>
-
             <!-- Email Address -->
             <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <x-label for="email" />E-mail:<br>
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" placeholder="" :value="old('email')" required />
             </div>
-
             <!-- Password -->
             <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
-
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                <x-label for="password" />Password:<br>
+                <x-input id="password" class="block mt-1 w-full" type="password" name="password" placeholder="" required autocomplete="new-password" />
             </div>
-
             <!-- Confirm Password -->
             <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required />
+                <x-label for="password_confirmation" />Confirm password:<br>
+                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" placeholder="" name="password_confirmation" required />
             </div>
+            <!-- Subscribe -->
+            <div class="input-group mb-4">
 
+            </div>
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
-                </a>
+                </a><br>
 
-                <x-button class="ml-4">
+                <x-button class="ml-4  btn btn-secondary">
                     {{ __('Register') }}
                 </x-button>
             </div>
         </form>
-    </x-auth-card>
+    </div>
+
 </x-guest-layout>
+<!-- :value="__('Country')"  -->
+<!-- <div class="container__main">
+<div class="planet"> 
+  <div class="wrap">
+     <div class="background"></div>
+     <div class="clouds">
+         <!-- <img src="http://artem.anmedio.ru/dev/planet/clouds.png) " alt=""> -->
+</div>
+</div>
+<div class="mask">
+    <!-- <img src="http://artem.anmedio.ru/dev/planet/mars.jpg" alt=""> -->
+</div>
+</div>
+</div>

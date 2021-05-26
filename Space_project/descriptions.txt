@@ -1,0 +1,16 @@
+Descriptions
+
+ShortDescription1 =  ‘Stay in our orbital hotel for 3 weeks of luxurious relaxation in microgravity’;
+LongDescription1 = ‘At our orbital hotel, you will find all the luxuries and gadgets you’d ever wanted or needed - plus some you never knew you would need!  Stay in our microgravity jacuzzi bubble, get a floating massage, play freefall tennis or simply go on a spacewalk. The world’s wide open for you!’;
+
+ShortDescription2 =  ‘Fly around the moon and get a full view of our beautiful natural satellite’;
+LongDescription2 = ‘Get up close and personal with the moon. See the beauty of our earth’s companion and what the moon really looks like. Our Luna travels include exclusive photoshoots during spacewalks with the moon up close as well as with the earth crescent as a backdrop.’
+
+ShortDescription3 =  ‘Go moonwalking or just relax in our moon hotel’;
+LongDescription3 = ‘A month-long stay in our Moon hotel will give you everything you ever needed to relax from your hard work life. The low gravity makes walking around a breeze and a stay in our temperate infinity pool will melt off any stress in an instant. Take a stroll through our lunar gardens or try yourself at our daily moonwalking competitions and win great prizes.’
+
+ShortDescription4 =  ‘An exclusive trip to mars and back’;
+LongDescription4 = ‘A flight to our close planet Mars and it’s orbital hotel where luxury has been redefined. Our golden flying casino will entertain you to your fullest, complete with a show of our space entertainers. Our microgravity jacuzzi bubble will remove any stress, and you’ll get absolutely pampered in our spac spa.’
+
+ShortDescription5 =  ‘Feel like a space pioneer with a full month stay in the Mars colony’;
+LongDescription5 = ‘Get a full 3 months stay on Mars with our most exclusive travel option. Feel like a pioneer on the red planet as you will go out into the wilderness of the planet. Become a botanist with your visit of an experimental Mars plantation or a chemist in the water and oxygen refinery. Or simply go on the mars rover racetrack and see if you can win a race!’

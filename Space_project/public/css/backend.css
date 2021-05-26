@@ -1,0 +1,225 @@
+* :not(input){
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100%;
+}
+
+/* font-family: 'Roboto', sans-serif; */
+main a {
+
+    text-decoration: none;
+    font-weight: 700;
+    /* color: aqua; */
+}
+
+li {
+    list-style: none;
+    padding-bottom: 10px;
+
+}
+
+main {
+    min-height: 84vh;
+    background-color: #181743;
+    font-family: 'Roboto', sans-serif;
+    color: snow;
+    padding: 10px 30px ;
+}
+
+main a {
+    margin-bottom: 30px;
+}
+
+footer {
+
+    transform: translate();
+    background-color: black;
+    margin: auto;
+    padding: 30px;
+}
+
+footer p {
+    text-align: center;
+    color: snow;
+}
+
+
+.card_backContainer{
+    max-width: 1200px;
+   /* display: flex;
+   justify-content: space-between;
+   align-items: center; */
+   /* flex-wrap: wrap; */
+  margin: auto;
+}
+
+
+
+
+.card {
+    background-color:white;
+    padding: 20px;
+    background-image: url(../images/all-images/Astronaut-high-5.jpg); /** placeholder until better image/styling is found */
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 10px;
+    color: black;
+    border-radius: 20px;
+}
+
+.card a {
+    margin: 5px 25px;
+    padding: 10px 20px;
+}
+
+.link {
+    margin: 5px 25px;
+}
+
+/* .card a:hover {
+    color: darkblue;
+    background-color: snow;
+} */
+
+/* .mybutton {
+
+    border: 0;
+    color: blue;
+    font-weight: 700;
+    background-color: rgba(24, 23, 67, 0.2);
+    padding: 7px 20px;
+
+}
+
+.mybutton:hover {
+    color: darkblue;
+    background-color: snow;
+} */
+
+
+.mybutton{
+    width: 20%;
+    cursor: pointer;
+    background: linear-gradient(90deg, deeppink, blueviolet);
+    margin: auto;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    color: white;
+}
+
+.mybutton:hover{
+    background: #8659e9;
+}
+
+.mybutton:focus{
+    box-shadow: 0 0 0 3px #8659e9;
+}
+
+
+
+.delete {
+    color: red;
+}
+
+.delete:hover {
+    background-color: red;
+    color: white;
+}
+
+/* footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer img {
+    min-width: 80px;
+
+} */
+
+/*insert pakage  */
+.success {
+    background-color: #fff;
+    color: #243B7B;
+    position: absolute;
+    width: 400px;
+    top: 200px;
+    left: 450px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 5px black;
+
+
+}
+
+.success a {
+    padding: 5px 20px;
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.success a:hover {
+    box-shadow: 5px 5px 5px black;
+    color: white;
+}
+
+.success img {
+    width: 80px;
+}
+
+.t2 {
+    text-align: center;
+}
+
+.bgform {
+    background-color: rgba(255, 255, 255, 0.644);
+    color: rgba(52, 52, 53, 0.829);
+    margin: 0px auto;
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    
+}
+.rowall{
+    display: flex;
+    justify-content: center;
+}
+.fon{
+    font-size:  0.9rem;
+}
+.butdiv{
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 960px) {
+    main {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
