@@ -72,7 +72,7 @@ Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
 Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
 //method to insert in the data base
 Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
-/**edit method */
+
 //show the edit form
 Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
 //update the data base
@@ -81,14 +81,20 @@ Route::post('/fligth/editFligth/{id}', [FligthController::class, 'update']);
 Route::post('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
 
 /**************Book Route************* */
+// Bookings: Show all bookings
 Route::get('/bookform', [FligthController::class, 'indexfront']);
-//route for  dettail page
+// Bookings: Show specific booking
 Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
+// Bookings: Edit booking
+Route::get('/booking/update/{id}', [BookingController::class, 'edit']);
+// Booking: Update booking
+Route::post('/booking/update/{id}', [BookingController::class, 'update']);
+// Booking: Payment protocol
 
 Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
 Route::post('/bookpay/{id}', [BookingController::class, 'store']);
 
-/**Insert in the data base */
+
 //show all fily for backend
 Route::get('/flight/AllFlight', [FligthController::class, 'index']);
 //show the form html to insert data
@@ -128,6 +134,7 @@ Route::post('/admin/delete/user{id}', [UserController::class, 'destroy']);
 
 // Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
 // Route::put('/update/user', [UserController::class, 'updateAcc']);
+
 
 
 
