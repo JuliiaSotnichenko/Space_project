@@ -8,7 +8,38 @@
 @section('title', 'Update Account')
 
 @section('content')
-<div class="container text-light">
+<style>
+    .content_template{
+  min-height: 50vh;
+}
+    .mycontainer {
+        width: 400px;
+        height: 400px;
+        font-family: 'Space Grotesk', sans-serif;
+        line-height: 20px;
+        padding: 10px;
+        background-color: white;
+        margin: auto;
+        margin-top: 80px;
+        border-radius: 10px;
+
+    }
+    .mycontainer:hover{
+        box-shadow: 5px 5px 5px black;
+    }
+
+h2{
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+footer{
+ height: 45vh;
+}
+
+
+</style>
+<div class="mycontainer text-light">
 
     <h2>Update User</h2>
     <form action="" method="post">
