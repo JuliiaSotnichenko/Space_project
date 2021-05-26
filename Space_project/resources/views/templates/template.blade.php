@@ -24,18 +24,20 @@
 
 <body>
   <main>
-  <section class="navigation">
-  <div class="nav-container">
-    <div class="brand">
-      <a href="#!">Logo</a>
+  <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <a href="{{ url('/') }}">
+        <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
+      </a>
     </div>
-    <nav>
-    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
-    <ul class="nav-list">
+    <ul class="nav navbar-nav">
     <li><a href="{{ url('/') }}">Home</a></li>
         <li><a href="{{ url('/about') }}">About us</a></li>
         <li><a href="{{ url('/bookform') }}">Packages</a></li>
-       
+   
+   
+     
 
         @if(Auth::check())
 
@@ -44,14 +46,17 @@
         @else
         <li><a href="{{ route('login') }}">Login</a></li>
         <li><a href="{{ route('register') }}">Register</a></li>
-        @endif
-        <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-    </a> -->
-      </ul>
-    </nav>
+        @endif 
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
   </div>
-</section>
+</nav>
+
+
+ 
 
 
 
