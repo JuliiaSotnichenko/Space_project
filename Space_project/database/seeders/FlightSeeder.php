@@ -37,7 +37,7 @@ class FlightSeeder extends Seeder
             "arrival_time" => "16:00",
             "status" => "Not Done",
             "itinerary" => "Space Station V",
-            "location" => "Kennedy Space Center",
+            "location" => "Nasa Kennedy Space Center",
             "fly_ref" => "B0000001",
             "price" => '1249000', //? price in Euro
             "file" => "",

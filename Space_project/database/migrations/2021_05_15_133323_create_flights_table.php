@@ -24,7 +24,7 @@ class CreateFlightsTable extends Migration
             $table->string('arrival_time');
             $table->enum('status', ['Done', 'Not Done']);
             $table->enum('itinerary', ['Orbital Hotel', 'Space Station V', 'Floshton Paradise']);
-            $table->enum('location', ['Baikonur Cosmodrome', 'Kennedy Space Center', 'Boca Chica Starbase', 'Guiana Space Center Kourou']);
+            $table->enum('location', ['Baikonur Cosmodrome', 'NASA Kennedy Space Center', 'Boca Chica Starbase', 'Guiana Space Center Kourou']);
             $table->string('fly_ref');
             $table->enum('price', ['799000', '1249000', '5899000']);
             $table->string('file');
