@@ -142,6 +142,10 @@ body {
 
   font-size: 20px;
 }
+.listAcc h1{
+
+  font-weight: bolder;
+}
 
 .container{
   
@@ -157,7 +161,7 @@ body {
   align-items: center;
   justify-content: center;
   color: black;
-  font-weight: bold;
+ 
   margin-top: 30px;
   z-index: 5;
   
