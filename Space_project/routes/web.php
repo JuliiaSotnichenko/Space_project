@@ -84,6 +84,7 @@ Route::post('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
 Route::get('/bookform', [FligthController::class, 'indexfront']);
 //route for  dettail page
 Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
+
 Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
 Route::post('/bookpay/{id}', [BookingController::class, 'store']);
 
@@ -122,13 +123,16 @@ Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
 // BoP update user
 Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
 Route::put('/admin/edit/user/{id}', [UserController::class, 'update']);
+// BOP deleting an user
+Route::post('/admin/delete/user{id}', [UserController::class, 'destroy']);
+
+// Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
+// Route::put('/update/user', [UserController::class, 'updateAcc']);
 
 
 
 
-
-
-// about Us page 
+// about Us page
 Route::get('/about', function () {
     return view('about');
 });
