@@ -14,6 +14,7 @@
         padding: 20px;
         border-radius: 5px;
         box-shadow: 10px 10px 10px 5px black;
+        z-index: 1;
 
     }
 
@@ -37,7 +38,14 @@
 @section('title', 'Account')
 
 @section('content')
-
+@if($message = Session::get('success'))
+<strong class="success">
+    <img src="/images/done.png" alt="img">
+    <p>Well Done</p>
+    <p>{{$message}}</p>
+    <a href="{{ url('/dashboard') }}">Continue</a>
+</strong>
+@endif
 <div class="form_container blokk ">
     <ul class=" listAcc">
         <h1>Account details:</h1>
