@@ -14,11 +14,6 @@
 @endif
 
 <div>
-    @if($message=Session::get('success'))
-    <div>
-        {{$message}}
-    </div>
-    @endif
 
     <div class="container">
         <div class="bgform">

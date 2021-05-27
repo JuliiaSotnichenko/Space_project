@@ -45,7 +45,7 @@
                     <span>Arrival time:</span> {{$fligth->arrival_time}}
                 </div>
                 <div>
-                    <span>Price:</span> {{$fligth->price}}
+                    <span>Price:</span> {{$fligth->price}}€
                 </div>
                 <div>
                     <span>Description:</span> {{$fligth->description}}
