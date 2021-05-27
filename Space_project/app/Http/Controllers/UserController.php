@@ -146,9 +146,10 @@ class UserController extends Controller
             $booking->user_id = $request->user_id;
             $booking->payment_status = $request->payment_status;
         }
+        $users = User::all();
 
         // check if the user logging in is a "user" or an "admin"
-        return view('BackOffice.user.user-update', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
+        return view('BackOffice.user.user-list', ['users' => $users])->with('success', $request->last_name . ' was updated successfully.');
         // if admin show the back office portal page
 
     }
@@ -168,7 +169,7 @@ class UserController extends Controller
         if ($user->role == 'user') {
             return view('home');
         } else { // check if the user logging in is a "user" or an "admin"
-            return view('BackOffice.user.user-update', ['user' => $user])->with('success', $request->last_name . ' was updated successfully.');
+            return view('BackOffice.user.user-update', ['user' => $user])->with('success' . $request->last_name . ' was updated successfully.');
             // if admin show the back office portal page
         }
     }
@@ -181,9 +182,13 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        $result = User::destroy($id);
+        User::destroy($id);
+        $user = auth()->user();
+        $users = User::all();
 
-        if ($result)
-            return redirect('admin/edit/user')->with('success', 'Booking deleted successfully.');
-}}
+        if ($user->role == 'admin') {
 
+        return view('BackOffice.user.user-update', ['users' => $users])->with('success' . 'Booking deleted successfully.');
+    }
+}
+}
