@@ -204,6 +204,82 @@ footer img {
     margin-top: 20px;
     
 }
+.bgform{
+    background-color: rgba(255, 255, 255, 0.644);   
+}
+.for{
+    background-color: rgba(255, 255, 255, 0.644); 
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    color: black;
+}
+.t3{
+    background-color: rgba(255, 255, 255, 0.753);
+    text-align: center;
+}
+.butcont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maincard{    
+   background-color: rgba(255, 255, 255, 0.733);
+   width: 80%;
+   margin: 10px auto;
+   color: rgba(58, 56, 56, 0.74);
+   padding: 10px;
+   border-radius: 10px;
+   
+}
+
+.cardcontent{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.cardImag{
+    width: 50%;
+}
+
+.cardcontent img{
+  width: 100%;
+}
+.titlepak{
+    text-align: center;
+    color: rgb(58, 56, 56);
+    font-weight: bolder;
+    padding: 20px;
+    font-size: 2rem;
+      
+}
+.butlink{
+    text-align: center;
+    
+}
+.butlink a,button{
+   padding: 5px 80px;
+    background-color: rgb(44, 114, 160);
+    border-radius: 5px;
+    color: white;
+    font-weight: normal;
+    margin: 5px;
+}
+.butlink button{
+    padding: 2px 66px;
+    border: none;
+    background-color: rgb(221, 6, 6);
+}
+.butlink a:hover{
+    background-color: rgba(44, 114, 160, 0.527);
+}
+.butlink button:hover{
+    background-color: rgba(221, 6, 6, 0.644);
+}
+
 
 
 

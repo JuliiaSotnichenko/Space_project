@@ -13,9 +13,21 @@
     margin: center;
    text-align: center;
 }
+.mynav{
+    width: 100%;
+}
+.mynav2{
+  margin: 0 auto;
+}
+.logo{
+    width: 80px;     
+}
+.nav-link{
+    font-size: 23px;
+}
 
-.main__navig{
-    /* width: 1200px; */
+/*.main__navig{
+    /* width: 1200px; *
     display: flex;
     justify-content: center;
     font-size: 20px;
@@ -30,7 +42,6 @@
     gap: 30px;
     text-align: center;
     align-items: center;
-    
 }
 
 ul li  {
@@ -52,10 +63,9 @@ ul li a {
     margin-top: 20px;
    justify-content: space-between;
 }
-
+*/
 
 footer{
-    /* position: relative; */
     text-align: center;
     color: white;
     background-color: #000;
@@ -74,5 +84,21 @@ footer{
     align-items: center;
     display: flex;
     margin: auto;
+}
+
+
+
+/* style for subscribe */
+.form-control{
+    border-radius: 10px;
+    width: 25%;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+
+/* Making the navbar reactive */
+@media screen and (min-width: 768px) {
+
 }
 

@@ -73,23 +73,30 @@ Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
 Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
 //FLIGHT Method to insert in the data base:
 Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
-//FLIGHT Displaythe edit form:
+
+//show the edit form
 Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
 //FLIGHT Update to the data base:
 Route::post('/fligth/editFligth/{id}', [FligthController::class, 'update']);
 /**delite fligth */
 Route::post('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
 
-//BOOKINGS Page:
+/**************Book Route************* */
+// Bookings: Show all bookings
 Route::get('/bookform', [FligthController::class, 'indexfront']);
-//BOOKINGS Display the detail page:
+// Bookings: Show specific booking
 Route::get('/bookingDitail/{id}', [FligthController::class, 'show']);
-//BOOKINGS Display the payment page:
+// Bookings: Edit booking
+Route::get('/booking/update/{id}', [BookingController::class, 'edit']);
+// Booking: Update booking
+Route::post('/booking/update/{id}', [BookingController::class, 'update']);
+// Booking: Payment protocol
+
 Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
 //BOOKINGS Update the DB if the payment is done, confirming the booking:
 Route::post('/bookpay/{id}', [BookingController::class, 'store']);
 
-/**Insert in the data base */
+
 //show all fily for backend
 Route::get('/flight/AllFlight', [FligthController::class, 'index']);
 //show the form html to insert data
@@ -124,13 +131,17 @@ Route::get('/admin/user/{id}', [UserController::class, 'showUser']);
 // BoP update user
 Route::get('/admin/edit/user/{id}', [UserController::class, 'edit']);
 Route::put('/admin/edit/user/{id}', [UserController::class, 'update']);
+// BOP deleting an user
+Route::post('/admin/delete/user{id}', [UserController::class, 'destroy']);
+
+// Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
+// Route::put('/update/user', [UserController::class, 'updateAcc']);
 
 
 
 
 
-
-// about Us page 
+// about Us page
 Route::get('/about', function () {
     return view('about');
 });

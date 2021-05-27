@@ -46,35 +46,38 @@
 @if(count($allBookings) > 0)
 
 @foreach($allBookings as $booking)
-
-
-
-
-<div class=" card">
-    <div class="">
-
+<div class="container">
+    <div class="for">
         <div>
+            <div class="t3">
+                <h2>User</h2>
+            </div>
 
-            <span>Booking ID :</span> {{$booking->id}}
-            <br>
-
-            <span>Payment :</span> {{$booking->payment}}
+            <p><span>First Name - </span>{{$booking->user->first_name}}</p>
+            <p><span>Last Name - </span>{{$booking->user->last_name}}</p>
+            <p><span>Email - </span>{{$booking->user->email}}</p>
+            <p><span>Country - </span>{{$booking->user->country}}</p>
+            <p><span>training Status - </span>{{$booking->user->training_status}}</p>
+        </div>
+        <div>
+            <h2 class="t3"> Pakage</h2>
+            <p><span>Departe - </span>{{$booking->flight->depart_date}} at {{$booking->flight->depart_time}}</p>
+            <p><span>Arrival - </span>{{$booking->flight->arrival_date}} at {{$booking->flight->arrival_time}}</p>
+            <p><span>Itinerary - </span>{{$booking->flight->itinerary}}</p>
+            <p><span>Location - </span>{{$booking->flight->location}}</p>
+            {{$booking->flight->fly_ref}}
 
         </div>
-
-        <div>
-            <span>Created:</span> {{$booking->created_at}}
-            <br>
-            <span>Updated:</span> {{$booking->updated_at}}
-
-        </div>
-
-
-
     </div>
-    <button class="mybutton" value="{{$booking->id}}">Delete</button>
+    <div class="butcont">
+        <button class="btn btn-primary" value="{{$booking->id}}">Edit</button>
+        <button class="btn btn-danger mbutton" value="{{$booking->id}}">Delete</button>
+    </div>
+
+
+
 </div>
-</div>
+
 @endforeach
 @endif
 @endsection
@@ -82,7 +85,7 @@
 @section('script')
 <script>
     $(function() {
-        $('.mybutton').click(function(e) {
+        $('.mbutton').click(function(e) {
             let but = '/booking/form' + $(this).val()
 
             console.log(but)

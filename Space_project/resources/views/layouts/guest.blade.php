@@ -20,24 +20,45 @@
     <!-- Scripts -->
 
 </head>
-<nav class="main__navig">
-            <a href="{{ url('/') }}">
-                <img class="logo" src="/images/logoSF.svg" alt="Starlight logo">
-            </a>
-            <ul class="main__navig_list">
-                <li><a href="{{ url('/') }}">Home</a></li>
-                <li><a href="{{ url('/about') }}">About us</a></li>
-                <li><a href="{{ url('/bookform') }}">Pakage</a></li>
-                <li><a href="{{ url('contact') }}">Contact</a></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mynav">
+    <div class="container-fluid mynav2">
+        <a class="navbar-brand" href="{{ url('/') }}">
+            <img class="logo" src="/images/logo/logoSmall.png" alt="Starlight logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url('/about') }}">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url('/bookform') }}">Packages</a>
+                </li>
                 @if(Auth::check())
-                <li><a href="{{ url('dashboard') }}">Account</a></li>
-                <li><a href="{{ url('logout') }}">Logout</a></li>
-                @else(view=('auth.login'))
-                <li><a href="{{ route('register') }}">Register</a></li>
-            
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url('dashboard') }}">Account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url('logout') }}">Logout</a>
+                </li>
+                @else
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('register') }}">Register</a>
+                </li>
                 @endif
+
             </ul>
-        </nav>
+        </div>
+    </div>
+</nav>
 
 
 
@@ -46,6 +67,8 @@
         {{ $slot }}
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 

@@ -14,6 +14,7 @@
         padding: 20px;
         border-radius: 5px;
         box-shadow: 10px 10px 10px 5px black;
+        z-index: 1;
 
     }
 
@@ -32,14 +33,39 @@
     .success img {
         width: 80px;
     }
+
+    .myBtn{
+        color: white;
+        padding: 8px 10px;
+        text-decoration: none;
+        background: linear-gradient(90deg, deeppink, blueviolet);
+        transition: 0.2s; 
+        transition-duration: 0.3s; 
+        font-weight: bolder;
+        width: 49%;
+        border-radius: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+
+
 </style>
 @endsection
 @section('title', 'Account')
 
 @section('content')
-
+@if($message = Session::get('success'))
+<strong class="success">
+    <img src="/images/done.png" alt="img">
+    <p>Well Done</p>
+    <p>{{$message}}</p>
+    <a href="{{ url('/dashboard') }}">Continue</a>
+</strong>
+@endif
 <div class="form_container blokk ">
-    <ul class=" listAcc">
+    <ul class="listAcc">
         <h1>Account details:</h1>
         @auth
         <li class="">First name: {{$user->first_name}}</li>
@@ -48,7 +74,7 @@
         <li class="">Email: {{$user->email}}</li>
 
         <div>
-            <a href="{{ url('update/user') }}" class="btn btn-light">Edit</a>
+            <a href="{{ url('update/user') }}" style="padding: 4px 30px" class="myBtn btn-light">Edit</a>
         </div>
         <hr>
         <!-- </article> -->
@@ -74,7 +100,8 @@
         <li>Flight ref.: {{ $flight->fly_ref}}</li>
 
         <div>
-            <hr>
+        <br>
+            
             <h2>Adress</h2>
             @if( $flight->location == 'NASA Kennedy Space Center')
             <!-- Giving the clients the addresses to the Spaceports -->
@@ -97,9 +124,11 @@
     <div>
         <ul>
 
-            <div></div>
+            
             <div class='container'>
-                <hr>
+                
+              <h1 style="font-weight: bold;">Useful information</h1>
+              <hr>
                 <div>
                     @if( $flight->location == 'NASA Kennedy Space Center')
                     <!-- weather widget start -->
@@ -123,10 +152,10 @@
 
             <hr>
             <!-- Google maps-->
-            <div></div>
+            
 
             <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={{ $flight->location}}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org">pirate bay</a><br>
+                <div class="gmap_canvas"><iframe width="600" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q={{ $flight->location}}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org">pirate bay</a><br>
                     <style>
                         .mapouter {
                             position: relative;
