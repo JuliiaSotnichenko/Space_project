@@ -7,6 +7,7 @@
 
   body{
     background-color: #181743;
+    min-width: 350px;
 }
 
 
@@ -105,6 +106,11 @@
 .ships__container .ship__card .imgBx{
   max-width: 150px;
   flex: 0 0 150px;
+
+}
+
+.imgBx img {
+    border-radius: 20px;
 }
 
 .ships__container .ship__card .imgBx img{
@@ -138,8 +144,7 @@
 }
 
 .btn{
-    width: 20%;
-    max-width: 120px;
+    width: 120px;
     cursor: pointer;
     background: linear-gradient(90deg, deeppink, blueviolet);
     margin: auto;
@@ -208,10 +213,7 @@ form{
   #titlequote {
     position: absolute;
     top: 45%;
-  }
-  .btn {
-      width: 30vw;
-  }
+
 
   .form-control {
       width: 35vw;
