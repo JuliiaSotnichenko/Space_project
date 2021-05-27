@@ -14,7 +14,7 @@
 	<!-- <img src="images/tourist_space.jpg" class="img-fluid" alt="..."> -->
 	<!-- Sidepanel sexy horizontal -->
     <div id="titlequote">
-        <h1>“What we are trying to do is to make a significant difference in space flight and help make space flight accessible to almost anyone.”</h1>
+        <h1>“What we are trying to do is to make a significant difference in space flight and help make space flight accessible to almost anyone.” <span>Elon Musk</span></h1>
     </div>
 	<aside class="sidepanel">
 		<a target="_blank" href="#" class="sidepanel__link__linkedn"><img src="images/social/61109%20(1).png" alt="linkedn"></a>
