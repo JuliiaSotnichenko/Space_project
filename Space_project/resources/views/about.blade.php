@@ -42,53 +42,9 @@
         
     </section> -->
 
-
-    <section class="ships">
-	<h2 class="title_content2">ABOUT US</h2>
-	<div class="ships__container">
-		<div class="ship__card">
-			<div class="imgBx">
-				<img src="/images/all-images/Mars-bungalow.jpg" alt="">
-			</div>
-			<div class="content_card">
-				<p>StarFlight International&trade; was founded in 2000 based on the vision of Steve Weidig to be able to visit space.
-                After tinkering in his garage for 16 years and the evolution of technology, the dream of a lifetime became a reality and
-                you can purchase your tickets today to see what we imagined for you.</p>
-			</div>
-		</div>
-
+ 
     
-        <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-</div>
-
+      
     <!-- <div class="card mb-3" style="max-width: 540px;">
   <div class="row no-gutters">
     <div class="col-md-4">
@@ -104,10 +60,10 @@
 </div> -->
 
 
-    
-    <!-- <section class="profiles"> -->
+   
+     <section class="profiles"> -->
 
-        <!-- <div>
+         <div>
             <ul>
                 <li>
                     <div class="profile-card">
@@ -124,7 +80,7 @@
                         <img src="" alt="">
                         <h4>Yuliia Sotnichenko</h4>
                         <p class="adescript">Had to leave her native Ukraine after strangling a mafia boss because she wasn’t in a good mood.</p>
-                    </div>
+                    </div> 
                 </li>
                 <li>
                     <div class="profile-card">
@@ -148,7 +104,7 @@
                     </div>
                 </li>
             </ul>
-        </div> -->
+        </div> 
     </section>
 </article>
 
