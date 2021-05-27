@@ -122,4 +122,23 @@ body{
     padding: 8px 30px;
 }
 
- 
+.form-controller{
+    align-items: center;
+    border-radius: 10px;
+}
+
+.panel{
+    align-items: center;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+.search_header{
+    padding-right: 10px;
+    color: white;
+    text-align: center;
+    
+    text-shadow: 5px 5px 4px black;
+}

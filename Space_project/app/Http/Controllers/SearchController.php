@@ -15,24 +15,35 @@ class SearchController extends Controller
 
    public function search(Request $request)
    {
-   if($request->ajax())
-   {
-   $output="";
-   $products=DB::table('flights')->where('itinerary','LIKE','%'.$request->search."%")->get();
-   if($products)
-   {
-   foreach ($products as $key => $product) {
-   $output.='<tr>'.
-   '<td>'.$product->id.'</td>'.
-   '<td>'.$product->itinerary.'</td>'.
-   '<td>'.$product->description.'</td>'.
-   '<td>'.$product->price.'</td>'.
-   '</tr>';
 
-}
-    return Response($output);
+   $output="";
+   $allFligth=DB::table('flights')->where('itinerary','LIKE','%'.$request->search."%")->get();
+
+   if($allFligth)
+   {
+      // foreach ($allFligth as $key => $fligth) {
+         // $output.='<tr>'.
+         // '<td>'.$fligth->id.'</td>'.
+         // '<td>'.$fligth->itinerary.'</td>'.
+         // '<td>'.$fligth->description.'</td>'.
+         // '<td>'.$fligth->price.'</td>'.
+         // '</tr>';
+
+      
+
+      // foreach ($products as $key => $product) {
+      //    $output.='<tr>'.
+      //    '<td>'.$product->id.'</td>'.
+      //    '<td>'.$product->itinerary.'</td>'.
+      //    '<td>'.$product->description.'</td>'.
+      //    '<td>'.$product->price.'</td>'.
+      //    '</tr>';
+
+
+    
+      return view('FrontOffice.booking.searchBooking', ['allFligth'=>$allFligth]);
    }
-   }
+
 }
 }
 

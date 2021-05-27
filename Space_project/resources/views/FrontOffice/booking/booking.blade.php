@@ -1,4 +1,6 @@
 @extends('templates/template')
+
+<meta name="_token" content="{{ csrf_token() }}">
 <!-- Style -->
 @section('style')
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
@@ -7,7 +9,29 @@
 @section('title', 'Pakages')
 
 
+
+
+
 @section('content')
+
+<div class="container">
+<div class="row">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 class="search_header">Search </h3>
+</div>
+<div class="panel-body">
+    <div class="form-group">
+        <input type="text" class="form-controller" id="search" name="search"></input>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
 
 @if(count($allFligth) > 0)
 <div class="titleh2">
@@ -30,4 +54,26 @@
 </div>
 
 @endif
+@endsection
+
+@section('script')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript">
+$('#search').on('keyup',function(){
+$value=$(this).val();
+$.ajax({
+type : 'get',
+url : "{{URL('/search')}}",
+data:{'search':$value},
+success:function(data){
+$('.bigcard').html(data);
+console.log(data);
+}
+});
+})
+</script>
+<script type="text/javascript">
+$.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });
+</script>
+
 @endsection
