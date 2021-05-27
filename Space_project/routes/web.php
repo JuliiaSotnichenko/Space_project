@@ -48,34 +48,35 @@ Route::get('/dashboard', function () {
 require __DIR__ . '/auth.php';
 
 
+// Front Office
+//LANDING Page:
+Route::get('/', function () {
+    return view('home');
+});
 
-// Account info
+// ACCOUNT Dashboard:
 Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);
-// Editing and updating account info
+// ACCOUNT Editing account info:
 Route::get('/update/user', [UserController::class, 'editAcc'])->middleware(['auth']);
+// ACCOUNT Updating account info:
 Route::put('/update/user', [UserController::class, 'updateAcc']);
 // Logout
 Route::get('/logout', [LoginController::class, 'logout']);
 
-//Auth::routes();
-
-//Route::get('/', [HomeController::class, 'index']);
-/***********************Fligth Routes*********************** */
 
 
-
-
-/**Insert in the data base */
-//show all fily for backend
+//Back Office
+//FLIGHT Page:
+//FLIGHT Show all flights:
 Route::get('/fligth/Allfligth', [FligthController::class, 'index']);
-//show the form html to insert data
+//FLIGHT Show the 'html' form to insert data:
 Route::get('/fligth/InsertFligth', [FligthController::class, 'create']);
-//method to insert in the data base
+//FLIGHT Method to insert in the data base:
 Route::post('/fligth/InsertFligth', [FligthController::class, 'store']);
 
 //show the edit form
 Route::get('/fligth/editFligth/{id}', [FligthController::class, 'edit']);
-//update the data base
+//FLIGHT Update to the data base:
 Route::post('/fligth/editFligth/{id}', [FligthController::class, 'update']);
 /**delite fligth */
 Route::post('/fligth/deleteFligth/{id}', [FligthController::class, 'destroy']);
@@ -92,6 +93,7 @@ Route::post('/booking/update/{id}', [BookingController::class, 'update']);
 // Booking: Payment protocol
 
 Route::get('/bookpay/{id}', [BookingController::class, 'payment']);
+//BOOKINGS Update the DB if the payment is done, confirming the booking:
 Route::post('/bookpay/{id}', [BookingController::class, 'store']);
 
 
