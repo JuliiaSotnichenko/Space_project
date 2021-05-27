@@ -34,13 +34,13 @@
         width: 80px;
     }
 
-    .myBtn{
+    .myBtn {
         color: white;
         padding: 8px 10px;
         text-decoration: none;
         background: linear-gradient(90deg, deeppink, blueviolet);
-        transition: 0.2s; 
-        transition-duration: 0.3s; 
+        transition: 0.2s;
+        transition-duration: 0.3s;
         font-weight: bolder;
         width: 49%;
         border-radius: 10px;
@@ -48,9 +48,6 @@
         margin-bottom: 30px;
         padding: 10px;
     }
-
-
-
 </style>
 @endsection
 @section('title', 'Account')
@@ -100,8 +97,8 @@
         <li>Flight ref.: {{ $flight->fly_ref}}</li>
 
         <div>
-        <br>
-            
+            <br>
+
             <h2>Adress</h2>
             @if( $flight->location == 'NASA Kennedy Space Center')
             <!-- Giving the clients the addresses to the Spaceports -->
@@ -124,11 +121,11 @@
     <div>
         <ul>
 
-            
+
             <div class='container'>
-                
-              <h1 style="font-weight: bold;">Useful information</h1>
-              <hr>
+
+                <h1 style="font-weight: bold;">Useful information</h1>
+                <hr>
                 <div>
                     @if( $flight->location == 'NASA Kennedy Space Center')
                     <!-- weather widget start -->
@@ -152,7 +149,7 @@
 
             <hr>
             <!-- Google maps-->
-            
+
 
             <div class="mapouter">
                 <div class="gmap_canvas"><iframe width="600" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q={{ $flight->location}}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org">pirate bay</a><br>
