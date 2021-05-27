@@ -65,7 +65,7 @@
 </strong>
 @endif
 <div class="form_container blokk ">
-    <ul class=" listAcc">
+    <ul class="listAcc">
         <h1>Account details:</h1>
         @auth
         <li class="">First name: {{$user->first_name}}</li>
@@ -74,7 +74,7 @@
         <li class="">Email: {{$user->email}}</li>
 
         <div>
-            <a href="{{ url('update/user') }}" class="myBtn btn-light">Edit</a>
+            <a href="{{ url('update/user') }}" style="padding: 4px 30px" class="myBtn btn-light">Edit</a>
         </div>
         <hr>
         <!-- </article> -->
@@ -100,7 +100,8 @@
         <li>Flight ref.: {{ $flight->fly_ref}}</li>
 
         <div>
-            <hr>
+        <br>
+            
             <h2>Adress</h2>
             @if( $flight->location == 'NASA Kennedy Space Center')
             <!-- Giving the clients the addresses to the Spaceports -->
@@ -123,9 +124,11 @@
     <div>
         <ul>
 
-            <div></div>
+            
             <div class='container'>
-                <hr>
+                
+              <h1 style="font-weight: bold;">Useful information</h1>
+              <hr>
                 <div>
                     @if( $flight->location == 'NASA Kennedy Space Center')
                     <!-- weather widget start -->
@@ -149,10 +152,10 @@
 
             <hr>
             <!-- Google maps-->
-            <div></div>
+            
 
             <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q={{ $flight->location}}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org">pirate bay</a><br>
+                <div class="gmap_canvas"><iframe width="600" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q={{ $flight->location}}&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org">pirate bay</a><br>
                     <style>
                         .mapouter {
                             position: relative;
