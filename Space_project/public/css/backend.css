@@ -207,6 +207,24 @@ footer img {
 .bgform{
     background-color: rgba(255, 255, 255, 0.644);   
 }
+.for{
+    background-color: rgba(255, 255, 255, 0.644); 
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    color: black;
+}
+.t3{
+    background-color: rgba(255, 255, 255, 0.753);
+    text-align: center;
+}
+.butcont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .maincard{    
    background-color: rgba(255, 255, 255, 0.733);
