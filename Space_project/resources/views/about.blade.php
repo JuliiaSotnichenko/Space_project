@@ -25,7 +25,7 @@
 @endsection
 
 <article>
-    <section class="banner">
+    <!-- <section class="banner">
         <div>
             <h1>ABOUT US</h1>
         </div>
@@ -38,9 +38,76 @@
                 you can purchase your tickets today to see what we imagined for you.
             </p>
         </div>
-    </section>
-    <section class="profiles">
-        <div>
+
+        
+    </section> -->
+
+
+    <section class="ships">
+	<h2 class="title_content2">ABOUT US</h2>
+	<div class="ships__container">
+		<div class="ship__card">
+			<div class="imgBx">
+				<img src="/images/all-images/Mars-bungalow.jpg" alt="">
+			</div>
+			<div class="content_card">
+				<p>StarFlight International&trade; was founded in 2000 based on the vision of Steve Weidig to be able to visit space.
+                After tinkering in his garage for 16 years and the evolution of technology, the dream of a lifetime became a reality and
+                you can purchase your tickets today to see what we imagined for you.</p>
+			</div>
+		</div>
+
+    
+        <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+
+    <!-- <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="/images//all-images/Mars-bungalow.jpg" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+         
+    </div>
+  </div>
+</div> -->
+
+
+    
+    <!-- <section class="profiles"> -->
+
+        <!-- <div>
             <ul>
                 <li>
                     <div class="profile-card">
@@ -81,7 +148,7 @@
                     </div>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </section>
 </article>
 
