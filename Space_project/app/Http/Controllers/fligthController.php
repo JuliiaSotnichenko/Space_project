@@ -21,6 +21,7 @@ class FligthController extends Controller
         $allFligth = Flight::all();
         return view('/fligth/fligthAll', ['allFligth' => $allFligth]);
     }
+    
     public function indexfront()
     {
         $allFligth = Flight::all();
