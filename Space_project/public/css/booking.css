@@ -148,3 +148,8 @@ body{
     box-shadow: rgba(255, 254, 254, 0.671);
     transform: scale(1.02);
 }
+
+input .form-controller:hover{
+    box-shadow: rgba(255, 254, 254, 0.671);
+    transform: scale(1.02);
+}
