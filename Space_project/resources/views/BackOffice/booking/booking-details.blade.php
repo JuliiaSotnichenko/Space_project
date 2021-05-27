@@ -39,7 +39,7 @@
     <img src="/images/done.png" alt="img">
     <p>Well Done</p>
     <p>{{$message}}</p>
-    <a href="{{ url('/dashboard') }}">Continue</a>
+    <a href="{{ url('/booking/form') }}">Continue</a>
 </strong>
 @endif
 

@@ -28,7 +28,7 @@ class CreateFlightsTable extends Migration
             $table->string('fly_ref');
             $table->enum('price', ['799000', '1249000', '5899000']);
             $table->string('file');
-            $table->string('description');
+            $table->longText('description');
             $table->timestamps();
         });
     }
