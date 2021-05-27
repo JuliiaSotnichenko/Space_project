@@ -1,4 +1,5 @@
 @extends('templates/template')
+
 <meta name="_token" content="{{ csrf_token() }}">
 <!-- Style -->
 @section('style')
@@ -8,35 +9,27 @@
 @section('title', 'Pakages')
 
 
-@section('content')
 
+
+
+@section('content')
 
 <div class="container">
 <div class="row">
 <div class="panel panel-default">
 <div class="panel-heading">
-<h3>Packages info </h3>
+<h3 class="search_header">Search </h3>
 </div>
 <div class="panel-body">
     <div class="form-group">
         <input type="text" class="form-controller" id="search" name="search"></input>
     </div>
-<table class="table table-bordered table-hover">
-<thead>
-<tr>
-<th>ID</th>
-<th>Packages Name</th>
-<th>Accomodation</th>
-<th>Price</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
 </div>
 </div>
 </div>
 </div>
+
+
 
 
 
@@ -59,10 +52,12 @@
     </div>
     @endforeach
 </div>
+
 @endif
 @endsection
 
-
+@section('script')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script type="text/javascript">
 $('#search').on('keyup',function(){
 $value=$(this).val();
@@ -71,7 +66,8 @@ type : 'get',
 url : "{{URL('/search')}}",
 data:{'search':$value},
 success:function(data){
-$('tbody').html(data);
+$('.bigcard').html(data);
+console.log(data);
 }
 });
 })
@@ -80,7 +76,4 @@ $('tbody').html(data);
 $.ajaxSetup({ headers: { 'csrftoken' : '{{ csrf_token() }}' } });
 </script>
 
-
-@section('script')
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 @endsection
