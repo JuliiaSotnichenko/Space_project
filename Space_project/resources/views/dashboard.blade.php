@@ -74,7 +74,7 @@
         <li class="">Email: {{$user->email}}</li>
 
         <div>
-            <a href="{{ url('update/user') }}" style="padding: 4px 10px" class="myBtn btn-light">Edit</a>
+            <a href="{{ url('update/user') }}" style="padding: 4px 30px" class="myBtn btn-light">Edit</a>
         </div>
         <hr>
         <!-- </article> -->
@@ -100,7 +100,8 @@
         <li>Flight ref.: {{ $flight->fly_ref}}</li>
 
         <div>
-            <hr>
+        <br>
+            
             <h2>Adress</h2>
             @if( $flight->location == 'NASA Kennedy Space Center')
             <!-- Giving the clients the addresses to the Spaceports -->
