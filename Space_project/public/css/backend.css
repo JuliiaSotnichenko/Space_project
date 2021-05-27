@@ -190,7 +190,7 @@ footer img {
     width: 500px;
     padding: 20px;
     border-radius: 5px;
-    
+
 }
 .rowall{
     display: flex;
@@ -202,14 +202,14 @@ footer img {
 .butdiv{
     text-align: center;
     margin-top: 20px;
-    
+
 }
 .bgform{
-    background-color: rgba(255, 255, 255, 0.644);   
+    background-color: rgba(255, 255, 255, 0.644);
 }
 .for{
-    background-color: rgba(255, 255, 255, 0.644); 
-    display: flex;  
+    background-color: rgba(255, 255, 255, 0.644);
+    display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 20px;
@@ -226,14 +226,14 @@ footer img {
     justify-content: center;
 }
 
-.maincard{    
+.maincard{
    background-color: rgba(255, 255, 255, 0.733);
    width: 80%;
    margin: 10px auto;
    color: rgba(58, 56, 56, 0.74);
    padding: 10px;
    border-radius: 10px;
-   
+
 }
 
 .cardcontent{
@@ -254,11 +254,11 @@ footer img {
     font-weight: bolder;
     padding: 20px;
     font-size: 2rem;
-      
+
 }
 .butlink{
     text-align: center;
-    
+
 }
 .butlink a,button{
    padding: 5px 80px;
@@ -296,6 +296,10 @@ footer img {
     }
 }
 
-
+@media screen and (max-width: 768px) {
+    .card {
+        background-image: none;
+    }
+}
 
 
