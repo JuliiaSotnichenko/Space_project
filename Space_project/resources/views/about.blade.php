@@ -25,7 +25,7 @@
 @endsection
 
 <article>
-    <section class="banner">
+    <!-- <section class="banner">
         <div>
             <h1>ABOUT US</h1>
         </div>
@@ -38,9 +38,32 @@
                 you can purchase your tickets today to see what we imagined for you.
             </p>
         </div>
-    </section>
-    <section class="profiles">
-        <div>
+
+        
+    </section> -->
+
+ 
+    
+      
+    <!-- <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="/images//all-images/Mars-bungalow.jpg" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+         
+    </div>
+  </div>
+</div> -->
+
+
+   
+     <section class="profiles"> -->
+
+         <div>
             <ul>
                 <li>
                     <div class="profile-card">
@@ -57,7 +80,7 @@
                         <img src="" alt="">
                         <h4>Yuliia Sotnichenko</h4>
                         <p class="adescript">Had to leave her native Ukraine after strangling a mafia boss because she wasn’t in a good mood.</p>
-                    </div>
+                    </div> 
                 </li>
                 <li>
                     <div class="profile-card">
@@ -81,7 +104,7 @@
                     </div>
                 </li>
             </ul>
-        </div>
+        </div> 
     </section>
 </article>
 
