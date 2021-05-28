@@ -22,7 +22,7 @@
 
     <div class="container">
         <div class="bgform">
-            <h2 class="t2"> Insert Pakage</h2>
+            <h2 class="t2"> Insert Package</h2>
             <div class="row rowall">
 
                 <div class="col">
@@ -43,12 +43,12 @@
 
                         </div>
                         <div>
-                            <label class="form-label fon" for="dod">Date of Departe</label>
+                            <label class="form-label fon" for="dod">Date of Departure</label>
                             <input class="form-control" id="dod" name="dateOfDepart" type="date">
 
                         </div>
                         <div>
-                            <label class="form-label fon" for="tod">Time of Departe</label>
+                            <label class="form-label fon" for="tod">Time of Departure</label>
                             <input class="form-control" id="tod" name="timeOfDepart" type="time">
 
                         </div>
@@ -58,7 +58,7 @@
 
                         </div>
                         <div>
-                            <label class="form-label fon" for="toa">time of Arrival</label>
+                            <label class="form-label fon" for="toa">Time of Arrival</label>
                             <input class="form-control" id="toa" name="timeOfArrival" type="time">
                         </div>
                         <div>
@@ -71,11 +71,11 @@
                             </select>
                         </div>
                         <div>
-                            <label class="form-label fon" for="disc">Discriptian</label>
-                            <textarea class="form-control" name="fdisc" id="disc" placeholder="Fly Discriptian"></textarea>
+                            <label class="form-label fon" for="disc">Description</label>
+                            <textarea class="form-control" name="fdisc" id="disc" placeholder="Flight Description"></textarea>
                         </div>
                         <div>
-                            <label class="form-label fon" for="ffile">Upload Fly Pictures</label>
+                            <label class="form-label fon" for="ffile">Upload Flight Pictures</label>
                             <input class="form-control" name="file" id="ffile" type="file">
                         </div>
                         <div>
