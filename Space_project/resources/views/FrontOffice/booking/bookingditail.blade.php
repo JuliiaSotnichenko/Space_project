@@ -7,7 +7,7 @@
 @section('title', 'Pakages |Detail')
 @section('content')
 <div class="titleh2">
-    <h1> Pakages Detail</h1>
+    <h1>Detailed Flight Packages</h1>
 </div>
 <div class="detail">
 
@@ -35,7 +35,7 @@
 
             </div>
             <div>
-                <span>Departe time </span> {{$fligth->depart_time}}
+                <span>Departure time </span> {{$fligth->depart_time}}
                 <br>
                 <span>Arrival time </span> {{$fligth->arrival_time}}
             </div>
@@ -43,7 +43,7 @@
                 <span>Price </span> {{$fligth->price}}€
             </div>
             <div>
-                <span>Discription </span> {{$fligth->description}}
+                <span>Description </span> {{$fligth->description}}
             </div>
         </div>
 
