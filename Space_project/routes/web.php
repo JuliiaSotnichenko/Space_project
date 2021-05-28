@@ -50,9 +50,7 @@ require __DIR__ . '/auth.php';
 
 // Front Office
 //LANDING Page:
-Route::get('/', function () {
-    return view('home');
-});
+
 
 // ACCOUNT Dashboard:
 Route::get('/dashboard', [UserController::class, 'showAcc'])->middleware(['auth']);

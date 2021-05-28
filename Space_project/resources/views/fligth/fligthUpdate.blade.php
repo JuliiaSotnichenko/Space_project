@@ -31,12 +31,12 @@
 
                     </div>
                     <div>
-                        <label for="dod">Date of Departe</label>
+                        <label for="dod">Date of Departure</label>
                         <input class="form-control" id="dod" name="dateOfDepart" type="date" value="{{$fligth->depart_date}}">
 
                     </div>
                     <div>
-                        <label for="tod">Time of Departe</label>
+                        <label for="tod">Time of Departure</label>
                         <input class="form-control" id="tod" name="timeOfDepart" type="time" value="{{$fligth->depart_time}}">
 
                     </div>
@@ -46,7 +46,7 @@
 
                     </div>
                     <div>
-                        <label for="toa">time of Arrival</label>
+                        <label for="toa">Time of Arrival</label>
                         <input class="form-control" id="toa" name="timeOfArrival" type="time" value="{{$fligth->arrival_time}}">
                     </div>
                     <div>
@@ -71,12 +71,12 @@
                         </select>
                     </div>
                     <div>
-                        <label for="disc">Discriptian</label>
-                        <textarea class="form-control" name="fdisc" id="disc" placeholder="Fly Discription">{{$fligth->description}}</textarea>
+                        <label for="disc">Description</label>
+                        <textarea class="form-control" name="fdisc" id="disc" placeholder="Flight Description">{{$fligth->description}}</textarea>
                     </div>
 
                     <div class="butdiv">
-                        <input class="btn btn-lg btn-info" type="submit" value="Update Pakage">
+                        <input class="btn btn-lg btn-info" type="submit" value="Update Package">
                     </div>
                 </form>
 
