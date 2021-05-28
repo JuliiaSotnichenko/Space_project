@@ -23,9 +23,9 @@
                         <label for="fitinerary">Itinerary</label>
                         <select class="form-select" name="itinerary" id="fitinerary">
                             <option value="{{$fligth->itinerary}}">{{$fligth->itinerary}}</option>
-                            <option value="Earth">Earth</option>
-                            <option value="Moon">Moon</option>
-                            <option value="Mars">Mars</option>
+                            <option value="Orbital Hotel">Orbital Hotel</option>
+                            <option value="Space Station V">Space Station V</option>
+                            <option value="Floshton Paradise">Floshton Paradise</option>
                         </select>
 
 
