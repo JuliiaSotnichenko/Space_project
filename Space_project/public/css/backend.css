@@ -241,12 +241,10 @@ footer img {
     align-items: center;
     gap:20px;
 }
-.cardImag{
-    width: 50%;
-}
+
 
 .cardcontent img{
-  width: 100%;
+  width: 250px;
 }
 .titlepak{
     text-align: center;
