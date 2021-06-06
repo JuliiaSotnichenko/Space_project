@@ -22,7 +22,7 @@
 </div>
 <div class="panel-body">
     <div class="form-group">
-        <input type="text" class="form-controller" id="search" name="search"></input>
+        <input type="text" class="form-controller" id="search" name="search" placeholder="search "></input>
     </div>
 </div>
 </div>
