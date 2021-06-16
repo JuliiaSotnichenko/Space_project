@@ -21,7 +21,7 @@
 		<a target="_blank" href="#" class="sidepanel__link"><img src="images/social/instagram.svg" alt="instagram"></a>
 		<a target="_blank" href="#" class="sidepanel__link"><img src="images/social/github.svg" alt="github"></a>
 		<div class="sidepanel__divider"></div>
-		<div class="sidepanel__text"><span>Social networks</span></div>
+		<div class="sidepanel__text"><span>Social ne</span></div>
 	</aside>
 
 
